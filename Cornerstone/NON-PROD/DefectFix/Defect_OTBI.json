@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "CTPFS-OTBI",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/AHCS/Reports/RPT207/Report/Layouts/Wesco_GBL_AHCS_RPT207_Subledger_Balance_Report.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "DEV_RPT"
+}

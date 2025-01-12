@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "CTPFS-29594",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/GL/Reports/RPT045/Report/DataModels/Wesco_GBL_GL_RPT045_GL_AR_AP_Period_Status_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/GL/Reports/RPT045/Report/Layouts/Wesco_GBL_GL_RPT045_GL_AP_AR_Period_Status_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

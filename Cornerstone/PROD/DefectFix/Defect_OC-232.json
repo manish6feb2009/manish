@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "OC-232",
+	"OIC": [],
+	"DB": ["PROD/Cornerstone/ERP/RTR/GL/Extension/EXT238/DB/Master/WSC_EXTENSION_238_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "PRD_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}

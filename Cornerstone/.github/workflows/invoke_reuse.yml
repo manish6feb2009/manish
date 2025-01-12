@@ -1,0 +1,43 @@
+name: invoke_reuse
+on:
+  workflow_dispatch:
+    inputs:
+      method:
+        description: 'PUT or POST'
+        required: true
+        type: string
+        default: 'PUT'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Runs a set of commands for deploying OIC Integration
+      - uses: actions/checkout@v2
+      - name: RUN the data
+        run: |
+          echo '----------------'
+          ls
+          sudo apt-get install alien
+          echo "installed"
+          sudo alien -i ./oracle-instantclient-basic-21.4.0.0.0-1.x86_64.rpm
+          sudo alien -i ./oracle-instantclient-sqlplus-21.4.0.0.0-1.x86_64.rpm
+          
+          #cd /
+          #echo "----------------"
+          #ls -l
+          #echo "----------------"
+          #find ./ -name sqlplus
+          ORACLE_HOME=/usr/lib/oracle/21/client64
+          PATH=$ORACLE_HOME/bin:$PATH
+          LD_LIBRARY_PATH=$ORACLE_HOME/lib
+          export ORACLE_HOME
+          export LD_LIBRARY_PATH
+          export PATH
+          username='finint/FiniNt#$12'
+          sqlplus -S "$username@10.200.160.7:1521/txndev.subashpcidtrnli.vcnaxepcidev.oraclevcn.com" @./test.sql
+          
+  call-workflow-passing-data:
+    uses: WESCO-International/Cornerstone/.github/workflows/reuse_workflow.yml@main
+    with:
+      fname: 'PUTSO'
+        

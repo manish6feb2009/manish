@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "OC-143",
+	"OIC": [],
+	"DB": [],
+	"Report": ["PROD/Cornerstone/ERP/RTR/AR/Reports/RPT102_103/Report/DataModels/TransactionsPrintDm.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "PRD_RPT"
+}

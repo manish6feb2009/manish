@@ -1,0 +1,24 @@
+✓ Interface directory exists for rice-id: EXT010 
+Fetching the components...
+✖ OIC Artifacts
+✖ Report-Data Model Artifacts
+✖ Report-Layout Artifacts
+✓ DB Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Extension/EXT010/DB/Master/WSC_EXT010_MASTER.sql
+---------DATABASE DEPLOYMENT----------
+EXECUTING WSC_AHCS_DASHBOARD2_T.sql
+
+Table "FININT"."WSC_AHCS_DASHBOARD2_T" created.
+
+EXECUTING WSC_AHCS_DASHBOARD2_STAGE_T.sql
+
+Table "FININT"."WSC_AHCS_DASHBOARD2_STAGE_T" created.
+
+EXECUTING WSC_AHCS_DASHBOARD2_V.sql
+
+View "FININT"."WSC_AHCS_DASHBOARD2_V" created.
+
+
+View "FININT"."WSC_AHCS_DASHBOARD2_V" created.
+
+--------------------------------------

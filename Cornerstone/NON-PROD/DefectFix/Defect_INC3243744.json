@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INC3243744",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_GL_COMMON_LEGAL_ENTITIES_EXTRACTION_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "SOAK_RPT"
+}

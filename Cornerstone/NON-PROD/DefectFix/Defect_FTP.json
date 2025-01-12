@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "FTP",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/FTP/Report/DataModels/Wesco_AXE_GBL_FTP_Done_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/FTP/Report/Layouts/Wesco_AXE_GBL_FTP_Done_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "SIT2_RPT"
+}

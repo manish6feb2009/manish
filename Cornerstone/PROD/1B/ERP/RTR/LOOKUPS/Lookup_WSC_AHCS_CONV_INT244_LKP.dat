@@ -1,0 +1,7 @@
+LookupType|LookupCode|Meaning|Description|EnabledFlag|DisplaySequence|Tag
+WSC_AHCS_CONV_INT244_LKP|AP_BEG_BAL|AP Beginning Balances|AP Beginning Balances|Y|1|MF AP
+WSC_AHCS_CONV_INT244_LKP|UNVOUCHERED_BEG_BAL|Unvouchered Beg Bal|Unvouchered Beg Bal|Y|2|MF AP
+WSC_AHCS_CONV_INT244_LKP|IC_BEG_BAL|IC Beg Bal|IC Beg Bal|Y|3|MF AP, MF AR
+WSC_AHCS_CONV_INT244_LKP|AR_BEG_BAL|AR Beg Bal|AR Beg Bal|Y|4|MF AR
+WSC_AHCS_CONV_INT244_LKP|IVB_BEG_BAL|Inventory Beg Bal|Inventory Beg Bal|Y|5|MF Inventory
+WSC_AHCS_CONV_INT244_LKP|IVB_UNVCH_BEG_BAL|Unvouchered Beg Balance|Unvouchered Beg Balance|Y|6|MF Inventory

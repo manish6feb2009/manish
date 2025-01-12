@@ -1,0 +1,10 @@
+{
+	"Rice_id" : "HYPERCARE",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/Hypercare/JOB_STATUS/Report/DataModels/Wesco_AXE_GBL_RPT219_ESS_Job_Status_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/Hypercare/JOB_STATUS/Report/Layouts/Wesco_AXE_GBL_RPT219_ESS_Job_Status_Report.xdo.catalog",
+	"NON-PROD/1B/ERP/RTR/Hypercare/XLA_LINES_BALANCES/Report/DataModels/XLA_Lines_to_XLA_Balances_Reconcilation_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/Hypercare/XLA_LINES_BALANCES/Report/Layouts/XLA_Lines_to_XLA_Balances_Reconcilation_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

@@ -1,0 +1,13 @@
+{
+	"Rice_id" : "RPT221-RPT222",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/AP/Reports/RPT222/Report/DataModels/Wesco_GBL_AP_RPT222_Tax_Error_Log_DM.xdm.catalog",
+	           "NON-PROD/Cornerstone/ERP/RTR/AP/Reports/RPT222/Report/Layouts/Wesco_GBL_AP_RPT222_Tax_Error_Log_Report.xdo.catalog",
+			   "NON-PROD/Cornerstone/ERP/RTR/AR/Reports/RPT221/Report/DataModels/Wesco_GBL_AR_RPT221_Tax_Error_Log_DM.xdm.catalog",
+	           "NON-PROD/Cornerstone/ERP/RTR/AR/Reports/RPT221/Report/Layouts/Wesco_GBL_AR_RPT221_Tax_Error_Log_Report.xdo.catalog"
+     ],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

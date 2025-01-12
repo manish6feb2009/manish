@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INC2766262",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/GL/Reports/RPT043/Report/DataModels/Wesco_GBL_GL_RPT043_Journals_Missed_Reversing_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "SIT2_RPT"
+}

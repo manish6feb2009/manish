@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "TEST",
+	"OIC": ["NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/OIC/Integration/WES_AXE_GBL_IC_EXT_CAL_ERP_CLO_I_01.00.0000.iar","NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/OIC/Integration/WES_AXE_GBL_IC_EXT_DB_TO_ERP_CLO_01.00.0000.iar","NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/OIC/Integration/WESC_WSC_GBL_COMM_USER_DATA_ACCE_01.00.0000.iar"],
+	"DB": ["NON-PROD/1B/ERP/RTR/AHCS/Interface/COMMON/DB/DefectFix/CTPFS-25720/WSC_COMMON_MASTER.sql"],
+	"Report": ["NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/Report/DataModels/WSC_AXE_GBL_EXT238_GL_UserAccess_Data_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/Report/DataModels/WSC_AXE_GBL_EXT238_IC_GroupID_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/Report/DataModels/WSC_AXE_GBL_EXT238_IC_PROGRAM_STATUS_DM.xdm.catalog", "NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/Report/Layouts/WSC_AXE_GBL_EXT238_GL_UserAccess_Data_Report.xdo.catalog","NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/Report/Layouts/WSC_AXE_GBL_EXT238_IC_GroupID_Report.xdo.catalog","NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/Report/Layouts/WSC_AXE_GBL_EXT238_IC_PROGRAM_STATUS_Report.xdo.catalog"],
+	"TARGET_DB": "DEV_DB",
+	"TARGET_OIC": "DEV_OIC",
+	"TARGET_RPT": "DEV_RPT"
+}

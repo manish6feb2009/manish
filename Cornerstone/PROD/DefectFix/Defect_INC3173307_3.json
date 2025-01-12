@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INC3173307_3",
+	"OIC": [],
+	"DB": ["PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT011/DB/DefectFix/INC3173307_3/WSC_EXT11_INC3173307_MASTER.sql"],
+	"Report": ["PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT011/Report/DataModels/Wesco_GBL_AHCS_EXT011_Cre_Acc_Recon_DM.xdm.catalog"],
+	"TARGET_DB": "PRD_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "PRD_RPT"
+}

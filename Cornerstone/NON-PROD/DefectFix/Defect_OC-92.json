@@ -1,0 +1,11 @@
+{
+	"Rice_id" : "OC-92",
+	"OIC": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT219/OIC/Integration/WESCO_CUSTO_ESS_JOBS_RELEA_INT_01.00.0000.iar", 
+			"NON-PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT219/OIC/Integration/WESCO_CUSTOM_ESS_JOBS_HOLD_INT_01.00.0000.iar"],
+	"DB": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT219/DB/DefectFix/OC-92/OC-92_MASTER.sql"],
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT219/Report/DataModels/Wesco_GBL_EXT219_ESS_Lookup_Query_DM.xdm.catalog",
+				"NON-PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT219/Report/Layouts/Wesco_GBL_EXT219_ESS_Lookup_RPT.xdo.catalog"],
+	"TARGET_DB": "UAT2_DB",
+	"TARGET_OIC": "UAT2_OIC",
+	"TARGET_RPT": "UAT2_RPT"
+}

@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INT033_38",
+	"OIC": [],
+	"DB": ["NON-PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/DB/DefectFix/OC-3/WSC_CENTRAL_033_038_OC3_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "UAT_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}

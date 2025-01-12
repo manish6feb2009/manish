@@ -1,0 +1,5 @@
+﻿DVM,WSC_INTER_INTRA_REPORT_LKP,
+reportName,reportPath
+UserAccess,/Custom/WESCO Custom/GL/Interfaces/WSC_AXE_GBL_EXT238_GL_UserAccess_Data_Report.xdo
+ICGroupID,/Custom/WESCO Custom/GL/Interfaces/WSC_AXE_GBL_EXT238_IC_GroupID_Report.xdo
+ICProgramStatus,/Custom/WESCO Custom/GL/Interfaces/WSC_AXE_GBL_EXT238_IC_PROGRAM_STATUS_Report.xdo

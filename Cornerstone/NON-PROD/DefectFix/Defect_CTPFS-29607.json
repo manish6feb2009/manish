@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "CTPFS-29607",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/AR/Reports/RPT027/Report/DataModels/Wesco_AXE_GBL_AR_RPT027_Non_Material_IC_AR_Transaction_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/AR/Reports/RPT027/Report/Layouts/Wesco_AXE_GBL_AR_RPT027_Non_Material_IC_AR_Transaction_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

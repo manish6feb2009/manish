@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INC3474758_1",
+	"OIC": [],
+	"DB": ["PROD/Cornerstone/ERP/RTR/AHCS/Interface/COMMON/DB/DefectFix/INC3474758_1/INC3474758_1_Data_Fix.sql"],
+	"Report": [],
+	"TARGET_DB": "PRD_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}

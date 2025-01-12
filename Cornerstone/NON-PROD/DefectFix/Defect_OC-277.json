@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "OC-277",
+	"OIC": [],
+	"DB": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT130/DB/DefectFix/OC-277/OC-277_Master.sql"],
+	"Report": [],
+	"TARGET_DB": "UAT2_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}

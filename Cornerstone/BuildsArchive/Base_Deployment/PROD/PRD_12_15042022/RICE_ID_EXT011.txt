@@ -1,0 +1,142 @@
+✓ Interface directory exists for rice-id: EXT011 
+Fetching the components...
+✓ OIC Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/OIC/Integration/WES_WSC_GBL_COM_AHC_CRE_REC_SCH_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar
+✓ Report-Data Model Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/Report/DataModels/Wesco_GBL_AHCS_EXT011_Cre_Acc_Recon_DM.xdm.catalog
+✓ Report-Layout Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/Report/Layouts/Wesco_GBL_AHCS_EXT011_Cre_Acc_Recon_Report.xdo.catalog
+✓ DB Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/DB/Master/WSC_EXT011_MASTER.sql
+---------DATABASE DEPLOYMENT----------
+
+Table "FININT"."WSC_AHCS_RECON_REP_TEMP_T" created.
+
+
+Type WSC_AHCS_RECON_REP_TEMP_T_TYPE compiled
+
+
+Type WSC_AHCS_RECON_REP_TEMP_T_TAB compiled
+
+
+Sequence "FININT"."WSC_AHCS_RECON_RECORDS_SEQ" created.
+
+
+Package WSC_AHCS_RECON_RECORDS_PKG compiled
+
+
+Package Body WSC_AHCS_RECON_RECORDS_PKG compiled
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Commit complete.
+
+
+Commit complete.
+
+--------------------------------------
+--------INTEGRATION DEPLOYMENT--------
+Recieved Filepath: github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/OIC/Integration/WES_WSC_GBL_COM_AHC_CRE_REC_SCH_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar,
+Iterating over filepaths and processing for deployment....
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/OIC/Integration/WES_WSC_GBL_COM_AHC_CRE_REC_SCH_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WES_WSC_GBL_COM_AHC_CRE_REC_SCH%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WES_WSC_GBL_COM_AHC_CRE_REC_SCH | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/OIC/Integration/WES_WSC_GBL_COM_AHC_CRE_REC_SCH_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WES_WSC_GBL_GL_COA_MAP_TO_BI | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED
+
+
+
+--------------------------------------
+-----------REPORT DEPLOYMENT----------
+Recieved Filepath: github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/Report/DataModels/Wesco_GBL_AHCS_EXT011_Cre_Acc_Recon_DM.xdm.catalog
+github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/Report/Layouts/Wesco_GBL_AHCS_EXT011_Cre_Acc_Recon_Report.xdo.catalog
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/Report/DataModels/Wesco_GBL_AHCS_EXT011_Cre_Acc_Recon_DM.xdm.catalog
+	ⓘ	Fetching property file  & exporting it: github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/Report/DataModels/Wesco_GBL_AHCS_EXT011_Cre_Acc_Recon_DM.xdm.prop 
+	ⓘ	Creating Folder Structure if doesn't exists. Location: /shared/Custom/WESCO Custom/AHCS/Interfaces/Data Models
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:createFolderResult></sawsoap:createFolderResult></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	ⓘ	Importing report to location: /shared/Custom/WESCO Custom/AHCS/Interfaces/Data Models
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:pasteItem2Result></sawsoap:pasteItem2Result></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	✓	Report Imported: github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/Report/DataModels/Wesco_GBL_AHCS_EXT011_Cre_Acc_Recon_DM.xdm.catalog
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/Report/Layouts/Wesco_GBL_AHCS_EXT011_Cre_Acc_Recon_Report.xdo.catalog
+	ⓘ	Fetching property file  & exporting it: github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/Report/Layouts/Wesco_GBL_AHCS_EXT011_Cre_Acc_Recon_Report.xdo.prop 
+	ⓘ	Creating Folder Structure if doesn't exists. Location: /shared/Custom/WESCO Custom/AHCS/Interfaces
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:createFolderResult></sawsoap:createFolderResult></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	ⓘ	Importing report to location: /shared/Custom/WESCO Custom/AHCS/Interfaces
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:pasteItem2Result></sawsoap:pasteItem2Result></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	✓	Report Imported: github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011/Report/Layouts/Wesco_GBL_AHCS_EXT011_Cre_Acc_Recon_Report.xdo.catalog
+--------------------------------------

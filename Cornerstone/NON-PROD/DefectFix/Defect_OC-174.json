@@ -1,0 +1,12 @@
+{
+	"Rice_id" : "OC-174",
+	"OIC": [],
+	"DB": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT010_123/DB/DefectFix/OC-174/WSC_EXT123_MASTER.sql"],
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Reports/RPT006/Report/DataModels/Wesco_GBL_AHCS_RPT006_Error_DM.xdm.catalog",
+	           "NON-PROD/Cornerstone/ERP/RTR/AHCS/Reports/RPT006/Report/Layouts/Wesco_GBL_AHCS_RPT006_Error_Report.xdo.catalog"
+                  ],
+	"TARGET_DB": "SOAK_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "SOAK_RPT"
+}
+

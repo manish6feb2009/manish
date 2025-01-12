@@ -1,0 +1,10 @@
+{
+    "Rice_id" : "OC-170",
+    "OIC": [],
+    "DB": [],
+    "Report": ["NON-PROD/Cornerstone/ERP/RTR/AP/Reports/RPT020/Report/DataModels/Wesco_AXE_GBL_AP_RPT020_Non_Material_IC_TB_Report_By_LE_ACC_LVL_DM.xdm.catalog", 
+               "NON-PROD/Cornerstone/ERP/RTR/AP/Reports/RPT020/Report/Layouts/Wesco_AXE_GBL_AP_RPT020_Non_Material_IC_TB_Report_By_LE_ACC_LVL_Report.xdo.catalog"],
+    "TARGET_DB": "",
+    "TARGET_OIC": "",
+    "TARGET_RPT": "UAT2_RPT"
+}

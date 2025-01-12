@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INC2647287",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/AR/Reports/RPT102_103/Report/DataModels/TransactionsPrintDm.xdm.catalog","NON-PROD/1B/ERP/RTR/AR/Reports/RPT102_103/Report/Layouts/DefaultCreditmemo.xdo.catalog","NON-PROD/1B/ERP/RTR/AR/Reports/RPT102_103/Report/Layouts/DefaultDebitmemo.xdo.catalog","NON-PROD/1B/ERP/RTR/AR/Reports/RPT102_103/Report/Layouts/DefaultInvoice.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "SOAK_RPT"
+}

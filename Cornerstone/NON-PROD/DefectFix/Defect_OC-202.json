@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "OC-202",
+	"OIC": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WES_AXE_GBL_COM_AHC_VAL_ERR_BAD__01.00.0000.iar"],
+	"DB": [],
+	"Report": [],
+	"TARGET_DB": "",
+	"TARGET_OIC": "UAT2_OIC",
+	"TARGET_RPT": ""
+}

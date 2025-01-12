@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "OC-216",
+	"OIC": [],
+	
+	"Report": ["PROD/Cornerstone/ERP/RTR/GL/Interface/INT021/Report/DataModels/Wesco_AXE_GBL_GL_INT021_GL_Journals_To_Teradata_Outbound_Interface_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "PRD_RPT"
+}

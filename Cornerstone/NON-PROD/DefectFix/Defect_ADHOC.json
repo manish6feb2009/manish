@@ -1,0 +1,18 @@
+{
+	"Rice_id" : "ADHOC",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/AP/Interface/INT232_INT233/Report/DataModels/Wesco_AXE_GBL_AP_INT232_INT233_Open AP_Invoice_Balances_to_IAP_Teradata_DM.xdm.catalog",
+"NON-PROD/1B/ERP/RTR/AP/Interface/INT232_INT233/Report/Layouts/Wesco_AXE_GBL_AP_INT232_INT233_Open_AP_Invoice_Balances_to_IAP_Teradata_Report.xdo.catalog",
+"NON-PROD/1B/ERP/RTR/GL/Interface/INT021/Report/DataModels/Wesco_AXE_GBL_GL_INT021_GL_Journals_To_Teradata_Outbound_Interface_DM.xdm.catalog",
+"NON-PROD/1B/ERP/RTR/GL/Interface/INT021/Report/Layouts/Wesco_AXE_GBL_GL_INT021_GL_Journals_To_Teradata_Outbound_Interface_Report.xdo.catalog",
+"NON-PROD/1B/ERP/RTR/GL/Interface/INT042/Report/DataModels/Wesco_AXE_GBL_GL_INT042_GL_Balances_To_Teradata_Outbound_Interface_DM.xdm.catalog",
+"NON-PROD/1B/ERP/RTR/GL/Interface/INT042/Report/Layouts/Wesco_AXE_GBL_GL_INT042_GL_Balances_To_Teradata_Outbound_Interface_Report.xdo.catalog",
+"NON-PROD/1B/ERP/RTR/GL/Interface/INT042/Report/DataModels/Wesco_AXE_GBL_GL_INT042_GL_Balances_To_Teradata_Outbound_Interface_DM.xdm.catalog",
+"NON-PROD/1B/ERP/RTR/GL/Interface/INT042/Report/Layouts/Wesco_AXE_GBL_GL_INT042_GL_Balances_To_Teradata_Outbound_Interface_Report.xdo.catalog",
+"NON-PROD/1B/ERP/RTR/GL/Reports/RPT190/Report/DataModels/Wesco_GBL_GL_RPT190_AP_AR_SLA_to_GL_Reconciliation_DM.xdm.catalog",
+"NON-PROD/1B/ERP/RTR/GL/Reports/RPT190/Report/Layouts/Wesco_GBL_GL_RPT190_AP_AR_SLA_to_GL_Reconciliation_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "SOAK_RPT"
+}

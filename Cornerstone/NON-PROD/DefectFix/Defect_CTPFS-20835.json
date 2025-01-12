@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INT186",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/AP/Interface/INT185_INT186/Report/DataModels/Wesco_AXE_GBL_AP_INT185_INT186_IC_ AP_Invoices_Feed_To_IAP_Teradata_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/AP/Interface/INT185_INT186/Report/Layouts/Wesco_AXE_GBL_AP_INT185_INT186_IC_AP_Invoices_Feed_To_IAP_Teradata_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT_RPT"
+}

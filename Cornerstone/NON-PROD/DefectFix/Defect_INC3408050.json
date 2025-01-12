@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INC3408050",
+	"OIC": [],
+	"DB": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT130/DB/DefectFix/INC3408050/WSC_EXT130_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "UAT2_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}

@@ -1,0 +1,10 @@
+{
+	"Rice_id" : "INC3002957",
+	"OIC": [],
+	"DB": [],
+	"Report": ["PROD/Cornerstone/ERP/RTR/AHCS/Reports/RPT009/Report/DataModels/Wesco_GBL_AHCS_RPT009_Subledger_Account_Analysis_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "PRD_RPT"
+}
+

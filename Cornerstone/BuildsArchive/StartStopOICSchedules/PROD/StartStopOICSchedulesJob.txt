@@ -1,0 +1,110 @@
+cp github/Miscellaneous/ArtifactDesigner_Components/template.json summary_html_data.json
+
+#variable prefix meaning
+# l = logging
+# v = variable
+# j = json
+# h = html
+# t = token
+
+l_payload_start_bar='##############PAYLOAD START################'
+l_payload_end_bar='##############PAYLOAD   END################'
+l_summary_file="integration_activation.txt"
+indi_sec_tpl8=`cat github/Miscellaneous/ArtifactDesigner_Components/PropertiesFile/artifact_individual/artifact_indv_sec.json`
+indi_sec_data_tpl8=`cat github/Miscellaneous/ArtifactDesigner_Components/PropertiesFile/artifact_individual/artifact_indv_sec_data.json`
+
+echo -e '-----------------------------------------------------------------------\n' |& tee -a $l_summary_file
+#decrypt and read connection_details.gpg
+v_con_details=`gpg -d --batch --passphrase $passphrase github/PROD/connection_details.gpg 2> /dev/null`
+
+echo -e "BaseDeployment File data recieved as\n$l_payload_start_bar\n`cat github/OICScheduleStopStart.json`\n$l_payload_end_bar\n" |& tee -a $l_summary_file
+
+#check & validate deployment file 
+if [[ `jq 'has("TARGET_OIC")' github/PROD/OICScheduleStopStart.json` == 'true' && `jq 'has("INTEGRATIONS")' github/PROD/OICScheduleStopStart.json` == 'true' ]]; then
+  echo "✓ OICScheduleStopStart File syntax is correct" |& tee -a $l_summary_file
+else
+  echo "✖ OICScheduleStopStart File must contain  TARGET_OIC & INTEGRATIONS" |& tee -a $l_summary_file
+  exit;
+fi
+
+## START V2 :Check if value provided in key TARGET_* are present in Connection Details##
+if [[ `jq '.TARGET_OIC' github/PROD/OICScheduleStopStart.json | sed 's/\"//g'` != "" && `echo $v_con_details | jq ".PASSWORDS | has($(jq '.TARGET_OIC' github/PROD/OICScheduleStopStart.json))"` == 'false' ]]; then
+  echo "✖ OICScheduleStopStart File TARGET_OIC value not present in connection details. Considering changing the value or connect with adminstrator." |& tee -a $l_summary_file
+  exit;
+fi
+
+## END V2##
+
+v_oic_instance_password=`echo $v_con_details  | jq ".PASSWORDS.$(jq '.TARGET_OIC' github/PROD/OICScheduleStopStart.json)" | sed 's/\"//g'`
+v_oic_instance=`echo $v_con_details  | jq ".URL.$(jq '.TARGET_OIC' github/PROD/OICScheduleStopStart.json)" | sed 's/\"//g'`
+
+j_oic=`jq '.INTEGRATIONS' github/PROD/OICScheduleStopStart.json`
+j_oic_len=`echo $j_oic | jq '. | length'`
+
+echo -e 'INTEGRATION ID | STATUS\n-----------------------------------------------------------------------\n' |& tee -a $l_summary_file
+
+#looping on integrations
+for (( i=0; i<$j_oic_len; i++ ))
+do
+  #✓✖⚠
+  j_integration_id=`echo $j_oic | jq ".[$i]" | sed 's/\"//g'`
+  iar_id=''
+  #username, password, url and other details for OIC server
+    user='FIN_INT'
+    pass=$v_oic_instance_password
+    base_url=$v_oic_instance
+    iar_check_url='/ic/api/integration/v1/integrations/'
+    iar_deac_act_url='/ic/api/integration/v1/integrations/'
+  iar_schedule_stop='/schedule/stop'
+  iar_schedule_start='/schedule/start'
+  
+  #FUNCTIONS
+
+    generating_iar_id(){  
+      pos=`echo $1 | awk -F "_" '{print length($0)-length($NF)}'`
+      iar_id=`echo $1 | awk -v pos=$pos -v repl=$2 '{print substr($0,1,pos-1) repl substr($0,pos+1)}'`
+    }
+  
+
+    stop_schedule_iar(){
+      if [[ $1 == 'STOP' ]] 
+      then
+        payload='{"status":"ACTIVATED","payloadTracingEnabledFlag":"true","tracingEnabledFlag":"true"}'
+        o_sch_stop=`curl -s -u ${user}:${pass} -X POST -H "Content-Type:application/json" -H "X-HTTP-Method-Override:PATCH" -d $payload $base_url$iar_deac_act_url$2$iar_schedule_stop`
+    echo -e "\n$l_payload_start_bar\n$o_sch_stop\n$l_payload_end_bar\n"
+      fi              
+      #-d 'enableAsyncActivationMode=true'
+    }
+  
+  start_schedule_iar(){
+      if [[ $1 == 'START' ]] 
+      then
+        payload='{"status":"ACTIVATED","payloadTracingEnabledFlag":"true","tracingEnabledFlag":"true"}'
+        o_sch_start=`curl -s -u ${user}:${pass} -X POST -H "Content-Type:application/json" -H "X-HTTP-Method-Override:PATCH" -d $payload $base_url$iar_deac_act_url$2$iar_schedule_start`
+    echo -e "\n$l_payload_start_bar\n$o_sch_start\n$l_payload_end_bar\n"
+      fi              
+      #-d 'enableAsyncActivationMode=true'
+    }
+  
+  #Primary Logic
+  #checking the status of the integration and generating ID of integration
+    ##Generating ID 
+    generating_iar_id $j_integration_id "%7C"
+
+    ##Invoking Rest API for integration status checking
+    o_iar_status=`curl -s -u ${user}:${pass} -H "Accept: application/json" $base_url$iar_check_url$iar_id`
+    echo -e "\n$l_payload_start_bar\n$o_iar_status\n$l_payload_end_bar\n" 
+    ###If status is ACTIVATED
+    if [[ `echo $o_iar_status | jq -r .status` == 'ACTIVATED' &&   `echo $StartStopOICSchedule` == 'Stop'  ]]
+    then stop_schedule_iar "STOP" $iar_id
+      echo -e "$j_integration_id |✓ Integration Schedule Stopped Successfully" |& tee -a $l_summary_file
+  elif [[ `echo $o_iar_status | jq -r .status` == 'ACTIVATED' &&   `echo $StartStopOICSchedule` == 'Start' ]]
+  then start_schedule_iar "START" $iar_id
+  echo -e "$j_integration_id |✓ Integration Schedule Started Successfully" |& tee -a $l_summary_file
+  elif [[ `echo $o_iar_status | jq -r .status` == 'CONFIGURED' ]]
+  then echo -e "$j_integration_id |✖ Integration Schedule Can Not Be Stopped or Started As - INTEGRATION IS NOT IN ACTIVE" |& tee -a $l_summary_file
+    elif [[ `echo $o_iar_status | jq -r .status` == 'HTTP 404 Not Found' ]]
+    then echo -e "$j_integration_id |✖ INTEGRATION IS NOT FOUND" |& tee -a $l_summary_file
+    else echo -e "END"
+    fi
+done

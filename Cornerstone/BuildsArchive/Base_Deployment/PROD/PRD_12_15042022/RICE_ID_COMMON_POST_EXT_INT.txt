@@ -1,0 +1,62 @@
+✓ Interface directory exists for rice-id: COMMON_POST_EXT_INT 
+Fetching the components...
+✖ OIC Artifacts
+✖ Report-Data Model Artifacts
+✖ Report-Layout Artifacts
+✓ DB Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON_POST_EXT_INT/DB/Master/WSC_COMMON_POST_EXT_INT_MASTER.sql
+---------DATABASE DEPLOYMENT----------
+EXECUTING WSC_AHCS_DASHBOARD_PKG.sql
+
+Package WSC_AHCS_DASHBOARD compiled
+
+EXECUTING WSC_AHCS_DASHBOARD_PKG_BODY.sql
+
+Package Body WSC_AHCS_DASHBOARD compiled
+
+EXECUTING WSC_AHCS_DASHBOARD1_V.sql
+
+Materialized view "FININT"."WSC_AHCS_DASHBOARD1_V" created.
+
+
+Comment created.
+
+EXECUTING WSC_COMMON_AHCS_PURGING_PKG_SPEC.sql
+
+Package WSC_AHCS_PURGING_PKG compiled
+
+EXECUTING WSC_COMMON_AHCS_PURGING_PKG_BODY.sql
+
+Package Body WSC_AHCS_PURGING_PKG compiled
+
+EXECUTING WSC_UNIVERSAL_PKG.sql
+
+Package WSC_UNIVERSAL_PKG compiled
+
+EXECUTING WSC_UNIVERSAL_PKG_BODY.sql
+
+Package Body WSC_UNIVERSAL_PKG compiled
+
+EXECUTING WSC_AHCS_DASHBOARD1_DOWNLOAD_PROC.sql
+
+Procedure WSC_AHCS_DASHBOARD1_DOWNLOAD compiled
+
+EXECUTING WSC_COMMON_GRANT_JOB_SCHEDULER.sql
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+EXECUTING DIGITALPULSE_XX_APEX_USER_SECURITY_PKG_SPEC.sql
+
+Package XX_APEX_USER_SECURITY_PKG compiled
+
+EXECUTING DIGITALPULSE_XX_APEX_USER_SECURITY_PKG_BODY.sql
+
+Package Body XX_APEX_USER_SECURITY_PKG compiled
+
+
+Commit complete.
+
+--------------------------------------

@@ -1,0 +1,419 @@
+[2022-07-14 15:58:10] Build scheduled. Build started by user depandya@deloitte.com
+[2022-07-14 15:58:10] Build task id: ab02f8d2-4d3a-4feb-b48f-47111b9dc8ca
+[2022-07-14 15:58:10] Waiting to obtain  executor [Anixter - VM Deploy Template] to start the execution of the build
+[2022-07-14 15:58:32] Executor obtained. Type: VM Template: Anixter - VM Deploy Template Executor VM ID: 32467
+[2022-07-14 15:58:32] Build execution started.
+[2022-07-14 15:58:32] 
+[2022-07-14 15:58:32] 
+[2022-07-14 15:58:32] Parameters in this job: 
+[2022-07-14 15:58:32] ------------------------------------------------------------------
+[2022-07-14 15:58:32] defect_id = OC-9
+[2022-07-14 15:58:32] connectiondetails_password = ********
+[2022-07-14 15:58:32] EXECUTOR_TYPE = VM
+[2022-07-14 15:58:32] TASKID = ab02f8d2-4d3a-4feb-b48f-47111b9dc8ca
+[2022-07-14 15:58:32] ------------------------------------------------------------------
+[2022-07-14 15:58:32] Git: Checkout directory is github relative to the workspace root.
+[2022-07-14 15:58:32] Git: git version 2.2.2
+[2022-07-14 15:58:32] Git: Fetching from remote repository https://mkg-sandbox-anixterpaas.developer.ocp.oraclecloud.com/mkg-sandbox-anixterpaas/s/mkg-sandbox-anixterpaas_cornerstone_39047/scm/Cornerstone.git
+[2022-07-14 15:58:32] /bin/git fetch --tags https://mkg-sandbox-anixterpaas.developer.ocp.oraclecloud.com/mkg-sandbox-anixterpaas/s/mkg-sandbox-anixterpaas_cornerstone_39047/scm/Cornerstone.git +refs/heads/*:refs/remotes/origin/* 
+[2022-07-14 15:58:41] Git: Checking out branch main
+[2022-07-14 15:58:41] Git: Done
+[2022-07-14 15:58:41] BEGIN shell script execution with /bin/sh -ex
+[2022-07-14 15:58:41] + l_file_prefix=DEFECT_ID_
+[2022-07-14 15:58:41] + l_summary_file=DEFECT_ID_OC-9_SUMMARY.txt
+[2022-07-14 15:58:41] + l_payload_start_bar='##############PAYLOAD START################'
+[2022-07-14 15:58:41] + l_payload_end_bar='##############PAYLOAD   END################'
+[2022-07-14 15:58:41] ++ cat github/Miscellaneous/ArtifactDesigner_Components/PropertiesFile/artifact_individual/artifact_indv_sec.json
+[2022-07-14 15:58:41] + indi_sec_tpl8='"#section_name#":[
+[2022-07-14 15:58:41] 		#section_data#
+[2022-07-14 15:58:41] ]'
+[2022-07-14 15:58:41] ++ cat github/Miscellaneous/ArtifactDesigner_Components/PropertiesFile/artifact_individual/artifact_indv_sec_data.json
+[2022-07-14 15:58:41] + indi_sec_data_tpl8='{
+[2022-07-14 15:58:41] 	"name":"#name#",
+[2022-07-14 15:58:41] 	"contains_error":"#contains_error#",
+[2022-07-14 15:58:41] 	"payload":"#payload#"
+[2022-07-14 15:58:41] }'
+[2022-07-14 15:58:41] + indi_sec_name=
+[2022-07-14 15:58:41] + section_list_data=
+[2022-07-14 15:58:41] + cp github/Miscellaneous/ArtifactDesigner_Components/PropertiesFile/artifact_individual/artifact_individual.json OC-9_indi_html_data.json
+[2022-07-14 15:58:41] + echo -----------------------------------------------------------------------
+[2022-07-14 15:58:41] -----------------------------------------------------------------------
+[2022-07-14 15:58:41] ++ gpg -d --batch --passphrase ******** github/PROD/connection_details.gpg
+[2022-07-14 15:58:42] + v_con_details='{
+[2022-07-14 15:58:42] 	"PASSWORDS" : {
+[2022-07-14 15:58:42] 		"DEV_DB":"Winter2021",
+[2022-07-14 15:58:42] 		"DEV_OIC":"WescoAnixter@12345678901234567890",
+[2022-07-14 15:58:42] 		"DEV_RPT":"j89uu(L0?",
+[2022-07-14 15:58:42] 		"DEV_DGTP":"DigitalPulse",
+[2022-07-14 15:58:42] 		"SIT_DGTP":"DigitalPulse",
+[2022-07-14 15:58:42] 		"UAT_DB":"WinTer##2022",
+[2022-07-14 15:58:42] 		"UAT_OIC":"WescoAnixter@12345678901234567890",
+[2022-07-14 15:58:42] 		"UAT_RPT":"Fbhsil&4(67g",
+[2022-07-14 15:58:42] 		"SIT2_RPT":"Welcome@123",
+[2022-07-14 15:58:42] 		"PRD_DGTP":"DigitalPulse##22",
+[2022-07-14 15:58:42] 		"PRD_RPT":"e+u8KbxR$(2r4/Xz$M_s^",
+[2022-07-14 15:58:42] 		"PRD_OIC":"WescoAnixterProd@12345678901234567890",
+[2022-07-14 15:58:42] 		"PRD_DB":"WinTer##2022",
+[2022-07-14 15:58:42] 		"PSA_DB":"Winter2021",
+[2022-07-14 15:58:42] 		"PSA_OIC":"WescoAnixter@12345678901234567890",
+[2022-07-14 15:58:42] 		"PSA_RPT":"e+u8KbxR$(2r4/Xz$M_s^"
+[2022-07-14 15:58:42] 	},
+[2022-07-14 15:58:42] 	"URL" :{
+[2022-07-14 15:58:42] 		"DEV_DB":"txndev.subashpcidtrnli.vcnaxepcidev.oraclevcn.com",
+[2022-07-14 15:58:42] 		"DEV_OIC":"https://aicdev-anixterpaas.integration.ocp.oraclecloud.com",
+[2022-07-14 15:58:42] 		"DEV_RPT":"https://eklm-dev20.fa.us2.oraclecloud.com",
+[2022-07-14 15:58:42] 		"DEV_DGTP":"txndev.subashpcidtrnli.vcnaxepcidev.oraclevcn.com",
+[2022-07-14 15:58:42] 		"SIT_DGTP":"ptxntra.subashtrapcidtr.vcnaxepcidev.oraclevcn.com",
+[2022-07-14 15:58:42] 		"UAT_DB":"ptxntr.subashtrapcidtr.vcnaxepcidev.oraclevcn.com",
+[2022-07-14 15:58:42] 		"UAT_OIC":"https://aictr-anixterpaas.integration.ocp.oraclecloud.com",
+[2022-07-14 15:58:42] 		"UAT_RPT":"https://eklm-dev21.fa.us2.oraclecloud.com",
+[2022-07-14 15:58:42] 		"SIT2_RPT":"https://eklm-dev22.fa.us2.oraclecloud.com",
+[2022-07-14 15:58:42] 		"PRD_DGTP":"PTXNPRD.anixter.com",
+[2022-07-14 15:58:42] 		"PRD_RPT":"https://eklm.fa.us2.oraclecloud.com",
+[2022-07-14 15:58:42] 		"PRD_OIC":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com",
+[2022-07-14 15:58:42] 		"PRD_DB":"PTXNPRD.anixter.com",
+[2022-07-14 15:58:42] 		"PSA_DB":"ptxnstg.subashtrapcidtr.vcnaxepcidev.oraclevcn.com",
+[2022-07-14 15:58:42] 		"PSA_OIC":"https://aicstage-anixterpaas.integration.ocp.oraclecloud.com",
+[2022-07-14 15:58:42] 		"PSA_RPT":"https://eklm-test.fa.us2.oraclecloud.com"
+[2022-07-14 15:58:42] 		
+[2022-07-14 15:58:42] 	}
+[2022-07-14 15:58:42] }'
+[2022-07-14 15:58:42] ++ pwd
+[2022-07-14 15:58:42] + v_home=/data/cibuild/ab02f8d2-4d3a-4feb-b48f-47111b9dc8ca/workspace
+[2022-07-14 15:58:42] + t_report=
+[2022-07-14 15:58:42] + v_check_oic=FALSE
+[2022-07-14 15:58:42] + v_check_db=FALSE
+[2022-07-14 15:58:42] + v_check_report=FALSE
+[2022-07-14 15:58:42] + v_oic_arti=
+[2022-07-14 15:58:42] + v_report_arti=
+[2022-07-14 15:58:42] + v_db_arti=
+[2022-07-14 15:58:42] + v_defectfix_file_path=github/PROD/DefectFix/Defect_OC-9.json
+[2022-07-14 15:58:42] + set +x
+[2022-07-14 15:58:42] ✓ Defect Fix file is present
+[2022-07-14 15:58:42] ✓ Defect Fix File syntax is correct
+[2022-07-14 15:58:42] + echo 'Parsing file for the components to be deployed as fix...'
+[2022-07-14 15:58:42] Parsing file for the components to be deployed as fix...
+[2022-07-14 15:58:42] ++ jq .OIC github/PROD/DefectFix/Defect_OC-9.json
+[2022-07-14 15:58:42] + j_oic_arti='[
+[2022-07-14 15:58:42]   "PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar"
+[2022-07-14 15:58:42] ]'
+[2022-07-14 15:58:42] ++ jq .Report github/PROD/DefectFix/Defect_OC-9.json
+[2022-07-14 15:58:42] + j_report_arti='[]'
+[2022-07-14 15:58:42] ++ jq .DB github/PROD/DefectFix/Defect_OC-9.json
+[2022-07-14 15:58:42] + j_db_arti='[]'
+[2022-07-14 15:58:42] ++ echo '[' '"PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar"' ']'
+[2022-07-14 15:58:42] ++ jq '. | length'
+[2022-07-14 15:58:42] + j_oic_arti_len=1
+[2022-07-14 15:58:42] ++ echo '[]'
+[2022-07-14 15:58:42] ++ jq '. | length'
+[2022-07-14 15:58:42] + j_report_arti_len=0
+[2022-07-14 15:58:42] ++ echo '[]'
+[2022-07-14 15:58:42] ++ jq '. | length'
+[2022-07-14 15:58:42] + j_db_arti_len=0
+[2022-07-14 15:58:42] + [[ 1 != 0 ]]
+[2022-07-14 15:58:42] + echo '✓ OIC Artifacts'
+[2022-07-14 15:58:42] ✓ OIC Artifacts
+[2022-07-14 15:58:42] + v_check_oic=TRUE
+[2022-07-14 15:58:42] + (( i=0 ))
+[2022-07-14 15:58:42] + (( i < 1 ))
+[2022-07-14 15:58:42] ++ echo '[' '"PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar"' ']'
+[2022-07-14 15:58:42] ++ jq '.[0]'
+[2022-07-14 15:58:42] ++ sed 's|"||g'
+[2022-07-14 15:58:42] + v_oic_arti=PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar,
+[2022-07-14 15:58:42] ++ echo '[' '"PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar"' ']'
+[2022-07-14 15:58:42] ++ jq '.[0]'
+[2022-07-14 15:58:42] ++ sed 's|"||g'
+[2022-07-14 15:58:42] + echo -e '\t•\tPROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar'
+[2022-07-14 15:58:42] 	•	PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar
+[2022-07-14 15:58:42] + (( i++  ))
+[2022-07-14 15:58:42] + (( i < 1 ))
+[2022-07-14 15:58:42] + [[ 0 != 0 ]]
+[2022-07-14 15:58:42] + echo '✖ Report Artifacts'
+[2022-07-14 15:58:42] ✖ Report Artifacts
+[2022-07-14 15:58:42] + [[ 0 != 0 ]]
+[2022-07-14 15:58:42] + echo '✖ DB Artifacts'
+[2022-07-14 15:58:42] ✖ DB Artifacts
+[2022-07-14 15:58:42] + [[ FALSE == \T\R\U\E ]]
+[2022-07-14 15:58:42] + [[ TRUE == \T\R\U\E ]]
+[2022-07-14 15:58:42] + indi_sec_name=',"INTEGRATION"'
+[2022-07-14 15:58:42] + echo '--------INTEGRATION DEPLOYMENT--------'
+[2022-07-14 15:58:42] --------INTEGRATION DEPLOYMENT--------
+[2022-07-14 15:58:42] + filetype=
+[2022-07-14 15:58:42] + iar_id=
+[2022-07-14 15:58:42] + import_put_post=PUT
+[2022-07-14 15:58:42] + user=FIN_INT
+[2022-07-14 15:58:42] + pass=WescoAnixterProd@12345678901234567890
+[2022-07-14 15:58:42] + base_url=https://aicprod-anixterpaas.integration.ocp.oraclecloud.com
+[2022-07-14 15:58:42] + iar_check_url=/ic/api/integration/v1/integrations/
+[2022-07-14 15:58:42] + iar_deac_act_url=/ic/api/integration/v1/integrations/
+[2022-07-14 15:58:42] + iar_import_url=/ic/api/integration/v1/integrations/archive
+[2022-07-14 15:58:42] + par_check_url=/ic/api/integration/v1/packages/
+[2022-07-14 15:58:42] + par_import_url=/ic/api/integration/v1/packages/archive
+[2022-07-14 15:58:42] + V_FILEPATHS=PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar,
+[2022-07-14 15:58:42] + echo 'Recieved Filepath: PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar,'
+[2022-07-14 15:58:42] Recieved Filepath: PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar,
+[2022-07-14 15:58:42] + echo 'Iterating over filepaths and processing for deployment....'
+[2022-07-14 15:58:42] Iterating over filepaths and processing for deployment....
+[2022-07-14 15:58:42] + indi_sec_oic='"#section_name#":[
+[2022-07-14 15:58:42] 		#section_data#
+[2022-07-14 15:58:42] ]'
+[2022-07-14 15:58:42] + indi_sec_data_list_oic=
+[2022-07-14 15:58:42] + for filepath in '${V_FILEPATHS//,/ }'
+[2022-07-14 15:58:42] + filepath=github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar
+[2022-07-14 15:58:42] + indi_sec_data_oic='{
+[2022-07-14 15:58:42] 	"name":"#name#",
+[2022-07-14 15:58:42] 	"contains_error":"#contains_error#",
+[2022-07-14 15:58:42] 	"payload":"#payload#"
+[2022-07-14 15:58:42] }'
+[2022-07-14 15:58:42] + oic_payload=
+[2022-07-14 15:58:42] + echo -e '\tProcessing file: github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar\n'
+[2022-07-14 15:58:42] 	Processing file: github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar
+[2022-07-14 15:58:42] + [[ github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar == *.par ]]
+[2022-07-14 15:58:42] + filetype=IAR
+[2022-07-14 15:58:42] + oic_payload='<br>FileType: INTERGARTION ARCHIVE'
+[2022-07-14 15:58:42] + echo -e '\tⓘ\tFileType: INTERGARTION ARCHIVE'
+[2022-07-14 15:58:42] 	ⓘ	FileType: INTERGARTION ARCHIVE
+[2022-07-14 15:58:42] + generating_iar_id github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar %7C
+[2022-07-14 15:58:42] ++ echo github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar
+[2022-07-14 15:58:42] ++ awk -F / '{print $NF}'
+[2022-07-14 15:58:42] + ex_fn=WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar
+[2022-07-14 15:58:42] ++ echo WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar
+[2022-07-14 15:58:42] ++ awk -F _ '{print length($0)-length($NF)}'
+[2022-07-14 15:58:42] + pos=29
+[2022-07-14 15:58:42] ++ echo WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar
+[2022-07-14 15:58:42] ++ awk -v pos=29 -v repl=%7C '{print substr($0,1,pos-1) repl substr($0,pos+1)}'
+[2022-07-14 15:58:42] ++ sed -e s/.iar//g
+[2022-07-14 15:58:42] + iar_id=WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000
+[2022-07-14 15:58:42] + oic_payload='<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000'
+[2022-07-14 15:58:42] ++ curl -s -u FIN_INT:WescoAnixterProd@12345678901234567890 -H 'Accept: application/json' https://aicprod-anixterpaas.integration.ocp.oraclecloud.com/ic/api/integration/v1/integrations/WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000
+[2022-07-14 15:58:42] + o_iar_status='{"apipId":"","code":"WES_WSC_GBL_GL_COA_MAP_TO_BI","compatible":true,"created":"2022-04-15T14:24:20.097+0000","createdBy":"FIN_INT","dependencies":{"connections":[{"id":"WSC_DB_CONN","name":"WSC_DB_Conn","role":"SOURCE_AND_TARGET","status":"CONFIGURED","type":"dbaasdatabase","usage":19},{"id":"OIC_SFTP","name":"WSC_SFTP_Conn","role":"TARGET","status":"CONFIGURED","type":"ftp","usage":7}],"integrations":[{"code":"WESCO_WSC_GBL_COMMO_ERROR_INTER","version":"01.00.0000"}]},"deploymentType":"","description":"","endPointURI":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/integrations/WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000/schedule/jobs","endPoints":[{"connection":{"agentRequired":false,"agentSupported":false,"id":"WSC_DB_CONN","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/WSC_DB_CONN","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/WSC_DB_CONN","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"GetCOAMappingData","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"OIC_SFTP","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/OIC_SFTP","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/OIC_SFTP","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"WriteFileToSFTP","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"WSC_DB_CONN","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/WSC_DB_CONN","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/WSC_DB_CONN","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"GetMinMaxCCID","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"OIC_SFTP","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/OIC_SFTP","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/OIC_SFTP","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"WriteDoneFile","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"PRESEEDED_COLLOCATED_CONN_1741","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/PRESEEDED_COLLOCATED_CONN_1741","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/PRESEEDED_COLLOCATED_CONN_1741","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"CallDPStratCOAExport","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"PRESEEDED_COLLOCATED_CONN_1741","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/PRESEEDED_COLLOCATED_CONN_1741","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/PRESEEDED_COLLOCATED_CONN_1741","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"CallDPEndCOAExport","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"PRESEEDED_COLLOCATED_CONN_1741","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/PRESEEDED_COLLOCATED_CONN_1741","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/PRESEEDED_COLLOCATED_CONN_1741","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"CallGlobalFaultHandlerToLogAndNotify","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"OIC_SFTP","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/OIC_SFTP","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/OIC_SFTP","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"WriteControlFile","role":"TARGET"}],"id":"WES_WSC_GBL_GL_COA_MAP_TO_BI|01.00.0000","isCloneAllowed":false,"isViewAllowed":false,"keywords":"","lastUpdated":"2022-04-19T07:39:43.135+0000","lastUpdatedBy":"FIN_INT","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/integrations/WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/integrations/WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000","rel":"canonical"}],"lockedFlag":false,"name":"Wesco_WSC_GBL_GL_COA_Mapping_to_BI_Syst_Interface","packageName":"WSC_COMMON_INTERFACE","pattern":"Scheduled","patternDescription":"Scheduled","payloadTracingEnabledFlag":true,"percentageComplete":100,"projectType":"DEVELOPED","publishFlag":false,"recordEnabledFlag":false,"scheduleApplicableFlag":true,"scheduleDefinedFlag":true,"smartTags":"","status":"ACTIVATED","stopScheduleForDeactivation":false,"style":"FREEFORM","styleDescription":"Orchestration","submitNowURI":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/integrations/WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000/schedule/jobs","tempCopyExists":false,"totalEndPoints":0,"tracingEnabledFlag":true,"trackingInstanceName":"start Time","trackingVariables":[{"id":"tracking_var_1","name":"start Time","output":{"messageContextRef":{"refUri":"messagecontext_7"},"name":"output_8"},"primary":true,"refUri":"","role":"tracking_var_1","xpath":"/schedule/startTime"},{"id":"tracking_var_2","name":"tracking_var_2","output":{"messageContextRef":{"refUri":"messagecontext_9"},"name":"output_10"},"primary":false,"refUri":"","role":"tracking_var_2","xpath":""},{"id":"tracking_var_3","name":"tracking_var_3","output":{"messageContextRef":{"refUri":"messagecontext_11"},"name":"output_12"},"primary":false,"refUri":"","role":"tracking_var_3","xpath":""}],"version":"01.00.0000","warningMsg":"ACTIVATE_PUBLISH_NO_CONN"}'
+[2022-07-14 15:58:42] ++ jq -r .status
+[2022-07-14 15:58:42] ++ echo '{"apipId":"","code":"WES_WSC_GBL_GL_COA_MAP_TO_BI","compatible":true,"created":"2022-04-15T14:24:20.097+0000","createdBy":"FIN_INT","dependencies":{"connections":[{"id":"WSC_DB_CONN","name":"WSC_DB_Conn","role":"SOURCE_AND_TARGET","status":"CONFIGURED","type":"dbaasdatabase","usage":19},{"id":"OIC_SFTP","name":"WSC_SFTP_Conn","role":"TARGET","status":"CONFIGURED","type":"ftp","usage":7}],"integrations":[{"code":"WESCO_WSC_GBL_COMMO_ERROR_INTER","version":"01.00.0000"}]},"deploymentType":"","description":"","endPointURI":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/integrations/WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000/schedule/jobs","endPoints":[{"connection":{"agentRequired":false,"agentSupported":false,"id":"WSC_DB_CONN","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/WSC_DB_CONN","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/WSC_DB_CONN","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"GetCOAMappingData","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"OIC_SFTP","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/OIC_SFTP","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/OIC_SFTP","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"WriteFileToSFTP","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"WSC_DB_CONN","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/WSC_DB_CONN","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/WSC_DB_CONN","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"GetMinMaxCCID","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"OIC_SFTP","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/OIC_SFTP","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/OIC_SFTP","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"WriteDoneFile","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"PRESEEDED_COLLOCATED_CONN_1741","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/PRESEEDED_COLLOCATED_CONN_1741","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/PRESEEDED_COLLOCATED_CONN_1741","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"CallDPStratCOAExport","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"PRESEEDED_COLLOCATED_CONN_1741","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/PRESEEDED_COLLOCATED_CONN_1741","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/PRESEEDED_COLLOCATED_CONN_1741","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"CallDPEndCOAExport","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"PRESEEDED_COLLOCATED_CONN_1741","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/PRESEEDED_COLLOCATED_CONN_1741","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/PRESEEDED_COLLOCATED_CONN_1741","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"CallGlobalFaultHandlerToLogAndNotify","role":"TARGET"},{"connection":{"agentRequired":false,"agentSupported":false,"id":"OIC_SFTP","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/OIC_SFTP","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/connections/OIC_SFTP","rel":"canonical"}],"metadataDownloadSupportedFlag":false,"testStatus":false},"name":"WriteControlFile","role":"TARGET"}],"id":"WES_WSC_GBL_GL_COA_MAP_TO_BI|01.00.0000","isCloneAllowed":false,"isViewAllowed":false,"keywords":"","lastUpdated":"2022-04-19T07:39:43.135+0000","lastUpdatedBy":"FIN_INT","links":[{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/integrations/WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000","rel":"self"},{"href":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/integrations/WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000","rel":"canonical"}],"lockedFlag":false,"name":"Wesco_WSC_GBL_GL_COA_Mapping_to_BI_Syst_Interface","packageName":"WSC_COMMON_INTERFACE","pattern":"Scheduled","patternDescription":"Scheduled","payloadTracingEnabledFlag":true,"percentageComplete":100,"projectType":"DEVELOPED","publishFlag":false,"recordEnabledFlag":false,"scheduleApplicableFlag":true,"scheduleDefinedFlag":true,"smartTags":"","status":"ACTIVATED","stopScheduleForDeactivation":false,"style":"FREEFORM","styleDescription":"Orchestration","submitNowURI":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com:443/ic/api/integration/v1/integrations/WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000/schedule/jobs","tempCopyExists":false,"totalEndPoints":0,"tracingEnabledFlag":true,"trackingInstanceName":"start' 'Time","trackingVariables":[{"id":"tracking_var_1","name":"start' 'Time","output":{"messageContextRef":{"refUri":"messagecontext_7"},"name":"output_8"},"primary":true,"refUri":"","role":"tracking_var_1","xpath":"/schedule/startTime"},{"id":"tracking_var_2","name":"tracking_var_2","output":{"messageContextRef":{"refUri":"messagecontext_9"},"name":"output_10"},"primary":false,"refUri":"","role":"tracking_var_2","xpath":""},{"id":"tracking_var_3","name":"tracking_var_3","output":{"messageContextRef":{"refUri":"messagecontext_11"},"name":"output_12"},"primary":false,"refUri":"","role":"tracking_var_3","xpath":""}],"version":"01.00.0000","warningMsg":"ACTIVATE_PUBLISH_NO_CONN"}'
+[2022-07-14 15:58:42] + [[ ACTIVATED == \A\C\T\I\V\A\T\E\D ]]
+[2022-07-14 15:58:42] + echo -e '\tⓘ\tIntegration Status: ACTIVATED'
+[2022-07-14 15:58:42] 	ⓘ	Integration Status: ACTIVATED
+[2022-07-14 15:58:42] + oic_payload='<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....'
+[2022-07-14 15:58:42] + echo -e '\tⓘ\tDeactivating the integration.....'
+[2022-07-14 15:58:42] 	ⓘ	Deactivating the integration.....
+[2022-07-14 15:58:42] + de_activate_iar DE-ACTIVATE WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000
+[2022-07-14 15:58:42] + [[ DE-ACTIVATE == \A\C\T\I\V\A\T\E ]]
+[2022-07-14 15:58:42] + payload='{"status":"CONFIGURED"}'
+[2022-07-14 15:58:42] ++ curl -s -u FIN_INT:WescoAnixterProd@12345678901234567890 -X POST -H Content-Type:application/json -H X-HTTP-Method-Override:PATCH -d '{"status":"CONFIGURED"}' https://aicprod-anixterpaas.integration.ocp.oraclecloud.com/ic/api/integration/v1/integrations/WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000
+[2022-07-14 15:58:53] + o_de_act='{"type":"integrationRs","links":[],"status":"CONFIGURED","compatible":false,"lockedFlag":false,"scheduleApplicableFlag":false,"scheduleDefinedFlag":false,"tempCopyExists":false,"totalEndPoints":0,"stopScheduleForDeactivation":true,"stopScheduleType":["Schedule"]}'
+[2022-07-14 15:58:53] ++ echo '{"type":"integrationRs","links":[],"status":"CONFIGURED","compatible":false,"lockedFlag":false,"scheduleApplicableFlag":false,"scheduleDefinedFlag":false,"tempCopyExists":false,"totalEndPoints":0,"stopScheduleForDeactivation":true,"stopScheduleType":["Schedule"]}'
+[2022-07-14 15:58:53] ++ jq -r .status
+[2022-07-14 15:58:53] + [[ CONFIGURED != \C\O\N\F\I\G\U\R\E\D ]]
+[2022-07-14 15:58:53] + echo -e '\t✓\tgithub/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED'
+[2022-07-14 15:58:53] 	✓	github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED
+[2022-07-14 15:58:53] + oic_payload='<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED'
+[2022-07-14 15:58:53] + echo -e '\tⓘ\tDeploying Integration.....'
+[2022-07-14 15:58:53] 	ⓘ	Deploying Integration.....
+[2022-07-14 15:58:53] + oic_payload='<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....'
+[2022-07-14 15:58:53] ++ curl -s -w '%{http_code}' -X PUT -u FIN_INT:WescoAnixterProd@12345678901234567890 -H Accept:application/json -F 'file=@github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar;type=application/octet-stream' https://aicprod-anixterpaas.integration.ocp.oraclecloud.com/ic/api/integration/v1/integrations/archive
+[2022-07-14 15:58:54] + o_iar_deploy=204
+[2022-07-14 15:58:54] + oic_payload='<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br>'
+[2022-07-14 15:58:54] + oic_payload='<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED'
+[2022-07-14 15:58:54] + echo -e '\t✓\tgithub/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED'
+[2022-07-14 15:58:54] 	✓	github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED
+[2022-07-14 15:58:54] + echo -e '\tⓘ\tActivating Integration.....'
+[2022-07-14 15:58:54] 	ⓘ	Activating Integration.....
+[2022-07-14 15:58:54] + [[ 204 != \2\0* ]]
+[2022-07-14 15:58:54] ++ echo '{' '"name":"#name#",' '"contains_error":"#contains_error#",' '"payload":"#payload#"' '}'
+[2022-07-14 15:58:54] ++ sed 's|#contains_error#|no|g'
+[2022-07-14 15:58:54] + indi_sec_data_oic='{ "name":"#name#", "contains_error":"no", "payload":"#payload#" }'
+[2022-07-14 15:58:54] ++ echo '{' '"name":"#name#",' '"contains_error":"no",' '"payload":"#payload#"' '}'
+[2022-07-14 15:58:54] ++ sed 's|#payload#|<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED|g'
+[2022-07-14 15:58:54] + indi_sec_data_oic='{ "name":"#name#", "contains_error":"no", "payload":"<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED" }'
+[2022-07-14 15:58:54] ++ echo github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar
+[2022-07-14 15:58:54] ++ rev
+[2022-07-14 15:58:54] ++ cut -d / -f1
+[2022-07-14 15:58:54] ++ rev
+[2022-07-14 15:58:54] + tp_name=WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar
+[2022-07-14 15:58:54] ++ echo '{' '"name":"#name#",' '"contains_error":"no",' '"payload":"<br>FileType:' INTERGARTION 'ARCHIVE<br>Checking' the status of the integration by integration ID : 'WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration' Status: 'ACTIVATED<br>Deactivating' the 'integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DE-ACTIVATED<br>Deploying' 'Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DEPLOYED"' '}'
+[2022-07-14 15:58:54] ++ sed 's|#name#|WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar|g'
+[2022-07-14 15:58:54] + indi_sec_data_oic='{ "name":"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar", "contains_error":"no", "payload":"<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED" }'
+[2022-07-14 15:58:54] + indi_sec_data_list_oic=',{ "name":"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar", "contains_error":"no", "payload":"<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED" }'
+[2022-07-14 15:58:54] + echo -e '\n\n'
+[2022-07-14 15:58:54] ++ echo ',{' '"name":"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar",' '"contains_error":"no",' '"payload":"<br>FileType:' INTERGARTION 'ARCHIVE<br>Checking' the status of the integration by integration ID : 'WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration' Status: 'ACTIVATED<br>Deactivating' the 'integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DE-ACTIVATED<br>Deploying' 'Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DEPLOYED"' '}'
+[2022-07-14 15:58:54] ++ cut -d , -f2-
+[2022-07-14 15:58:54] + indi_sec_data_list_oic='{ "name":"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar", "contains_error":"no", "payload":"<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED" }'
+[2022-07-14 15:58:54] ++ echo '"#section_name#":[' '#section_data#' ']'
+[2022-07-14 15:58:54] ++ sed 's|#section_data#|{ "name":"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar", "contains_error":"no", "payload":"<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED" }|g'
+[2022-07-14 15:58:54] + indi_sec_oic='"#section_name#":[ { "name":"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar", "contains_error":"no", "payload":"<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED" } ]'
+[2022-07-14 15:58:54] ++ sed 's|#section_name#|INTEGRATION|g'
+[2022-07-14 15:58:54] ++ echo '"#section_name#":[' '{' '"name":"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar",' '"contains_error":"no",' '"payload":"<br>FileType:' INTERGARTION 'ARCHIVE<br>Checking' the status of the integration by integration ID : 'WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration' Status: 'ACTIVATED<br>Deactivating' the 'integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DE-ACTIVATED<br>Deploying' 'Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DEPLOYED"' '}' ']'
+[2022-07-14 15:58:54] + indi_sec_oic='"INTEGRATION":[ { "name":"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar", "contains_error":"no", "payload":"<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED" } ]'
+[2022-07-14 15:58:54] + section_list_data=',"INTEGRATION":[ { "name":"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar", "contains_error":"no", "payload":"<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED" } ]'
+[2022-07-14 15:58:54] + echo --------------------------------------
+[2022-07-14 15:58:54] --------------------------------------
+[2022-07-14 15:58:54] + [[ FALSE == \T\R\U\E ]]
+[2022-07-14 15:58:54] ++ cut -d , -f2-
+[2022-07-14 15:58:54] ++ echo ',"INTEGRATION"'
+[2022-07-14 15:58:54] + indi_sec_name='"INTEGRATION"'
+[2022-07-14 15:58:54] ++ echo ',"INTEGRATION":[' '{' '"name":"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar",' '"contains_error":"no",' '"payload":"<br>FileType:' INTERGARTION 'ARCHIVE<br>Checking' the status of the integration by integration ID : 'WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration' Status: 'ACTIVATED<br>Deactivating' the 'integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DE-ACTIVATED<br>Deploying' 'Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DEPLOYED"' '}' ']'
+[2022-07-14 15:58:54] ++ cut -d , -f2-
+[2022-07-14 15:58:54] + section_list_data='"INTEGRATION":[ { "name":"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar", "contains_error":"no", "payload":"<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED" } ]'
+[2022-07-14 15:58:54] + sed -i 's|#artifact_name#||g' OC-9_indi_html_data.json
+[2022-07-14 15:58:54] + sed -i 's|#section#|"INTEGRATION"|g' OC-9_indi_html_data.json
+[2022-07-14 15:58:54] + sed -i 's|#section_list_data#|"INTEGRATION":[ { "name":"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar", "contains_error":"no", "payload":"<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED" } ]|g' OC-9_indi_html_data.json
+[2022-07-14 15:58:54] + echo -----------------------------------------------------------------------
+[2022-07-14 15:58:54] -----------------------------------------------------------------------
+[2022-07-14 15:58:54] END shell script execution
+[2022-07-14 15:58:54] BEGIN shell script execution with /bin/sh -ex
+[2022-07-14 15:58:54] ++ cat github/Miscellaneous/ArtifactDesigner_Components/Html/artifact_individual/artifact_individual_section_card.txt
+[2022-07-14 15:58:54] + temp_section='<div class="card text-white bg-secondary my-5 py-4 text-center">
+[2022-07-14 15:58:54]     <div class="card-body"><p class="text-white m-0">##section_name##</p></div>
+[2022-07-14 15:58:54] </div>
+[2022-07-14 15:58:54] <div class="row gx-4 gx-lg-5">
+[2022-07-14 15:58:54] 	<div class="col-lg-12" style="margin-bottom:20px">
+[2022-07-14 15:58:54] 		<div id="accordion">
+[2022-07-14 15:58:54] 		##section_data##
+[2022-07-14 15:58:54] 		</div>
+[2022-07-14 15:58:54] 	</div>
+[2022-07-14 15:58:54] </div>'
+[2022-07-14 15:58:54] ++ cat github/Miscellaneous/ArtifactDesigner_Components/Html/artifact_individual/artifact_individual_section_details_comp.txt
+[2022-07-14 15:58:54] + temp_section_detail='<div class="card">
+[2022-07-14 15:58:54] <div class="card-header" id="heading##artifact_id##">
+[2022-07-14 15:58:54]   <h5 class="mb-0">
+[2022-07-14 15:58:54] 	<button class="btn btn-link" data-toggle="collapse" data-target="###artifact_id##" aria-expanded="false" aria-controls="##artifact_id##">
+[2022-07-14 15:58:54] 	  ##name##
+[2022-07-14 15:58:54] 	</button>
+[2022-07-14 15:58:54] 	<button class="btn disabled" style="background-color:##status_color##;"></button>
+[2022-07-14 15:58:54]   </h5>
+[2022-07-14 15:58:54] </div>
+[2022-07-14 15:58:54] <div id="##artifact_id##" class="collapse" aria-labelledby="heading##artifact_id##" data-parent="#accordion">
+[2022-07-14 15:58:54]   <div class="card-body">
+[2022-07-14 15:58:54] 	##payload##
+[2022-07-14 15:58:54]   </div>
+[2022-07-14 15:58:54] </div>
+[2022-07-14 15:58:54] </div>'
+[2022-07-14 15:58:54] + for indi in '*_indi_html_data.json'
+[2022-07-14 15:58:54] + echo xxxxxxxPAYLOADxxxxxxxxx
+[2022-07-14 15:58:54] xxxxxxxPAYLOADxxxxxxxxx
+[2022-07-14 15:58:54] + cat OC-9_indi_html_data.json
+[2022-07-14 15:58:54] {
+[2022-07-14 15:58:54] 	"artifact_name":"",
+[2022-07-14 15:58:54] 	"section":["INTEGRATION"],
+[2022-07-14 15:58:54] 	"section_data":{
+[2022-07-14 15:58:54] 		"INTEGRATION":[ { "name":"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar", "contains_error":"no", "payload":"<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED" } ]
+[2022-07-14 15:58:54] 	}
+[2022-07-14 15:58:54] }+ echo xxxxxxxPAYLOADxxxxxxxxx
+[2022-07-14 15:58:54] xxxxxxxPAYLOADxxxxxxxxx
+[2022-07-14 15:58:54] ++ echo OC-9_indi_html_data.json
+[2022-07-14 15:58:54] ++ cut -d _ -f1
+[2022-07-14 15:58:54] + indi_name=OC-9
+[2022-07-14 15:58:54] + cp github/Miscellaneous/ArtifactDesigner_Components/Html/artifact_individual/artifact_individual.txt DEFECT_ID_OC-9.html
+[2022-07-14 15:58:54] ++ jq .artifact_name OC-9_indi_html_data.json
+[2022-07-14 15:58:54] + j_artifact_name='""'
+[2022-07-14 15:58:54] ++ jq .section OC-9_indi_html_data.json
+[2022-07-14 15:58:54] + j_sections='[
+[2022-07-14 15:58:54]   "INTEGRATION"
+[2022-07-14 15:58:54] ]'
+[2022-07-14 15:58:54] ++ jq .section_data OC-9_indi_html_data.json
+[2022-07-14 15:58:54] + j_sections_data='{
+[2022-07-14 15:58:54]   "INTEGRATION": [
+[2022-07-14 15:58:54]     {
+[2022-07-14 15:58:54]       "name": "WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar",
+[2022-07-14 15:58:54]       "contains_error": "no",
+[2022-07-14 15:58:54]       "payload": "<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED"
+[2022-07-14 15:58:54]     }
+[2022-07-14 15:58:54]   ]
+[2022-07-14 15:58:54] }'
+[2022-07-14 15:58:54] ++ echo '[' '"INTEGRATION"' ']'
+[2022-07-14 15:58:54] ++ jq '. | length'
+[2022-07-14 15:58:54] + j_sections_len=1
+[2022-07-14 15:58:54] + d_arti_individual_data=
+[2022-07-14 15:58:54] + (( i=0 ))
+[2022-07-14 15:58:54] + (( i<1 ))
+[2022-07-14 15:58:54] ++ echo '[' '"INTEGRATION"' ']'
+[2022-07-14 15:58:54] ++ jq '.[0]'
+[2022-07-14 15:58:54] ++ sed 's/\"//g'
+[2022-07-14 15:58:54] + j_section_name=INTEGRATION
+[2022-07-14 15:58:54] ++ jq .INTEGRATION
+[2022-07-14 15:58:54] ++ echo '{' '"INTEGRATION":' '[' '{' '"name":' '"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar",' '"contains_error":' '"no",' '"payload":' '"<br>FileType:' INTERGARTION 'ARCHIVE<br>Checking' the status of the integration by integration ID : 'WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration' Status: 'ACTIVATED<br>Deactivating' the 'integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DE-ACTIVATED<br>Deploying' 'Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DEPLOYED"' '}' ']' '}'
+[2022-07-14 15:58:54] + j_section_name_data='[
+[2022-07-14 15:58:54]   {
+[2022-07-14 15:58:54]     "name": "WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar",
+[2022-07-14 15:58:54]     "contains_error": "no",
+[2022-07-14 15:58:54]     "payload": "<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED"
+[2022-07-14 15:58:54]   }
+[2022-07-14 15:58:54] ]'
+[2022-07-14 15:58:54] ++ echo '[' '{' '"name":' '"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar",' '"contains_error":' '"no",' '"payload":' '"<br>FileType:' INTERGARTION 'ARCHIVE<br>Checking' the status of the integration by integration ID : 'WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration' Status: 'ACTIVATED<br>Deactivating' the 'integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DE-ACTIVATED<br>Deploying' 'Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DEPLOYED"' '}' ']'
+[2022-07-14 15:58:54] ++ jq '. | length'
+[2022-07-14 15:58:54] + j_section_name_data_len=1
+[2022-07-14 15:58:54] + d_section='<div class="card text-white bg-secondary my-5 py-4 text-center">
+[2022-07-14 15:58:54]     <div class="card-body"><p class="text-white m-0">##section_name##</p></div>
+[2022-07-14 15:58:54] </div>
+[2022-07-14 15:58:54] <div class="row gx-4 gx-lg-5">
+[2022-07-14 15:58:54] 	<div class="col-lg-12" style="margin-bottom:20px">
+[2022-07-14 15:58:54] 		<div id="accordion">
+[2022-07-14 15:58:54] 		##section_data##
+[2022-07-14 15:58:54] 		</div>
+[2022-07-14 15:58:54] 	</div>
+[2022-07-14 15:58:54] </div>'
+[2022-07-14 15:58:54] + d_section_data=
+[2022-07-14 15:58:54] + (( j=0 ))
+[2022-07-14 15:58:54] + (( j<1 ))
+[2022-07-14 15:58:54] + section_data_obj='<div class="card">
+[2022-07-14 15:58:54] <div class="card-header" id="heading##artifact_id##">
+[2022-07-14 15:58:54]   <h5 class="mb-0">
+[2022-07-14 15:58:54] 	<button class="btn btn-link" data-toggle="collapse" data-target="###artifact_id##" aria-expanded="false" aria-controls="##artifact_id##">
+[2022-07-14 15:58:54] 	  ##name##
+[2022-07-14 15:58:54] 	</button>
+[2022-07-14 15:58:54] 	<button class="btn disabled" style="background-color:##status_color##;"></button>
+[2022-07-14 15:58:54]   </h5>
+[2022-07-14 15:58:54] </div>
+[2022-07-14 15:58:54] <div id="##artifact_id##" class="collapse" aria-labelledby="heading##artifact_id##" data-parent="#accordion">
+[2022-07-14 15:58:54]   <div class="card-body">
+[2022-07-14 15:58:54] 	##payload##
+[2022-07-14 15:58:54]   </div>
+[2022-07-14 15:58:54] </div>
+[2022-07-14 15:58:54] </div>'
+[2022-07-14 15:58:54] ++ jq '.[0].name'
+[2022-07-14 15:58:54] ++ echo '[' '{' '"name":' '"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar",' '"contains_error":' '"no",' '"payload":' '"<br>FileType:' INTERGARTION 'ARCHIVE<br>Checking' the status of the integration by integration ID : 'WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration' Status: 'ACTIVATED<br>Deactivating' the 'integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DE-ACTIVATED<br>Deploying' 'Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DEPLOYED"' '}' ']'
+[2022-07-14 15:58:54] ++ sed 's/\"//g'
+[2022-07-14 15:58:54] + j_name=WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar
+[2022-07-14 15:58:54] ++ echo '[' '{' '"name":' '"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar",' '"contains_error":' '"no",' '"payload":' '"<br>FileType:' INTERGARTION 'ARCHIVE<br>Checking' the status of the integration by integration ID : 'WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration' Status: 'ACTIVATED<br>Deactivating' the 'integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DE-ACTIVATED<br>Deploying' 'Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DEPLOYED"' '}' ']'
+[2022-07-14 15:58:54] ++ jq '.[0].contains_error'
+[2022-07-14 15:58:54] ++ sed 's/\"//g'
+[2022-07-14 15:58:54] + j_contains_error=no
+[2022-07-14 15:58:54] ++ jq '.[0].payload'
+[2022-07-14 15:58:54] ++ echo '[' '{' '"name":' '"WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar",' '"contains_error":' '"no",' '"payload":' '"<br>FileType:' INTERGARTION 'ARCHIVE<br>Checking' the status of the integration by integration ID : 'WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration' Status: 'ACTIVATED<br>Deactivating' the 'integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DE-ACTIVATED<br>Deploying' 'Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DEPLOYED"' '}' ']'
+[2022-07-14 15:58:54] ++ sed 's/\"//g'
+[2022-07-14 15:58:54] + j_payload='<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED'
+[2022-07-14 15:58:54] ++ sed 's|##name##|WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar|g'
+[2022-07-14 15:58:54] ++ echo '<div' 'class="card">' '<div' 'class="card-header"' 'id="heading##artifact_id##">' '<h5' 'class="mb-0">' '<button' 'class="btn' 'btn-link"' 'data-toggle="collapse"' 'data-target="###artifact_id##"' 'aria-expanded="false"' 'aria-controls="##artifact_id##">' '##name##' '</button>' '<button' 'class="btn' 'disabled"' 'style="background-color:##status_color##;"></button>' '</h5>' '</div>' '<div' 'id="##artifact_id##"' 'class="collapse"' 'aria-labelledby="heading##artifact_id##"' 'data-parent="#accordion">' '<div' 'class="card-body">' '##payload##' '</div>' '</div>' '</div>'
+[2022-07-14 15:58:54] + section_data_obj='<div class="card"> <div class="card-header" id="heading##artifact_id##"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="###artifact_id##" aria-expanded="false" aria-controls="##artifact_id##"> WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar </button> <button class="btn disabled" style="background-color:##status_color##;"></button> </h5> </div> <div id="##artifact_id##" class="collapse" aria-labelledby="heading##artifact_id##" data-parent="#accordion"> <div class="card-body"> ##payload## </div> </div> </div>'
+[2022-07-14 15:58:54] ++ echo '<div' 'class="card">' '<div' 'class="card-header"' 'id="heading##artifact_id##">' '<h5' 'class="mb-0">' '<button' 'class="btn' 'btn-link"' 'data-toggle="collapse"' 'data-target="###artifact_id##"' 'aria-expanded="false"' 'aria-controls="##artifact_id##">' WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar '</button>' '<button' 'class="btn' 'disabled"' 'style="background-color:##status_color##;"></button>' '</h5>' '</div>' '<div' 'id="##artifact_id##"' 'class="collapse"' 'aria-labelledby="heading##artifact_id##"' 'data-parent="#accordion">' '<div' 'class="card-body">' '##payload##' '</div>' '</div>' '</div>'
+[2022-07-14 15:58:54] ++ sed 's|##artifact_id##|INTEGRATION0|g'
+[2022-07-14 15:58:54] + section_data_obj='<div class="card"> <div class="card-header" id="headingINTEGRATION0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#INTEGRATION0" aria-expanded="false" aria-controls="INTEGRATION0"> WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar </button> <button class="btn disabled" style="background-color:##status_color##;"></button> </h5> </div> <div id="INTEGRATION0" class="collapse" aria-labelledby="headingINTEGRATION0" data-parent="#accordion"> <div class="card-body"> ##payload## </div> </div> </div>'
+[2022-07-14 15:58:54] + [[ no == \n\o ]]
+[2022-07-14 15:58:54] ++ echo '<div' 'class="card">' '<div' 'class="card-header"' 'id="headingINTEGRATION0">' '<h5' 'class="mb-0">' '<button' 'class="btn' 'btn-link"' 'data-toggle="collapse"' 'data-target="#INTEGRATION0"' 'aria-expanded="false"' 'aria-controls="INTEGRATION0">' WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar '</button>' '<button' 'class="btn' 'disabled"' 'style="background-color:##status_color##;"></button>' '</h5>' '</div>' '<div' 'id="INTEGRATION0"' 'class="collapse"' 'aria-labelledby="headingINTEGRATION0"' 'data-parent="#accordion">' '<div' 'class="card-body">' '##payload##' '</div>' '</div>' '</div>'
+[2022-07-14 15:58:54] ++ sed 's|##status_color##|green|g'
+[2022-07-14 15:58:54] + section_data_obj='<div class="card"> <div class="card-header" id="headingINTEGRATION0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#INTEGRATION0" aria-expanded="false" aria-controls="INTEGRATION0"> WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="INTEGRATION0" class="collapse" aria-labelledby="headingINTEGRATION0" data-parent="#accordion"> <div class="card-body"> ##payload## </div> </div> </div>'
+[2022-07-14 15:58:54] ++ echo '<div' 'class="card">' '<div' 'class="card-header"' 'id="headingINTEGRATION0">' '<h5' 'class="mb-0">' '<button' 'class="btn' 'btn-link"' 'data-toggle="collapse"' 'data-target="#INTEGRATION0"' 'aria-expanded="false"' 'aria-controls="INTEGRATION0">' WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar '</button>' '<button' 'class="btn' 'disabled"' 'style="background-color:green;"></button>' '</h5>' '</div>' '<div' 'id="INTEGRATION0"' 'class="collapse"' 'aria-labelledby="headingINTEGRATION0"' 'data-parent="#accordion">' '<div' 'class="card-body">' '##payload##' '</div>' '</div>' '</div>'
+[2022-07-14 15:58:54] +++ echo -e '<br>FileType:' INTERGARTION 'ARCHIVE<br>Checking' the status of the integration by integration ID : 'WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration' Status: 'ACTIVATED<br>Deactivating' the 'integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' 'DE-ACTIVATED<br>Deploying' 'Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar:' DEPLOYED
+[2022-07-14 15:58:54] ++ sed 's|##payload##|<br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED|g'
+[2022-07-14 15:58:54] + section_data_obj='<div class="card"> <div class="card-header" id="headingINTEGRATION0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#INTEGRATION0" aria-expanded="false" aria-controls="INTEGRATION0"> WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="INTEGRATION0" class="collapse" aria-labelledby="headingINTEGRATION0" data-parent="#accordion"> <div class="card-body"> <br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED </div> </div> </div>'
+[2022-07-14 15:58:54] + d_section_data='<div class="card"> <div class="card-header" id="headingINTEGRATION0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#INTEGRATION0" aria-expanded="false" aria-controls="INTEGRATION0"> WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="INTEGRATION0" class="collapse" aria-labelledby="headingINTEGRATION0" data-parent="#accordion"> <div class="card-body"> <br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED </div> </div> </div>'
+[2022-07-14 15:58:54] + (( j++  ))
+[2022-07-14 15:58:54] + (( j<1 ))
+[2022-07-14 15:58:54] ++ echo '<div' 'class="card' text-white bg-secondary my-5 py-4 'text-center">' '<div' 'class="card-body"><p' 'class="text-white' 'm-0">##section_name##</p></div>' '</div>' '<div' 'class="row' gx-4 'gx-lg-5">' '<div' 'class="col-lg-12"' 'style="margin-bottom:20px">' '<div' 'id="accordion">' '##section_data##' '</div>' '</div>' '</div>'
+[2022-07-14 15:58:54] ++ sed 's|##section_name##|INTEGRATION|g'
+[2022-07-14 15:58:54] + d_section='<div class="card text-white bg-secondary my-5 py-4 text-center"> <div class="card-body"><p class="text-white m-0">INTEGRATION</p></div> </div> <div class="row gx-4 gx-lg-5"> <div class="col-lg-12" style="margin-bottom:20px"> <div id="accordion"> ##section_data## </div> </div> </div>'
+[2022-07-14 15:58:54] ++ echo '<div' 'class="card' text-white bg-secondary my-5 py-4 'text-center">' '<div' 'class="card-body"><p' 'class="text-white' 'm-0">INTEGRATION</p></div>' '</div>' '<div' 'class="row' gx-4 'gx-lg-5">' '<div' 'class="col-lg-12"' 'style="margin-bottom:20px">' '<div' 'id="accordion">' '##section_data##' '</div>' '</div>' '</div>'
+[2022-07-14 15:58:54] ++ sed 's|##section_data##|<div class="card"> <div class="card-header" id="headingINTEGRATION0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#INTEGRATION0" aria-expanded="false" aria-controls="INTEGRATION0"> WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="INTEGRATION0" class="collapse" aria-labelledby="headingINTEGRATION0" data-parent="#accordion"> <div class="card-body"> <br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED </div> </div> </div>|g'
+[2022-07-14 15:58:54] + d_section='<div class="card text-white bg-secondary my-5 py-4 text-center"> <div class="card-body"><p class="text-white m-0">INTEGRATION</p></div> </div> <div class="row gx-4 gx-lg-5"> <div class="col-lg-12" style="margin-bottom:20px"> <div id="accordion"> <div class="card"> <div class="card-header" id="headingINTEGRATION0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#INTEGRATION0" aria-expanded="false" aria-controls="INTEGRATION0"> WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="INTEGRATION0" class="collapse" aria-labelledby="headingINTEGRATION0" data-parent="#accordion"> <div class="card-body"> <br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED </div> </div> </div> </div> </div> </div>'
+[2022-07-14 15:58:54] + d_arti_individual_data='<div class="card text-white bg-secondary my-5 py-4 text-center"> <div class="card-body"><p class="text-white m-0">INTEGRATION</p></div> </div> <div class="row gx-4 gx-lg-5"> <div class="col-lg-12" style="margin-bottom:20px"> <div id="accordion"> <div class="card"> <div class="card-header" id="headingINTEGRATION0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#INTEGRATION0" aria-expanded="false" aria-controls="INTEGRATION0"> WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="INTEGRATION0" class="collapse" aria-labelledby="headingINTEGRATION0" data-parent="#accordion"> <div class="card-body"> <br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED </div> </div> </div> </div> </div> </div>'
+[2022-07-14 15:58:54] + (( i++  ))
+[2022-07-14 15:58:54] + (( i<1 ))
+[2022-07-14 15:58:54] + sed -i 's|##artifact_name##|""|g' DEFECT_ID_OC-9.html
+[2022-07-14 15:58:54] + sed -i 's|##artifact_individual_data##|<div class="card text-white bg-secondary my-5 py-4 text-center"> <div class="card-body"><p class="text-white m-0">INTEGRATION</p></div> </div> <div class="row gx-4 gx-lg-5"> <div class="col-lg-12" style="margin-bottom:20px"> <div id="accordion"> <div class="card"> <div class="card-header" id="headingINTEGRATION0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#INTEGRATION0" aria-expanded="false" aria-controls="INTEGRATION0"> WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="INTEGRATION0" class="collapse" aria-labelledby="headingINTEGRATION0" data-parent="#accordion"> <div class="card-body"> <br>FileType: INTERGARTION ARCHIVE<br>Checking the status of the integration by integration ID : WES_WSC_GBL_GL_COA_MAP_TO_BI%7C01.00.0000<br>Integration Status: ACTIVATED<br>Deactivating the integration.....<br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DE-ACTIVATED<br>Deploying Integration.....<br><hr>204<hr><br><br>github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar: DEPLOYED </div> </div> </div> </div> </div> </div>|g' DEFECT_ID_OC-9.html
+[2022-07-14 15:58:54] END shell script execution
+[2022-07-14 15:58:55] Following artifacts are archived:
+[2022-07-14 15:58:55]   -->  DEFECT_ID_OC-9_SUMMARY.txt
+[2022-07-14 15:58:55]   -->  DEFECT_ID_OC-9.html
+Executor log size 67.4 KB (67,434)
+[2022-07-14 15:58:56] 
+[2022-07-14 15:58:56] Build completed.
+[2022-07-14 15:58:56] Status: DONE Result: SUCCESSFUL Duration: 24 sec

@@ -1,0 +1,136 @@
+name: DeployInterfaceComponents
+on:
+  workflow_dispatch:
+    inputs:
+      riceid:
+        description: 'for ex. INT002'
+        required: true
+        type: string
+        default: 'NA'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      V_CHECK_OIC: ${{ steps.pre-req.outputs.v_check_oic }}
+      V_CHECK_DB: ${{ steps.pre-req.outputs.v_check_db }}
+      V_CHECK_REPORT: ${{ steps.pre-req.outputs.v_check_report }}
+      V_OIC_ARTI: ${{ steps.pre-req.outputs.v_oic_arti }}
+      V_REPORT_ARTI: ${{ steps.pre-req.outputs.v_report_arti }}
+      V_DB_ARTI: ${{ steps.pre-req.outputs.v_db_arti }}
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      # Runs a set of commands for deploying OIC Integration
+      #✓✖
+      #${{ github.event.inputs.riceid }}#${{ github.event.inputs.riceid }}
+      - id: pre-req
+        name: Pre-requistes for migration
+        run: |
+            echo '----------------'
+            #intialize global variable
+            v_check_oic='FALSE'
+            v_check_db='FALSE'
+            v_check_report='FALSE'
+            v_oic_arti=''
+            v_report_arti=''
+            v_db_arti='' 
+            #checking if for given rice id folder is present
+            #✓✖
+            if [ -d $V_RICEID_FILE_PATH ]
+            then
+                echo "✓ Interface directory exists for rice-id: $V_RICEID "
+                echo "Fetching the components..."
+                #Checking OIC artifacts
+                if [ -d $V_RICEID_FILE_PATH'/OIC/Integration' ]
+                then
+                    echo "✓ OIC Artifacts"
+                    v_check_oic='TRUE'
+                    for arti in "${V_RICEID_FILE_PATH}/OIC/Integration"/*
+                    do
+                       echo -e "\t•\t$arti" 
+                       v_oic_arti=$v_oic_arti$arti',' 
+                    done
+                else
+                    echo "✖ OIC Artifacts"
+                fi
+                #Checking Report - Data Model artifacts
+                if [ -d $V_RICEID_FILE_PATH'/Report/Data_Model' ]
+                then
+                    echo "✓ Report-Data Model Artifacts"
+                    v_check_report='TRUE'
+                    for arti in "${V_RICEID_FILE_PATH}/Report/Data_Model"/*
+                    do
+                       echo -e "\t•\t$arti"
+                       v_report_arti=$v_report_arti$arti',' 
+                    done
+                else
+                    echo "✖ Report-Data Model Artifacts"
+                fi
+                #Checking Report - Layout artifacts
+                if [ -d $V_RICEID_FILE_PATH'/Report/Layout' ]
+                then
+                    echo "✓ Report-Layout Artifacts"
+                    v_check_report='TRUE'
+                    for arti in "${V_RICEID_FILE_PATH}/Report/Layout"/*
+                    do
+                       echo -e "\t•\t$arti" 
+                       v_report_arti=$v_report_arti$arti',' 
+                    done
+                else
+                    echo "✖ Report-Layout Artifacts"
+                fi
+                #Checking DB artifacts
+                if [ -d $V_RICEID_FILE_PATH'/DB/Master' ]
+                then
+                    echo "✓ DB Artifacts"
+                    v_check_db='TRUE'
+                    for arti in "${V_RICEID_FILE_PATH}/DB/Master"/*
+                    do
+                       echo -e "\t•\t$arti"
+                       v_db_arti=$v_db_arti$arti',' 
+                    done
+                else
+                    echo "✖ DB Artifacts"
+                fi
+            else
+                echo "✖ Interface directory exist for rice-id: $V_RICEID "
+                echo "Exiting with error"
+                exit 2;
+            fi
+            #Setting output of this run
+            echo "::set-output name=V_CHECK_OIC::$v_check_oic"
+            echo "::set-output name=V_CHECK_DB::$v_check_db"
+            echo "::set-output name=V_CHECK_REPORT::$v_check_report"
+            echo "::set-output name=V_OIC_ARTI::$v_oic_arti"
+            echo "::set-output name=V_REPORT_ARTI::$v_report_arti"
+            echo "::set-output name=V_DB_ARTI::$v_db_arti" 
+            echo '----------------' 
+        env:
+          V_RICEID: "${{ github.event.inputs.riceid }}"
+          V_RICEID_FILE_PATH: "./NON-PROD/1A/ERP/RTR/AHCS/Interface/${{ github.event.inputs.riceid }}"
+  call-OIC-workflow-passing-data:
+    needs: build
+    if: ${{ needs.build.outputs.V_CHECK_OIC == 'TRUE'}}
+    uses: WESCO-International/Cornerstone/.github/workflows/OIC_DeployArtifacts.yml@main
+    with:
+      filepaths: ${{ needs.build.outputs.V_OIC_ARTI }}
+      
+  call-REPORT-workflow-passing-data:
+    needs: build
+    if: ${{ needs.build.outputs.V_CHECK_REPORT == 'TRUE'}}
+    uses: WESCO-International/Cornerstone/.github/workflows/Report_DeployArtifacts.yml@main
+    with:
+      reportpath: ${{ needs.build.outputs.V_REPORT_ARTI }}
+
+  call-DB-workflow-passing-data:
+    needs: build
+    if: ${{ needs.build.outputs.V_CHECK_DB == 'TRUE'}}
+    uses: WESCO-International/Cornerstone/.github/workflows/reuse_workflow.yml@main
+    with:
+      fname: 'DB'
+  Post-build-workflow:
+    needs: [call-OIC-workflow-passing-data,call-REPORT-workflow-passing-data,call-DB-workflow-passing-data]
+    if: ${{ always() && contains(needs.*.result, 'success') && !(contains(needs.*.result, 'failure')) }}
+    uses: WESCO-International/Cornerstone/.github/workflows/reuse_workflow.yml@main
+    with:
+      fname: 'POST'

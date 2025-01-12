@@ -1,0 +1,11 @@
+{
+	"Rice_id" : "TEST2",
+	"OIC": ["NON-PROD/1B/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_COMMO_EMAIL_INTER_01.00.0000.iar",
+	        "NON-PROD/1B/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_COMMO_ERROR_INTER_01.00.0000.iar",
+            "NON-PROD/1B/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar"],
+	"DB": [],
+	"Report": [],
+	"TARGET_DB": "",
+	"TARGET_OIC": "DEV_OIC",
+	"TARGET_RPT": ""
+}

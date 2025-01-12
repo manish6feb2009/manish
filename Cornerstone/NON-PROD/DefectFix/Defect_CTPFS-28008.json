@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "CTPFS-28008",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/Report/DataModels/WSC_AXE_GBL_RPT099_Inter_Intra_Transaction_Error_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "RPT101",
+	"OIC": [],
+	"DB": [],
+    "Report":["NON-PROD/1A/ERP/RTR/GL/Reports/RPT101/Report/DataModels/Wesco_GBL_GL_RPT101_GL_Journal_Attachments_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "SIT2_RPT"
+}

@@ -1,0 +1,17 @@
+{
+	"CodePackEnv": "NON-PROD",
+	"RICE_ID": [
+"NON-PROD/Cornerstone/ERP/RTR/FA/Reports/RPT234",
+"NON-PROD/Cornerstone/ERP/RTR/FA/Reports/RPT225",
+"NON-PROD/Cornerstone/ERP/RTR/FA/Reports/RPT226",
+"NON-PROD/Cornerstone/ERP/RTR/FA/Reports/RPT227",
+"NON-PROD/Cornerstone/ERP/RTR/FA/Reports/RPT228",
+"NON-PROD/Cornerstone/ERP/RTR/FA/Reports/RPT229",
+"NON-PROD/Cornerstone/ERP/RTR/FA/Reports/RPT230",
+"NON-PROD/Cornerstone/ERP/RTR/FA/Reports/RPT231",
+"NON-PROD/Cornerstone/ERP/RTR/FA/Reports/RPT232",
+"NON-PROD/Cornerstone/ERP/RTR/FA/Interface/INT245"],
+	"TARGET_DB": "DEV_DB",
+	"TARGET_OIC": "DEV_OIC",
+	"TARGET_RPT": "DEV_RPT"
+}

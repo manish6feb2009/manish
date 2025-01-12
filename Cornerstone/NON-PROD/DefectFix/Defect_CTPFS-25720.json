@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "CTPFS-25720",
+	"OIC": [],
+	"DB": ["NON-PROD/1B/ERP/RTR/AHCS/Interface/COMMON/DB/DefectFix/CTPFS-25720/WSC_COMMON_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "UAT2_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}

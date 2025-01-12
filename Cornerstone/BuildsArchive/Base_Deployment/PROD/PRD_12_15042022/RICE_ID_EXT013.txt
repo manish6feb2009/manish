@@ -1,0 +1,67 @@
+✓ Interface directory exists for rice-id: EXT013 
+Fetching the components...
+✖ OIC Artifacts
+✖ Report-Data Model Artifacts
+✖ Report-Layout Artifacts
+✓ DB Artifacts
+	•	github/PROD/1A/ERP/RTR/GL/Extension/EXT013/DB/Master/WSC_EXTENSION_013_MASTER.sql
+---------DATABASE DEPLOYMENT----------
+EXECUTING WSC_EXTENSION_013_SEQUENCE.sql
+
+Sequence "WSC_GL_USER_COA_MAPPING_H_S" created.
+
+
+Sequence "WSC_GL_USER_COA_MAPPING_T_S" created.
+
+
+Sequence "WSC_GL_USER_JOB_NAME_S" created.
+
+EXECUTING WSC_EXTENSION_013_TABLE.sql
+
+Table "WSC_GL_USER_COA_MAPPING_H" created.
+
+
+Table "WSC_GL_USER_COA_MAPPING_T" created.
+
+
+Table "WSC_GL_ADFDI_COA_MAPPING_T" created.
+
+
+Table "WSC_GL_ADFDI_EXCEL_TEMPLATE_T" created.
+
+EXECUTING WSC_EXTENSION_013_INDEX.sql
+
+Index "WSC_GL_USER_COA_MAPPING_BATCH_ID_I" created.
+
+
+Index "WSC_GL_USER_COA_MAPPING_COA_MAP_NAME_I" created.
+
+
+Index "WSC_GL_USER_ADFDI_MAPPING_BATCH_ID_I" created.
+
+
+Index "WSC_GL_USER_ADFDI_MAPPING_COA_MAP_NAME_I" created.
+
+EXECUTING WSC_EXTENSION_013_TRIGGER.sql
+
+Trigger WSC_USER_COA_MAPPING_BIR compiled
+
+
+Trigger WSC_GL_ADFDI_COA_MAPPING_BIR compiled
+
+EXECUTING WSC_EXTENSION_013_PROCEDURE.sql
+
+PL/SQL procedure successfully completed.
+
+EXECUTING WSC_USER_COA_TRANSFORMATION_PKG.sql
+
+Package WSC_USER_COA_TRANSFORMATION_PKG compiled
+
+EXECUTING WSC_USER_COA_TRANSFORMATION_PKG_BODY.sql
+
+Package Body WSC_USER_COA_TRANSFORMATION_PKG compiled
+
+
+Commit complete.
+
+--------------------------------------

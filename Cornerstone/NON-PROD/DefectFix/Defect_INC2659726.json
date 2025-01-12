@@ -1,0 +1,11 @@
+{
+	"Rice_id" : "INC2659726",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/GL/Reports/RPT048/Report/DataModels/Wesco_AXE_GBL_GL_RPT048_IC_Balance_Matrix_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT_RPT"
+}
+
+

@@ -1,0 +1,13 @@
+SET DEFINE OFF;
+Insert into WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T (Original,Reversal) VALUES ('5689','7396');
+Insert into WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T (Original,Reversal) VALUES ('1938','1948');
+Insert into WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T (Original,Reversal) VALUES ('2098','2054');
+Insert into WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T (Original,Reversal) VALUES ('3406','3406');
+Insert into WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T (Original,Reversal) VALUES ('7302','7392');
+Insert into WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T (Original,Reversal) VALUES ('7304','7394');
+Insert into WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T (Original,Reversal) VALUES ('7305','7395');
+Insert into WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T (Original,Reversal) VALUES ('7307','7395');
+Insert into WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T (Original,Reversal) VALUES ('7498','7499');
+Insert into WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T (Original,Reversal) VALUES ('7310','7397');
+Insert into WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T (Original,Reversal) VALUES ('7303','7393');
+Commit;

@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INT011",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1A/ERP/RTR/GL/Interface/INT011/Report/DataModels/Wesco_GBL_GL_INT011_GL_Journals_To_Teradata_Outbound_Interface_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT_RPT"
+}

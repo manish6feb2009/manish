@@ -1,0 +1,11 @@
+{
+	"Rice_id" : "CTPFS-21758",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/AHCS/Interface/INT044/Report/DataModels/Wesco_AXE_GBL_AHCS_INT044_AHCS_Data_to_IAP_AHCS_Balances_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/AHCS/Interface/INT044/Report/Layouts/Wesco_AXE_GBL_AHCS_INT044_AHCS_Data_to_IAP_AHCS_Balances_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}
+
+

@@ -1,0 +1,2 @@
+LookupType|Meaning|Description|ModuleKey|ModuleType
+WSC_DP_REPROTS_DETAILS_LKP|WSC_DP_REPROTS_DETAILS_LKP|Digital Pulse Reports Monitoring List|FndAppCommon|LBA

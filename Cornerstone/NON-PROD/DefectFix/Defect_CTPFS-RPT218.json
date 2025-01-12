@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "CTPFS-RPT218",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/IC/Reports/RPT218/Report/DataModels/Wesco_AXE_GBL_IC_RPT218_Intercompany_Reverse_Batch_Transaction_Detail_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/IC/Reports/RPT218/Report/Layouts/Wesco_AXE_GBL_IC_RPT218_Intercompany_Reverse_Batch_Transaction_Detail_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

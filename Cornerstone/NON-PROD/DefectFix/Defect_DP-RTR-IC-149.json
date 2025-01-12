@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "DP-RTR-IC-149",
+	"OIC": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/LSI/OIC/Integration/WESC_AXE_GBL_AHCS_COMM_LSI_IMPA__01.00.0000.iar"],
+	"DB": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/LSI/DB/DefectFix/DP-RTR-IC-149/WSC_LSI_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "UAT2_DB",
+	"TARGET_OIC": "UAT2_OIC",
+	"TARGET_RPT": ""
+}

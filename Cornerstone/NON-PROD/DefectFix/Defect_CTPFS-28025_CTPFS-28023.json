@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "CTPFS-28025_CTPFS-28023",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/GL/Reports/RPT026/Report/DataModels/Wesco_AXE_GBL_GL_RPT026_France_FEC_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/GL/Reports/RPT026/Report/Layouts/Wesco_AXE_GBL_GL_RPT026_France_FEC_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

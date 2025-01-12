@@ -1,0 +1,48 @@
+✓ Interface directory exists for rice-id: RPT004 
+Fetching the components...
+✖ OIC Artifacts
+✓ Report-Data Model Artifacts
+	•	github/PROD/1A/ERP/RTR/GL/Reports/RPT004/Report/DataModels/Journal Approval Data Model.xdm.catalog
+✓ Report-Layout Artifacts
+	•	github/PROD/1A/ERP/RTR/GL/Reports/RPT004/Report/Layouts/Journal Approval Report.xdo.catalog
+✖ DB Artifacts
+-----------REPORT DEPLOYMENT----------
+Recieved Filepath: github/PROD/1A/ERP/RTR/GL/Reports/RPT004/Report/DataModels/Journal Approval Data Model.xdm.catalog
+github/PROD/1A/ERP/RTR/GL/Reports/RPT004/Report/Layouts/Journal Approval Report.xdo.catalog
+
+	Processing file: github/PROD/1A/ERP/RTR/GL/Reports/RPT004/Report/DataModels/Journal Approval Data Model.xdm.catalog
+	ⓘ	Fetching property file  & exporting it: github/PROD/1A/ERP/RTR/GL/Reports/RPT004/Report/DataModels/Journal Approval Data Model.xdm.prop 
+	ⓘ	Creating Folder Structure if doesn't exists. Location: /shared/Custom/Financials/Workflow Notifications/General Ledger/Journals/Data Models
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:createFolderResult></sawsoap:createFolderResult></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	ⓘ	Importing report to location: /shared/Custom/Financials/Workflow Notifications/General Ledger/Journals/Data Models
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:pasteItem2Result></sawsoap:pasteItem2Result></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	✓	Report Imported: github/PROD/1A/ERP/RTR/GL/Reports/RPT004/Report/DataModels/Journal Approval Data Model.xdm.catalog
+
+	Processing file: github/PROD/1A/ERP/RTR/GL/Reports/RPT004/Report/Layouts/Journal Approval Report.xdo.catalog
+	ⓘ	Fetching property file  & exporting it: github/PROD/1A/ERP/RTR/GL/Reports/RPT004/Report/Layouts/Journal Approval Report.xdo.prop 
+	ⓘ	Creating Folder Structure if doesn't exists. Location: /shared/Custom/Financials/Workflow Notifications/General Ledger/Journals
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:createFolderResult></sawsoap:createFolderResult></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	ⓘ	Importing report to location: /shared/Custom/Financials/Workflow Notifications/General Ledger/Journals
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:pasteItem2Result></sawsoap:pasteItem2Result></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	✓	Report Imported: github/PROD/1A/ERP/RTR/GL/Reports/RPT004/Report/Layouts/Journal Approval Report.xdo.catalog
+--------------------------------------

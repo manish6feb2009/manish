@@ -1,0 +1,14 @@
+{
+	"Rice_id" : "OC-112",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/IC/Reports/RPT036/Report/Layouts/Wesco_AXE_GBL_IC_RPT036_Intercompany_Transaction_Detail_Report.xdo.catalog" ,
+	
+	"NON-PROD/Cornerstone/ERP/RTR/IC/Reports/RPT036/Report/DataModels/Wesco_AXE_GBL_IC_RPT036_Intercompany_Transaction_Detail_DM.xdm.catalog"
+     ],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}
+
+

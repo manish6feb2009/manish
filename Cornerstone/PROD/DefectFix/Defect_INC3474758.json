@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INC3474758",
+	"OIC": [],
+	"DB": ["PROD/Cornerstone/ERP/RTR/AHCS/Interface/COMMON/DB/Master/WSC_COMMON_MASTER_INC3474758.sql"],
+	"Report": [],
+	"TARGET_DB": "PRD_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}

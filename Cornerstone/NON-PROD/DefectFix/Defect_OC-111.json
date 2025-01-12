@@ -1,0 +1,10 @@
+{
+	"Rice_id" : "OC-111",
+	"OIC": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/INT184/OIC/Integration/WES_AXE_GBL_AHC_INT_PSFA_TO_DB_01.00.0000.iar",
+            "NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/INT184/OIC/Integration/WES_AXE_GB_AH_IN_PSF_DB_TO_UC_IN_01.00.0000.iar"],
+	"DB": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/INT184/DB/DefectFix/OC-111/WSC_INT184_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "UAT2_DB",
+	"TARGET_OIC": "UAT2_OIC",
+	"TARGET_RPT": ""
+}

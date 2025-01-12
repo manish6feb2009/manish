@@ -1,0 +1,12 @@
+{
+	"Rice_id" : "OC-208",
+	"OIC": [],
+	
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/GL/Reports/RPT233/Report/DataModels/Wesco_GBL_GL_RPT233_Balance_Sheet_Accounts_Not_Aligned_To_Accounts_Natural_Sign_DM.xdm.catalog",
+	           "NON-PROD/Cornerstone/ERP/RTR/GL/Reports/RPT233/Report/Layouts/Wesco_GBL_GL_RPT233_Balance_Sheet_Accounts_Not_Aligned_To_Accounts_Natural_Sign_Report.xdo.catalog"
+                  ],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}
+

@@ -1,0 +1,2 @@
+LookupType|Meaning|Description|ModuleKey|ModuleType
+WSC_AHCS_RECON_REPORT|WSC_AHCS_RECON_REPORT|WSC_AHCS_RECON_REPORT|FndAppCommon|LBA

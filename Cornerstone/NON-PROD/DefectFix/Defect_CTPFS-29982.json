@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "CTPFS-29982",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/AR/Interface/INT234_INT235/Report/DataModels/Wesco_AXE_GBL_AR_INT234_INT235_AR_Invoice_Balances_to_IAP_Teradata_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/AR/Interface/INT234_INT235/Report/Layouts/Wesco_AXE_GBL_AR_INT234_INT235_AR_Invoice_Balances_to_IAP_Teradata_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

@@ -1,0 +1,10 @@
+{
+	"Rice_id" : "OC-236",
+	"OIC": [],
+	
+	"Report": ["PROD/Cornerstone/ERP/RTR/GL/Reports/RPT047/Report/DataModels/Wesco_GBL_GL_RPT047_Trial_Balance_by_Entered_and_Accounted_Amounts_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "PRD_RPT"
+}
+

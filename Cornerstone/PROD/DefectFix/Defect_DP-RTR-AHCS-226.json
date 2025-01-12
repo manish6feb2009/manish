@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "DP-RTR-AHCS-226",
+	"OIC": ["PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT130/OIC/Integration/WESC_AXE_GBL_AHCS_COA_MAPP_SYNC__01.00.0000.iar"],
+	"DB": ["PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT130/DB/Master/WSC_AHCS_COA_SYNC_EXECUTION_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "PRD_DB",
+	"TARGET_OIC": "PRD_OIC",
+	"TARGET_RPT": ""
+}

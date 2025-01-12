@@ -1,0 +1,11 @@
+{
+	"Rice_id" : "INT041",
+	"OIC": [],
+	"DB": [],
+    "Report":["NON-PROD/1A/ERP/RTR/AHCS/Interface/INT041/Report/DataModels/Wesco_GBL_AHCS_INT041_Reconciliation_Balances_Interface_DM.xdm.catalog","NON-PROD/1A/ERP/RTR/AHCS/Interface/INT041/Report/Layouts/Wesco_GBL_AHCS_INT041_Reconciliation_Balances_To_Teradata_Outbound_Interface_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "SIT2_RPT"
+}
+
+

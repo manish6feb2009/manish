@@ -1,0 +1,10 @@
+{
+    "Rice_id" : "OC-97",
+    "OIC": [],
+    "DB": [],
+    "Report": ["NON-PROD/Cornerstone/ERP/RTR/AP/Reports/RPT019/Report/DataModels/Wesco_AXE_GBL_AP_RPT019_Non-material_IC_TB_Report_By_LE_Invoice_Level_DM.xdm.catalog", 
+               "NON-PROD/Cornerstone/ERP/RTR/AP/Reports/RPT019/Report/Layouts/Wesco_AXE_GBL_AP_RPT019_Non_Material_IC_TB_Report_By_LE_Invoice_Level_Report.xdo.catalog"],
+    "TARGET_DB": "",
+    "TARGET_OIC": "",
+    "TARGET_RPT": "UAT2_RPT"
+}

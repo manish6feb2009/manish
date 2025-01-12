@@ -1,0 +1,10 @@
+{
+	"Rice_id" : "INC2695052",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/GL/Reports/RPT016/Report/DataModels/Wesco_GBL_GL_RPT016_Flag_Incorrect_Exchange_Rates_on_Journal_DM.xdm.catalog", "NON-PROD/Cornerstone/ERP/RTR/GL/Reports/RPT016/Report/Layouts/Wesco_GBL_GL_RPT016_Flag_Incorrect_Exchange_Rates_on_Journal_Report.xdo.catalog" 
+     ],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT_RPT"
+}

@@ -1,0 +1,9 @@
+{
+	"CodePackEnv": "NON-PROD",
+	"RICE_ID": [
+		"NON-PROD/Cornerstone/ERP/RTR/Miscellaneous/Reports/RPT223"
+	],
+	"TARGET_RPT": "UAT2_RPT",
+        "TARGET_OIC": "",
+	"TARGET_DB": ""
+}

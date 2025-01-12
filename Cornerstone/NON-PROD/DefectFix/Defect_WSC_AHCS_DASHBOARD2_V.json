@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "WSC_AHCS_DASHBOARD2_V",
+	"OIC": [],
+	"DB": ["NON-PROD/1B/ERP/RTR/AHCS/Interface/COMMON/DB/Master/WSC_AHCS_DASHBOARD2_V.sql"],
+	"Report": [],
+	"TARGET_DB": "DEV_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}

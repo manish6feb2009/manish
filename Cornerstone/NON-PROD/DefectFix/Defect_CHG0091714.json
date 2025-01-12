@@ -1,0 +1,16 @@
+{
+	"Rice_id" : "CHG0091714",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/AHCS/Reports/RPT008/Report/DataModels/Wesco_GBL_AHCS_RPT008_Subledger_Period_Close_Exception_by_Ledger_Set_DM.xdm.catalog",
+	           "NON-PROD/1B/ERP/RTR/AHCS/Reports/RPT008/Report/Layouts/Wesco_GBL_AHCS_RPT008_Subledger_Period_Close_Exception_by_Ledger_Set_Report.xdo.catalog",
+               "NON-PROD/1B/ERP/RTR/AHCS/Reports/RPT007/Report/DataModels/Wesco_GBL_AHCS_RPT007_AHCS_to_GL_Reconciliation_DM.xdm.catalog",
+	           "NON-PROD/1B/ERP/RTR/AHCS/Reports/RPT007/Report/Layouts/Wesco_GBL_AHCS_RPT007_AHCS_to_GL_Reconciliation_Report.xdo.catalog",
+			   "NON-PROD/1B/ERP/RTR/AHCS/Interface/LSI/Report/DataModels/Wesco_GBL_AHCS_RPT100_LSI_Reconciliation_DM.xdm.catalog",
+	           "NON-PROD/1B/ERP/RTR/AHCS/Interface/LSI/Report/Layouts/Wesco_GBL_AHCS_RPT100_LSI_Reconciliation_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "SOAK_RPT"
+}
+
+

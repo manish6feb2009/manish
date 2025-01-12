@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INC2919535",
+	"OIC": ["PROD/Cornerstone/ERP/RTR/AHCS/Interface/INT241/OIC/Integration/WES_AXE_GBL_AHC_INT_JTI_TO_DB_IN_01.00.0000.iar"],
+	"DB": [],
+	"Report": [],
+	"TARGET_DB": "",
+	"TARGET_OIC": "PRD_OIC",
+	"TARGET_RPT": ""
+}

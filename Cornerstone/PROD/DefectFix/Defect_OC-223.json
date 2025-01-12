@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "RPT051",
+	"OIC": [],
+	"DB": [],
+  "Report":["PROD/Cornerstone/ERP/RTR/GL/Reports/RPT051/Report/DataModels/Wesco_GBL_GL_RPT051_Exchange_Rate_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "PRD_RPT"
+}

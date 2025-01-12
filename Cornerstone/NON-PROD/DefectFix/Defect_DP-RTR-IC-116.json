@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "RPT028",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/AP/Reports/RPT028/Report/DataModels/Wesco_AXE_GBL_AP_RPT028_Non_material_IC_AP_Report_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/AP/Reports/RPT028/Report/Layouts/Wesco_AXE_GBL_AP_RPT028_Non-material_IC_AP_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT_RPT"
+}

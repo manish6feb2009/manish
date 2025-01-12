@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "EXT001_002_014",
+	"OIC": [],
+	"DB": ["PROD/1A/ERP/RTR/GL/Extension/EXT001_002_014/DB/DefectFix/OC-64/WSC_EXTENSION_001_002_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "PRD_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}

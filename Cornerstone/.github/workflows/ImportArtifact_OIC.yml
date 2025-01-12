@@ -1,0 +1,42 @@
+name: CI Manually triggered workflow
+on:
+  workflow_dispatch:
+    branches: [ main ]
+    inputs:
+      filepath:
+        description: 'GIT FULL FILEPATH'
+        required: true
+        default: 'NON'
+      method:
+        description: 'PUT or POST'
+        required: true
+        default: 'PUT'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      
+      # Runs a set of commands for deploying OIC Integration
+      #tr -s ' ' $deployFileList | cut -d ' ' -f2
+      - name: Deploy ICS Files
+        run: |
+          echo '----------------'
+          user='abchakraborty@deloitte.com'
+          pass='WescoAnixter@123456789012345678'
+          #/usr/bin/git show --name-only | grep ".deploy" | cat > deployFileList
+          #cat deployFileList
+          #lcount=`wc -l deployFileList | cut -c1`
+          #if(("$lcount">0)); then
+           # cat deployFileList | while read df
+            #do
+            #   iarFile=`echo $df | sed 's/.deploy/.iar/g'`
+               echo ${{ github.event.inputs.filepath }}
+               curl -u "${user}:${pass}" -H "Accept: application/json" -X ${{ github.event.inputs.method }} -F "file=@${{ github.event.inputs.filepath }};type=application/octet-stream" https://aicdev-anixterpaas.integration.ocp.oraclecloud.com/ic/api/integration/v1/integrations/archive
+            #done 
+          #else
+           #exit 78;
+          #fi
+          echo '----------------'

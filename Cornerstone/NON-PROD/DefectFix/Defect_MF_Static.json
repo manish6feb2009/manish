@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "MF_Static",
+	"OIC": [],
+	"DB": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/COMMON/DB/DefectFix/MF_Static/WSC_COMMON_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "UAT2_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}

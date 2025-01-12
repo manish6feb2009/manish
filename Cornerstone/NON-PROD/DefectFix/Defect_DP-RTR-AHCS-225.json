@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "DP-RTR-AHCS-225",
+	"OIC": [""],
+	"DB": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT129/DB/Master/WSC_AHCS_TXN_PURGE_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "UAT2_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}

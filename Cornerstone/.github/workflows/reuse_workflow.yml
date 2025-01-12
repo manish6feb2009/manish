@@ -1,0 +1,34 @@
+name: reuse-test
+on:
+  workflow_dispatch:
+    inputs:
+      fname:
+        description: 'PUT or POST'
+        required: true
+        type: string
+        default: 'PUT'
+  workflow_call:
+    inputs:
+      fname:
+        description: 'PUT or POST'
+        required: true
+        type: string
+        default: 'DEFAULT'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Runs a set of commands for deploying OIC Integration
+      - name: RUN the data
+        env:
+          INPUT_DATA:
+        run: |
+          echo '----------------'
+          if [ ${{ github.event.workflow }} = '.github/workflows/reuse_workflow.yml' ] 
+          then 
+            INPUT_DATA=${{ github.event.inputs.fname }}
+          else
+            INPUT_DATA=${{ inputs.fname }}
+          fi
+          echo "$INPUT_DATA"
+          echo '----------------'

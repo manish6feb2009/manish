@@ -1,0 +1,14 @@
+{
+	"Rice_id" : "INC2676467",
+	"OIC": ["PROD/Cornerstone/ERP/RTR/AHCS/Interface/LSI/OIC/Integration/WES_WSC_GBL_LSI_AP_AR_RPT_TO_DB__01.00.0000.iar",
+	"PROD/Cornerstone/ERP/RTR/AHCS/Interface/LSI/OIC/Integration/WES_WSC_GBL_LSI_JOU_RPT_TO_DB_IN_01.00.0000.iar",
+	"PROD/Cornerstone/ERP/RTR/AHCS/Interface/LSI/OIC/Integration/WESC_AXE_GBL_AHCS_COMM_LSI_IMPA__01.00.0000.iar",
+	"PROD/Cornerstone/ERP/RTR/AHCS/Interface/LSI/OIC/Integration/WESC_WSC_GBL_LSI_CREA_AR_RECE_CA_01.00.0000.iar",
+	"PROD/Cornerstone/ERP/RTR/AHCS/Interface/LSI/OIC/Integration/WESC_WSC_GBL_LSI_CRED_MEMO_INV_C_01.00.0000.iar",
+	"PROD/Cornerstone/ERP/RTR/AHCS/Interface/LSI/OIC/Integration/WESC_WSC_GBL_LSI_CRED_MEMO_SCH_01.00.0000.iar"],
+	"DB": [],
+	"Report": [],
+	"TARGET_DB": "",
+	"TARGET_OIC": "PRD_OIC",
+	"TARGET_RPT": ""
+}

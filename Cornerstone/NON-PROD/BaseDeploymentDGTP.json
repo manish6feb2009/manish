@@ -1,0 +1,7 @@
+{
+    "CodePackEnv": "NON-PROD",
+    "RICE_ID": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/DIGITALPULSE"],
+    "TARGET_DB": "DEV_DGTP",
+    "TARGET_OIC": "",
+    "TARGET_RPT": ""
+}

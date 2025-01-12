@@ -1,0 +1,3 @@
+﻿DVM,WSC_AHCS_COMMON_PURGING_TABLE_DVM,Purging the Interface table look up,purging interface table
+RICE_ID,SUCCESS_DAYS,ERROR_DAYS
+INT_PURGE_001,1,2

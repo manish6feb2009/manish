@@ -1,0 +1,5 @@
+SET DEFINE OFF;
+
+@DP_RTR_AHCS_220.sql;
+
+commit;

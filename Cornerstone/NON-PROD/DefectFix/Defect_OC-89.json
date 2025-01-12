@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "OC-89",
+	"OIC": [],
+	"DB": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/COMMON_POST_EXT_INT/DB/DefectFix/OC-89/WSC_COMMON_POST_EXT_INT_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "UAT_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}

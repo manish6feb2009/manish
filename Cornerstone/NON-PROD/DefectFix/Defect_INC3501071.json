@@ -1,0 +1,10 @@
+{
+	"Rice_id" : "INC3501071",
+	"OIC": [],
+	
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/AR/Reports/RPT102_103/Report/DataModels/TransactionsPrintDm.xdm.catalog"
+              ],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

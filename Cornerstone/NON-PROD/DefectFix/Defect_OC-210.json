@@ -1,0 +1,12 @@
+{
+	"Rice_id" : "OC-210",
+	"OIC": [],
+	
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/GL/Reports/RPT224/Report/DataModels/Wesco_GBL_GL_RPT224_IC_Batches_DM.xdm.catalog",
+	           "NON-PROD/Cornerstone/ERP/RTR/GL/Reports/RPT224/Report/Layouts/Wesco_GBL_GL_RPT224_IC_Batches_Report.xdo.catalog"
+                  ],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}
+

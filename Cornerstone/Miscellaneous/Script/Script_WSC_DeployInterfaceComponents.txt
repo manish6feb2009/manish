@@ -1,0 +1,700 @@
+cp github/Miscellaneous/ArtifactDesigner_Components/template.json summary_html_data.json
+
+
+#variable prefix meaning
+# l = logging
+# v = variable
+# j = json
+# h = html
+# t = token
+
+##Varialbles for logging
+l_file_prefix='RICE_ID_'
+l_summary_file=$l_file_prefix'BASE_SUMMARY.txt'
+l_payload_start_bar='##############PAYLOAD START################'
+l_payload_end_bar='##############PAYLOAD   END################'
+indi_sec_tpl8=`cat github/Miscellaneous/ArtifactDesigner_Components/PropertiesFile/artifact_individual/artifact_indv_sec.json`
+indi_sec_data_tpl8=`cat github/Miscellaneous/ArtifactDesigner_Components/PropertiesFile/artifact_individual/artifact_indv_sec_data.json`
+h_rice_obj_type_tpl8='"RICE_OBJ_NAME#DB_STATUS:RPT_STATUS:OIC_STATUS#LOG_FILE_NAME"'
+h_rice_obj=''
+
+
+
+echo -e '-----------------------------------------------------------------------\n' |& tee -a $l_summary_file
+#decrypt and read connection_details.gpg
+v_con_details=`gpg -d --batch --passphrase finint123 github/NON-PROD/connection_details.gpg 2> /dev/null`
+
+echo -e "BaseDeployment File data recieved as\n$l_payload_start_bar\n`cat github/BaseDeployment.json`\n$l_payload_end_bar\n" |& tee -a $l_summary_file
+
+#check & validate deployment file 
+if [[ `jq 'has("TARGET_DB")' github/NON-PROD/BaseDeployment.json` == 'true' && `jq 'has("TARGET_OIC")' github/NON-PROD/BaseDeployment.json` == 'true' && `jq 'has("TARGET_RPT")' github/NON-PROD/BaseDeployment.json` == 'true' && `jq 'has("RICE_ID")' github/NON-PROD/BaseDeployment.json` == 'true' ]]; then
+  echo "✓ BaseDeployment File syntax is correct" |& tee -a $l_summary_file
+else
+	echo "✖ BaseDeployment File must contain TARGET_DB, TARGET_OIC, TARGET_RPT & RICE_ID" |& tee -a $l_summary_file
+	sed -i "s|#deploy_status#|'FAILED'|g" summary_html_data.json
+  sed -i "s|#deploy_reason#|'BaseDeployment File must contain TARGET_DB, TARGET_OIC, TARGET_RPT & RICE_ID'|g" summary_html_data.json
+  exit;
+fi
+
+## START V2 :Check if value provided in key TARGET_* are present in Connection Details##
+if [[ `jq '.TARGET_DB' github/NON-PROD/BaseDeployment.json | sed 's/\"//g'` != "" && `echo $v_con_details | jq ".PASSWORDS | has($(jq '.TARGET_DB' github/NON-PROD/BaseDeployment.json))"` == 'false' ]]; then
+  echo "✖ BaseDeployment File TARGET_DB value not present in connection details. Considering changing the value or connect with adminstrator." |& tee -a $l_summary_file
+  sed -i "s|#deploy_status#|'FAILED'|g" summary_html_data.json
+  sed -i "s|#deploy_reason#|'BaseDeployment File TARGET_DB value not present in connection details'|g" summary_html_data.json
+  exit;
+fi
+
+if [[ `jq '.TARGET_OIC' github/NON-PROD/BaseDeployment.json | sed 's/\"//g'` != "" && `echo $v_con_details | jq ".PASSWORDS | has($(jq '.TARGET_OIC' github/NON-PROD/BaseDeployment.json))"` == 'false' ]]; then
+  echo "✖ BaseDeployment File TARGET_OIC value not present in connection details. Considering changing the value or connect with adminstrator." |& tee -a $l_summary_file
+  sed -i "s|#deploy_status#|'FAILED'|g" summary_html_data.json
+  sed -i "s|#deploy_reason#|'BaseDeployment File TARGET_OIC value not present in connection details'|g" summary_html_data.json
+  exit;
+fi
+
+if [[ `jq '.TARGET_RPT' github/NON-PROD/BaseDeployment.json | sed 's/\"//g'` != "" && `echo $v_con_details | jq ".PASSWORDS | has($(jq '.TARGET_RPT' github/NON-PROD/BaseDeployment.json))"` == 'false' ]]; then
+  echo "✖ BaseDeployment File TARGET_RPT value not present in connection details. Considering changing the value or connect with adminstrator." |& tee -a $l_summary_file
+  sed -i "s|#deploy_status#|'FAILED'|g" summary_html_data.json
+  sed -i "s|#deploy_reason#|'BaseDeployment File TARGET_RPT value not present in connection details'|g" summary_html_data.json
+  exit;
+fi
+## END V2##
+
+## START V3 : Not allowing PRD_* value from base deployment in NON PROD env##
+if [[ `jq '.TARGET_DB' github/NON-PROD/BaseDeployment.json` == "PRD_DB" || `jq '.TARGET_OIC' github/NON-PROD/BaseDeployment.json` == "PRD_OIC" || `jq '.TARGET_RPT' github/NON-PROD/BaseDeployment.json` == "PRD_RPT" ]]; then
+   echo "✖ BaseDeployment File TARGET_DB or TARGET_OIC or TARGET_RPT value contains PRD data which is not allowed in NON-PROD automation. Considering changing the value." |& tee -a $l_summary_file
+   sed -i "s|#deploy_status#|'FAILED'|g" summary_html_data.json
+  sed -i "s|#deploy_reason#|'BaseDeployment File TARGET_* value contains PRD data'|g" summary_html_data.json
+  exit
+fi
+## END V3##
+
+v_db_instance_password=`echo $v_con_details  | jq ".PASSWORDS.$(jq '.TARGET_DB' github/NON-PROD/BaseDeployment.json)" | sed 's/\"//g'`
+v_db_instance=`echo $v_con_details  | jq ".URL.$(jq '.TARGET_DB' github/NON-PROD/BaseDeployment.json)" | sed 's/\"//g'`
+v_oic_instance_password=`echo $v_con_details  | jq ".PASSWORDS.$(jq '.TARGET_OIC' github/NON-PROD/BaseDeployment.json)" | sed 's/\"//g'`
+v_oic_instance=`echo $v_con_details  | jq ".URL.$(jq '.TARGET_OIC' github/NON-PROD/BaseDeployment.json)" | sed 's/\"//g'`
+v_report_instance_password=`echo $v_con_details  | jq ".PASSWORDS.$(jq '.TARGET_RPT' github/NON-PROD/BaseDeployment.json)" | sed 's/\"//g'`
+v_report_instance=`echo $v_con_details  | jq ".URL.$(jq '.TARGET_RPT' github/NON-PROD/BaseDeployment.json)" | sed 's/\"//g'`
+
+
+#Iterating over RICE ID in BaseDeployment file
+j_rice_id=`jq '.RICE_ID' github/NON-PROD/BaseDeployment.json`
+h_add_info=$( echo $j_rice_id | sed 's/"//g;s/\[//g;s/\]//g' )
+j_rice_id_len=`echo $j_rice_id | jq '. | length'`
+
+t_report=''
+
+for (( i=0; i<$j_rice_id_len; i++ ))
+do
+  
+	#intialize global variable
+	v_check_oic='FALSE'
+	v_check_db='FALSE'
+	v_check_report='FALSE'
+	v_oic_arti=''
+	v_report_arti=''
+	v_db_arti=''
+	V_RICEID_FILE_PATH="github/`echo $j_rice_id | jq ".[$i]" | sed 's/\"//g'`"
+  
+  tp_rice_obj_type=$h_rice_obj_type_tpl8
+  tp_rice_obj_name=$(echo $V_RICEID_FILE_PATH | grep -o '[^/]*$')
+  tp_rice_obj_type=$(echo $tp_rice_obj_type | sed "s|RICE_OBJ_NAME|$tp_rice_obj_name|g")
+  
+  indi_sec_name=''
+  section_list_data=''
+  #copy and intialize variable for individual html
+  cp github/Miscellaneous/ArtifactDesigner_Components/PropertiesFile/artifact_individual/artifact_individual.json ${tp_rice_obj_name}_indi_html_data.json
+  
+  
+	echo $V_RICEID_FILE_PATH |& tee -a $l_summary_file
+	
+	#checking if for given rice id folder is present
+	#✓✖
+	v_home=`pwd`
+	if [ -d $V_RICEID_FILE_PATH ]
+	then
+		v_rice_id=`echo $V_RICEID_FILE_PATH |rev|cut -d'/' -f1|rev`
+		echo "✓ Interface directory exists for rice-id: $v_rice_id " |& tee -a $l_file_prefix$v_rice_id.txt
+		echo "Fetching the components..." |& tee -a $l_file_prefix$v_rice_id.txt
+		#Checking OIC artifacts
+		if [ -d $V_RICEID_FILE_PATH'/OIC/Integration' ]
+		then
+			echo "✓ OIC Artifacts" |& tee -a $l_file_prefix$v_rice_id.txt
+			v_check_oic='TRUE'
+      indi_sec_name=',"INTEGRATION"'$indi_sec_name
+			for arti in "${V_RICEID_FILE_PATH}/OIC/Integration"/*
+			do
+			   echo -e "\t•\t$arti" |& tee -a $l_file_prefix$v_rice_id.txt
+			   v_oic_arti=$v_oic_arti$arti','
+			done
+		else
+			echo "✖ OIC Artifacts" |& tee -a $l_file_prefix$v_rice_id.txt
+      tp_rice_obj_type=$(echo $tp_rice_obj_type | sed 's|OIC_STATUS|Not Present|g')
+		fi
+		#Checking Report - Data Model artifacts
+		if [ -d $V_RICEID_FILE_PATH'/Report/DataModels' ]
+		then
+			echo "✓ Report-Data Model Artifacts" |& tee -a $l_file_prefix$v_rice_id.txt
+			v_check_report='TRUE'
+			for arti in "${V_RICEID_FILE_PATH}/Report/DataModels"/*.catalog
+			do
+			   echo -e "\t•\t$arti" |& tee -a $l_file_prefix$v_rice_id.txt
+         v_report_arti=$v_report_arti$arti',' 
+			done
+		else
+			echo "✖ Report-Data Model Artifacts" |& tee -a $l_file_prefix$v_rice_id.txt
+		fi
+		#Checking Report - Layout artifacts
+		if [ -d $V_RICEID_FILE_PATH'/Report/Layouts' ]
+		then
+			echo "✓ Report-Layout Artifacts" |& tee -a $l_file_prefix$v_rice_id.txt
+			v_check_report='TRUE'
+			for arti in "${V_RICEID_FILE_PATH}/Report/Layouts"/*.catalog
+			do
+			   echo -e "\t•\t$arti" |& tee -a $l_file_prefix$v_rice_id.txt
+         arti=`echo "$arti" | sed 's! !\\ !g'`
+			   v_report_arti=$v_report_arti$arti',' 
+			done
+		else
+			echo "✖ Report-Layout Artifacts" |& tee -a $l_file_prefix$v_rice_id.txt
+		fi
+		#Checking DB artifacts
+		if [ -d $V_RICEID_FILE_PATH'/DB/Master' ]
+		then
+			if [[ `ls $V_RICEID_FILE_PATH/DB/Master/*_MASTER.sql | wc -w` == 1 ]]
+			then
+				echo "✓ DB Artifacts" |& tee -a $l_file_prefix$v_rice_id.txt
+				v_db_arti=`ls $V_RICEID_FILE_PATH/DB/Master/*_MASTER.sql`
+				v_check_db='TRUE'
+				echo -e "\t•\t$v_db_arti" |& tee -a $l_file_prefix$v_rice_id.txt
+        indi_sec_name=',"DATABASE"'$indi_sec_name
+			else
+				echo "✖ DB Artifacts (One MASTER SQL file should be present)" |& tee -a $l_file_prefix$v_rice_id.txt
+        tp_rice_obj_type=$(echo $tp_rice_obj_type | sed 's|DB_STATUS|MASTER SQL Not Present|g')
+			fi
+		else
+			echo "✖ DB Artifacts" |& tee -a $l_file_prefix$v_rice_id.txt
+      tp_rice_obj_type=$(echo $tp_rice_obj_type | sed 's|DB_STATUS|Not Present|g')
+		fi
+	else
+		echo "✖ Interface directory doesnt exist for rice-id: $v_rice_id " |& tee -a $l_file_prefix$v_rice_id.txt
+    rm ${tp_rice_obj_name}_indi_html_data.json
+    tp_rice_obj_type=$(echo $tp_rice_obj_type | sed 's|DB_STATUS|Directory Not Present|g')
+    tp_rice_obj_type=$(echo $tp_rice_obj_type | sed 's|OIC_STATUS|Directory Not Present|g')
+    tp_rice_obj_type=$(echo $tp_rice_obj_type | sed 's|RPT_STATUS|Directory Not Present|g')
+		#echo "Exiting with error" |& tee -a deployBaseArtifacts.txt
+		#exit 2;
+	fi
+	###################################################################################
+
+	#############################DATABASE DEPLOYMENT###################################
+  if [[ $v_check_db == 'TRUE' ]]; then
+    indi_sec_db=$indi_sec_tpl8
+    indi_sec_data_db=$indi_sec_data_tpl8
+    db_payload=''
+  
+    echo '---------DATABASE DEPLOYMENT----------' |& tee -a $l_file_prefix$v_rice_id.txt
+    v_master_file=`echo $v_db_arti |rev|cut -d'/' -f1|rev`
+    indi_sec_data_db=$(echo $indi_sec_data_db | sed "s|#name#|$v_master_file|g")
+    
+    cd `echo $v_db_arti |rev|cut -d'/' -f2-|rev`
+    echo -e "\tⓘ\tExecuting Master Script: $v_master_file"|& tee -a $l_file_prefix$v_rice_id.txt
+    db_payload=$db_payload"<br>Executing Master Script: "$v_master_file
+    #exit | sql -S "finint/$v_db_instance_password@150.136.196.229:1521/$v_db_instance" @$v_master_file |& tee -a $l_file_prefix$v_rice_id.txt
+    sql -S "finint/$v_db_instance_password@150.136.196.229:1521/$v_db_instance" <<EOF
+    SPOOL $v_home/spool.txt;
+    SET DEFINE OFF;
+    SET ECHO ON;
+    @$v_master_file
+    SPOOL OFF;
+EOF
+    cat $v_home/spool.txt >> $v_home/$l_file_prefix$v_rice_id.txt
+    db_payload=$db_payload"<br>"`cat $v_home/spool.txt`
+    db_payload=$(echo $db_payload | sed 's|"||g')
+    indi_sec_data_db=$(echo $indi_sec_data_db | sed "s|#payload#|$db_payload|g")
+    echo -e '--------------------------------------' |& tee -a $v_home/$l_file_prefix$v_rice_id.txt
+    if [[ `cat $v_home/$l_file_prefix$v_rice_id.txt`  == *'Error report -'* || `cat $v_home/$l_file_prefix$v_rice_id.txt`  == *'Errors: check compiler log'* ]]; then
+      echo -e "\t·DB Status : ⚠ Partial Success. Check Log File" |& tee -a $v_home/$l_summary_file
+      tp_rice_obj_type=$(echo $tp_rice_obj_type | sed 's|DB_STATUS|Partial Success|g')
+      indi_sec_data_db=$(echo $indi_sec_data_db | sed 's|#contains_error#|yes|g')
+    else 
+      echo -e "\t·DB Status : ✓ Success." |& tee -a $v_home/$l_summary_file
+      tp_rice_obj_type=$(echo $tp_rice_obj_type | sed 's|DB_STATUS|Success|g')
+      indi_sec_data_db=$(echo $indi_sec_data_db | sed 's|#contains_error#|no|g')
+    fi
+    
+    indi_sec_db=$(echo $indi_sec_db | sed 's|#section_name#|DATABASE|g')
+    indi_sec_db=$(echo $indi_sec_db | sed "s|#section_data#|$indi_sec_data_db|g")
+    section_list_data=','$indi_sec_db$section_list_data
+  fi
+	cd $v_home
+
+	###################################################################################
+
+
+
+	################################## OIC INTEGRATION ############################
+  if [[ $v_check_oic == 'TRUE' ]]; then
+    echo '--------INTEGRATION DEPLOYMENT--------' |& tee -a $l_file_prefix$v_rice_id.txt
+    #✓✖
+    #Intialize global variable and files
+    oic_all_success=''
+    oic_failed=''
+    filetype=''
+    iar_id=''
+    #PUT=existing Post=New
+    import_put_post='PUT'
+
+    #username, password, url and other details for OIC server
+    user='FIN_INT'
+    pass=$v_oic_instance_password
+    base_url=$v_oic_instance
+    iar_check_url='/ic/api/integration/v1/integrations/'
+    iar_deac_act_url='/ic/api/integration/v1/integrations/'
+    iar_import_url='/ic/api/integration/v1/integrations/archive'
+    par_check_url='/ic/api/integration/v1/packages/'
+    par_import_url='/ic/api/integration/v1/packages/archive'
+
+    #FUNCTIONS
+
+    generating_iar_id(){
+      ex_fn=`echo $1 | awk -F "/" '{print $NF}'`  
+      pos=`echo $ex_fn | awk -F "_" '{print length($0)-length($NF)}'`
+      iar_id=`echo $ex_fn | awk -v pos=$pos -v repl=$2 '{print substr($0,1,pos-1) repl substr($0,pos+1)}' | sed -e 's/'.iar'/''/g'`
+    }
+
+    de_activate_iar(){
+      if [[ $1 == 'ACTIVATE' ]] 
+      then
+        payload='{"status":"ACTIVATED"}'
+        o_de_act=`curl -s -u ${user}:${pass} -X POST -H "Content-Type:application/json" -H "X-HTTP-Method-Override:PATCH" -d $payload $base_url$iar_deac_act_url$2`
+		echo -e "\n$l_payload_start_bar\n$o_de_act\n$l_payload_end_bar\n" |& tee -a $l_file_prefix$v_rice_id.txt
+        if [[ `echo $o_de_act | jq -r .status` != 'ACTIVATED' ]]
+        then
+          echo -e "\t✖\tSomething went wrong while activating the integration. Contact Admin." |& tee -a $l_file_prefix$v_rice_id.txt
+          exit 2;
+        fi
+
+      else
+        payload='{"status":"CONFIGURED"}'
+        o_de_act=`curl -s -u ${user}:${pass} -X POST -H "Content-Type:application/json" -H "X-HTTP-Method-Override:PATCH" -d $payload $base_url$iar_deac_act_url$2`
+		echo -e "\n$l_payload_start_bar\n$o_de_act\n$l_payload_end_bar\n" |& tee -a $l_file_prefix$v_rice_id.txt
+        if [[ `echo $o_de_act | jq -r .status` != 'CONFIGURED' ]]
+        then
+          echo -e "\t✖\tSomething went wrong while de-activating the integration. Contact Admin." |& tee -a $l_file_prefix$v_rice_id.txt
+          exit 2;
+        fi
+      fi              
+      #-d 'enableAsyncActivationMode=true'
+    }
+
+
+
+    #Intialize variable values
+    V_FILEPATHS=$v_oic_arti
+
+    echo "Recieved Filepath: $V_FILEPATHS" |& tee -a $l_file_prefix$v_rice_id.txt
+
+    echo "Iterating over filepaths and processing for deployment...." |& tee -a $l_file_prefix$v_rice_id.txt
+    
+    indi_sec_oic=$indi_sec_tpl8
+    indi_sec_data_list_oic=''
+    for filepath in ${V_FILEPATHS//,/ }
+    do     
+      indi_sec_data_oic=$indi_sec_data_tpl8
+      oic_payload=''
+      echo -e "\tProcessing file: $filepath\n" |& tee -a $l_file_prefix$v_rice_id.txt
+      
+      oic_payload=$oic_payload"<br>Processing file: $filepath"
+      #checks if file is a package or integration..
+      if [[ $filepath == *.par ]] 
+      then
+      filetype='PAR'
+      echo -e "\tⓘ\tFileType: PACKAGE ARCHIVE" |& tee -a $l_file_prefix$v_rice_id.txt
+      #checking the status of the package
+      pkg_name=`echo $filepath |awk -F "/" '{print $NF}' | sed -e 's/'.par'/''/g'`
+	  echo "checking the status of the package : $pkg_name" |& tee -a $l_file_prefix$v_rice_id.txt
+      o_par_status=`curl -s -u ${user}:${pass} -H "Accept: application/json" $base_url$par_check_url$pkg_name`
+	  echo -e "\n$l_payload_start_bar\n$o_par_status\n$l_payload_end_bar\n" |& tee -a $l_file_prefix$v_rice_id.txt
+      if [[ `echo $o_par_status | jq -r .status`  == 'HTTP 404 Not Found' ]]
+      then
+        echo -e "\tⓘ\tPackage Not found. Deploying....." |& tee -a $l_file_prefix$v_rice_id.txt
+        import_put_post='POST'
+      else
+        echo -e "\tⓘ\t$filepath: Package found" |& tee -a $l_file_prefix$v_rice_id.txt
+        iar_count=`echo $o_par_status | jq -r .countOfIntegrations`
+        echo -e "\tⓘ\tIntegration Count: $iar_count" |& tee -a $l_file_prefix$v_rice_id.txt
+        for((j=0;j<$iar_count;j++))
+        do
+          iar_this_status=`echo $o_par_status | jq -r .integrations[$j].status`
+          echo -e "\tⓘ\t`echo $o_par_status | jq -r .integrations[$j].name` : $iar_this_status" |& tee -a $l_file_prefix$v_rice_id.txt
+          #Deactivate the Integration if activated
+          if [[ $iar_this_status == 'ACTIVATED' ]]
+          then
+            de_activate_iar "DE-ACTIVATE" `echo $o_par_status | jq -r .integrations[$j].id | sed -e 's/|/%7C/g'`
+            echo -e "\t✓\t`echo $o_par_status | jq -r .integrations[$j].name`: DE-ACTIVATED" |& tee -a $l_file_prefix$v_rice_id.txt
+          fi
+        done  
+      fi
+      echo -e "\tⓘ\tDeploying Package....." |& tee -a $l_file_prefix$v_rice_id.txt
+      o_par_deploy=`curl -s -X $import_put_post -u ${user}:${pass} -H "Accept:application/json" -F "file=@${filepath};type=application/octet-stream" $base_url$par_import_url`
+	  echo -e "\n$l_payload_start_bar\n$o_par_deploy\n$l_payload_end_bar\n" |& tee -a $l_file_prefix$v_rice_id.txt
+      echo -e "\t✓\t$filepath: DEPLOYED" |& tee -a $l_file_prefix$v_rice_id.txt
+      else
+      filetype='IAR'
+      oic_payload=$oic_payload"<br>FileType: INTERGARTION ARCHIVE"
+      echo -e "\tⓘ\tFileType: INTERGARTION ARCHIVE" |& tee -a $l_file_prefix$v_rice_id.txt
+      #checking the status of the integration and generating ID of integration
+	  ##Generating ID 
+      generating_iar_id $filepath "%7C"
+	    echo "Checking the status of the integration by integration ID : $iar_id" |& tee -a $l_file_prefix$v_rice_id.txt
+      oic_payload=$oic_payload"<br>Checking the status of the integration by integration ID : $iar_id"
+	  
+      ##Invoking Rest API for integration status checking
+      o_iar_status=`curl -s -u ${user}:${pass} -H "Accept: application/json" $base_url$iar_check_url$iar_id`
+	  echo -e "\n$l_payload_start_bar\n$o_iar_status\n$l_payload_end_bar\n" |& tee -a $l_file_prefix$v_rice_id.txt
+      ###If status is ACTIVATED
+      if [[ `echo $o_iar_status | jq -r .status` == 'ACTIVATED' ]]
+      then
+        echo -e "\tⓘ\tIntegration Status: ACTIVATED" |& tee -a $l_file_prefix$v_rice_id.txt
+        oic_payload=$oic_payload"<br>Integration Status: ACTIVATED<br>Deactivating the integration....."
+        echo -e "\tⓘ\tDeactivating the integration....." |& tee -a $l_file_prefix$v_rice_id.txt
+        #Deactivate the IAR Integration
+        de_activate_iar "DE-ACTIVATE" $iar_id
+        echo -e "\t✓\t$filepath: DE-ACTIVATED" |& tee -a $l_file_prefix$v_rice_id.txt
+        oic_payload=$oic_payload"<br>$filepath: DE-ACTIVATED"
+      elif [[ `echo $o_iar_status | jq -r .status` == 'HTTP 404 Not Found' ]]
+      then
+        echo -e "\tⓘ\tIntegration Not found. Deploying....." |& tee -a $l_file_prefix$v_rice_id.txt
+        oic_payload=$oic_payload"<br>Integration Not found. Deploying....."
+        import_put_post='POST'
+      else
+        echo -e "\tⓘ\tIntegration Status: CONFIGURED" |& tee -a $l_file_prefix$v_rice_id.txt
+        oic_payload=$oic_payload"<br>Integration Status: CONFIGURED"
+      fi
+      #Deploying Integration
+      echo -e "\tⓘ\tDeploying Integration....." |& tee -a $l_file_prefix$v_rice_id.txt
+      oic_payload=$oic_payload"<br>Deploying Integration....."
+      o_iar_deploy=`curl -s -w "%{http_code}" -X $import_put_post -u ${user}:${pass} -H "Accept:application/json" -F "file=@${filepath};type=application/octet-stream" $base_url$iar_import_url`
+	    echo -e "\n$l_payload_start_bar\n$o_iar_deploy\n$l_payload_end_bar\n" |& tee -a $l_file_prefix$v_rice_id.txt
+      oic_payload=$oic_payload"<br><hr>$o_iar_deploy<hr><br>"
+      oic_payload=$oic_payload"<br>$filepath: DEPLOYED"
+      echo -e "\t✓\t$filepath: DEPLOYED" |& tee -a $l_file_prefix$v_rice_id.txt
+      ##echo -e "\tⓘ\tActivating Integration....."
+      #Activate the IAR Integration
+      ##de_activate_iar "ACTIVATE" $iar_id
+      ##echo -e "\t✓\t$filepath: ACTIVATED"   
+      fi
+      if [[ "$o_iar_deploy"  != '20'*  ]]; then
+        oic_all_success='FALSE'
+        oic_failed="$filepath','$oic_failed"
+        echo -e "\t·DB Status : ⚠ Partial Success. Check Log File" |& tee -a $v_home/$l_summary_file
+        indi_sec_data_oic=$(echo $indi_sec_data_oic | sed 's|#contains_error#|yes|g')
+      else
+        indi_sec_data_oic=$(echo $indi_sec_data_oic | sed 's|#contains_error#|no|g')
+      fi
+      
+      indi_sec_data_oic=$(echo $indi_sec_data_oic | sed "s|#payload#|$oic_payload|g")
+      tp_name=$(echo $filepath | rev | cut -d '/' -f1 | rev)
+      indi_sec_data_oic=$(echo $indi_sec_data_oic | sed "s|#name#|$tp_name|g")
+      indi_sec_data_list_oic=$indi_sec_data_list_oic','$indi_sec_data_oic
+      echo -e "\n\n" |& tee -a $l_file_prefix$v_rice_id.txt
+    done
+    indi_sec_data_list_oic=$(echo $indi_sec_data_list_oic | cut -d ',' -f2-)
+    indi_sec_oic=$(echo $indi_sec_oic | sed "s|#section_data#|$indi_sec_data_list_oic|g")
+    indi_sec_oic=$(echo $indi_sec_oic | sed 's|#section_name#|INTEGRATION|g')
+    section_list_data=','$indi_sec_oic$section_list_data
+    
+    if [[ $oic_all_success  == 'FALSE' ]]; then
+      echo -e "\t·OIC Status : ⚠ Partial Success. Check Log File\nFAILED OIC NAME\n$rpt_failed\n" |& tee -a $v_home/$l_summary_file
+      tp_rice_obj_type=$(echo $tp_rice_obj_type | sed 's|OIC_STATUS|Partial Success|g')
+    else 
+      echo -e "\t·OIC Status : ✓ Success." |& tee -a $v_home/$l_summary_file
+      tp_rice_obj_type=$(echo $tp_rice_obj_type | sed 's|OIC_STATUS|Success|g')
+    fi
+    echo '--------------------------------------' |& tee -a $l_file_prefix$v_rice_id.txt
+	fi
+  ###################################################################################
+
+	#############################REPORT DEPLOYMENT#####################################
+  if [[ $v_check_report == 'TRUE' ]]; then
+    indi_sec_name=',"REPORT"'$indi_sec_name
+    rpt_all_success=''
+    rpt_failed=''
+    echo '-----------REPORT DEPLOYMENT----------' |& tee -a $l_file_prefix$v_rice_id.txt
+    #✓✖
+    #Intialize global variable and files
+      Instance=$v_report_instance
+      Username='FIN_INT'
+      Password=$v_report_instance_password
+      GITLocation=$(echo $v_report_arti | sed 's/,/\n/g') 
+      FilePath=''
+      
+      indi_sec_rpt=$indi_sec_tpl8
+      indi_sec_data_list_rpt=''
+      
+      echo "Recieved Filepath: $GITLocation" |& tee -a $l_file_prefix$v_rice_id.txt
+      if [[ $t_report == '' ]]; then
+      echo -e "\tⓘ\tGenerating Session Token...." |& tee -a $l_file_prefix$v_rice_id.txt
+      echo -n "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:v6=\"urn://oracle.bi.webservices/v6\">
+       <soapenv:Header/>
+       <soapenv:Body>
+        <v6:logon>
+           <v6:name>"$Username"</v6:name>
+           <v6:password><![CDATA["$Password"]]></v6:password>
+        </v6:logon>
+       </soapenv:Body>
+      </soapenv:Envelope>">>tokenRequest.xml
+      {
+        curl -s --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:urn:logon" --data @tokenRequest.xml $Instance/analytics-ws/saw.dll?SoapImpl=nQSessionService>>tokenResponse.xml 
+		echo -e "Response Recieved:\n$l_payload_start_bar\n`cat tokenResponse.xml`\n$l_payload_end_bar\n" |& tee -a $l_file_prefix$v_rice_id.txt  
+      }||{
+        echo -e "\t✖\tSome Error Occured while generating session using CURL. Error Code: $?" |& tee -a $l_file_prefix$v_rice_id.txt 
+      }
+      t_report=`cat tokenResponse.xml | sed 's/<\/\?[^>]\+>//g' | xargs`
+      echo -e "\t✓\tGenerated Session Token : $t_report" |& tee -a $l_file_prefix$v_rice_id.txt
+      fi
+      #${GITLocation//,/ }
+      OLDIFS="$IFS"
+      IFS=$'\n'
+      for filepath in $GITLocation
+      do
+        indi_sec_data_rpt=$indi_sec_data_tpl8
+        rpt_payload=''
+        rpt_payload=$rpt_payload"<br>Processing file: $filepath"
+        echo -e "\n\tProcessing file: $filepath" |& tee -a $l_file_prefix$v_rice_id.txt
+        propertyFile=`echo $filepath | sed -e 's/'.catalog'/'.prop'/g'`
+        rpt_payload=$rpt_payload"<br>Fetching property file  & exporting it: $propertyFile"
+        echo -e "\tⓘ\tFetching property file  & exporting it: $propertyFile " |& tee -a $l_file_prefix$v_rice_id.txt
+        {
+          chmod +777 $propertyFile
+          . $propertyFile
+        }||{
+          rpt_payload=$rpt_payload"<br>Some Error Occured while reading and exporting property file. Error Code: $?"
+          echo -e "\t✖\tSome Error Occured while reading and exporting property file. Error Code: $?" |& tee -a $l_file_prefix$v_rice_id.txt
+        }
+        rpt_payload=$rpt_payload"<br>Creating Folder Structure if doesn't exists. Location: $BI_FOLDER_LOCATION"
+        echo -e "\tⓘ\tCreating Folder Structure if doesn't exists. Location: $BI_FOLDER_LOCATION" |& tee -a $l_file_prefix$v_rice_id.txt
+        echo -n "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:v6=\"urn://oracle.bi.webservices/v6\">
+         <soapenv:Header/>
+         <soapenv:Body>
+          <v6:createFolder>
+             <v6:path>"$BI_FOLDER_LOCATION"</v6:path>
+             <v6:createIfNotExists>true</v6:createIfNotExists>
+             <v6:createIntermediateDirs>true</v6:createIntermediateDirs>
+             <v6:sessionID>"$t_report"</v6:sessionID>
+          </v6:createFolder>
+          </soapenv:Body>
+        </soapenv:Envelope>">>dir.xml
+        cat dir.xml 
+        {
+          o_create_loc=`curl -s --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:urn:createFolder" --data @dir.xml $Instance/analytics-ws/saw.dll?SoapImpl=webCatalogService`
+          rpt_payload=$rpt_payload"<br>Response Recieved:<br><hr><textarea cols=\"40\" style=\"border:none;\">$o_create_loc</textarea><hr><br>"
+          echo -e "Response Recieved:\n$l_payload_start_bar\n$o_create_loc\n$l_payload_end_bar\n" |& tee -a $l_file_prefix$v_rice_id.txt
+          if [[ "$o_create_loc" == *'<sawsoap:createFolderResult></sawsoap:createFolderResult>'* ]]; then
+            rpt_all_success='TRUE'
+            indi_sec_data_rpt=$(echo $indi_sec_data_rpt | sed 's|#contains_error#|no|g')
+          else
+          echo "Create Failed" 
+            rpt_all_success='FALSE'
+            rpt_failed="$filepath'::CREATE-DIR,'$rpt_failed"
+            indi_sec_data_rpt=$(echo $indi_sec_data_rpt | sed 's|#contains_error#|yes|g')
+          fi
+        }||{
+        rpt_payload=$rpt_payload"<br>Some Error Occured while creating folder structure. Error Code: $?"
+          echo -e "\t✖\tSome Error Occured while creating folder structure. Error Code: $?" |& tee -a $l_file_prefix$v_rice_id.txt
+        }
+        rpt_payload=$rpt_payload"<br>Converting Report Content to BASE64 encoding"
+        echo -e "\t✓\tConverting Report Content to BASE64 encoding" |& tee -a deployBaseArtifacts.txt
+        echo -n "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:v6=\"urn://oracle.bi.webservices/v6\">
+         <soapenv:Header/>
+         <soapenv:Body>
+          <v6:pasteItem2>
+             <v6:archive>">>updateRequest.xml
+        #added base64 data
+        cat $filepath | base64 >>updateRequest.xml
+        echo -n "</v6:archive>
+             <v6:replacePath>"$BI_FOLDER_LOCATION"</v6:replacePath>
+             <v6:flagACL>0</v6:flagACL>
+             <v6:flagOverwrite>0</v6:flagOverwrite>
+             <v6:sessionID>"$t_report"</v6:sessionID>
+          </v6:pasteItem2>
+         </soapenv:Body>
+        </soapenv:Envelope>">>updateRequest.xml
+        rpt_payload=$rpt_payload"<br>Importing report to location: $BI_FOLDER_LOCATION"
+        echo -e "\tⓘ\tImporting report to location: $BI_FOLDER_LOCATION" |& tee -a $l_file_prefix$v_rice_id.txt
+        {
+          o_imp_rep=`curl -s --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:urn:pasteItem2" --data @updateRequest.xml $Instance/analytics-ws/saw.dll?SoapImpl=webCatalogService`
+		  if [[ "$o_imp_rep" == *'<sawsoap:pasteItem2Result></sawsoap:pasteItem2Result>'* ]]; then 
+            rpt_all_success='TRUE'
+            indi_sec_data_rpt=$(echo $indi_sec_data_rpt | sed 's|#contains_error#|no|g')
+          else
+          echo "Import Failed"
+            indi_sec_data_rpt=$(echo $indi_sec_data_rpt | sed 's|#contains_error#|yes|g')
+            rpt_all_success='FALSE'
+            rpt_failed="$filepath'::IMPORT,'$rpt_failed"
+          fi
+          rpt_payload=$rpt_payload"<br><hr><textarea cols=\"40\" style=\"border:none;\">$o_imp_rep</textarea><hr>"
+      echo -e "Response Recieved:\n$l_payload_start_bar\n$o_imp_rep\n$l_payload_end_bar\n" |& tee -a $l_file_prefix$v_rice_id.txt
+        }||{
+          rpt_payload=$rpt_payload"<br>Some Error Occured while importing report using CURL. Error Code: $?"
+          echo -e "\t✖\tSome Error Occured while importing report using CURL. Error Code: $?" |& tee -a $l_file_prefix$v_rice_id.txt
+        }
+        rpt_payload=$rpt_payload"<br>Report Imported: $filepath"
+        echo -e "\t✓\tReport Imported: $filepath" |& tee -a $l_file_prefix$v_rice_id.txt
+        truncate -s 0 updateRequest.xml
+        truncate -s 0 dir.xml
+        rpt_payload=$(echo $rpt_payload | sed 's|"||g')
+        indi_sec_data_rpt=$(echo $indi_sec_data_rpt | sed "s|#payload#|$rpt_payload|g")
+        tp_name=$(echo $filepath | rev | cut -d '/' -f1 | rev)
+        indi_sec_data_rpt=$(echo $indi_sec_data_rpt | sed "s|#name#|$tp_name|g")
+        indi_sec_data_list_rpt=$indi_sec_data_list_rpt','$indi_sec_data_rpt
+      done
+      IFS="$OLDIFS"
+      indi_sec_data_list_rpt=$(echo $indi_sec_data_list_rpt | cut -d ',' -f2-)
+      indi_sec_rpt=$(echo $indi_sec_rpt | sed "s|#section_data#|$indi_sec_data_list_rpt|g")
+      indi_sec_rpt=$(echo $indi_sec_rpt | sed 's|#section_name#|REPORT|g')
+      section_list_data=','$indi_sec_rpt$section_list_data
+      
+      
+      if [[ $rpt_all_success  == 'FALSE' ]]; then
+      echo -e "\t·RPT Status : ⚠ Partial Success. Check Log File \nFAILED RPT NAME\n$rpt_failed\n" |& tee -a $v_home/$l_summary_file
+      tp_rice_obj_type=$(echo $tp_rice_obj_type | sed 's|RPT_STATUS|Partial Success|g')
+    else 
+      echo -e "\t·RPT Status : ✓ Success." |& tee -a $v_home/$l_summary_file
+      tp_rice_obj_type=$(echo $tp_rice_obj_type | sed 's|RPT_STATUS|Success|g')
+    fi
+    echo '--------------------------------------' |& tee -a $l_file_prefix$v_rice_id.txt
+  else
+    tp_rice_obj_type=$(echo $tp_rice_obj_type | sed 's|RPT_STATUS|Not Present|g')
+  fi
+  tp_rice_obj_type=$(echo $tp_rice_obj_type | sed "s|LOG_FILE_NAME|RICE_ID_${tp_rice_obj_name}.html|g")
+  h_rice_obj=$h_rice_obj','$tp_rice_obj_type
+  
+  indi_sec_name=$(echo $indi_sec_name | cut -d ',' -f2-)
+  section_list_data=$(echo $section_list_data | cut -d ',' -f2-)
+  
+  sed -i "s|#artifact_name#|$tp_rice_obj_name|g" ${tp_rice_obj_name}_indi_html_data.json
+  sed -i "s|#section#|$indi_sec_name|g" ${tp_rice_obj_name}_indi_html_data.json
+  sed -i "s|#section_list_data#|$section_list_data|g" ${tp_rice_obj_name}_indi_html_data.json
+done
+echo '-----------------------------------------------------------------------' |& tee -a $l_summary_file
+
+#####Assigning vlaue to rice_id summary html json data file
+h_rice_obj=$(echo $h_rice_obj | cut -d ',' -f2-)
+sed -i 's|#deploy_status#|SUCCESS|g' summary_html_data.json
+sed -i 's|#deploy_reason#|SUCCESS|g' summary_html_data.json
+sed -i "s|#rice_obj_count#|$j_rice_id_len|g" summary_html_data.json
+sed -i "s|#add_info#|$h_add_info|g" summary_html_data.json
+sed -i "s|#db_env#|$v_db_instance|g" summary_html_data.json
+sed -i "s|#oic_env#|$v_oic_instance|g" summary_html_data.json
+sed -i "s|#rpt_env#|$v_report_instance|g" summary_html_data.json
+sed -i "s|#rice_obj#|$h_rice_obj|g" summary_html_data.json
+
+
+#sending mail.....
+#mail -a deployBaseArtifacts.txt -s "DevCS - DeployBaseArtifact" hdatta@deloitte.com < /dev/null 
+
+
+
+-------------------------------------------------------------------------
+
+#################################### SUMMARY HTML CODE #######################################
+cp github/Miscellaneous/ArtifactDesigner_Components/artifact_summary.txt RICE_ID_SUMMARY.html
+card_template=`cat github/Miscellaneous/ArtifactDesigner_Components/artifact_summary_card.txt`
+
+cards=``
+j_rice_obj=`jq '.rice_obj' summary_html_data.json`
+j_rice_count=`jq '.rice_obj_count' summary_html_data.json | sed 's/\"//g'`
+j_deploy_status=`jq '.deploy_status' summary_html_data.json | sed 's/\"//g'`
+j_deploy_reason=`jq '.deploy_reason' summary_html_data.json | sed 's/\"//g'`
+j_db_env=`jq '.db_env' summary_html_data.json | sed 's/\"//g'`
+j_oic_env=`jq '.oic_env' summary_html_data.json | sed 's/\"//g'`
+j_rpt_env=`jq '.rpt_env' summary_html_data.json | sed 's/\"//g'`
+j_add_info=`jq '.add_info' summary_html_data.json | sed 's/\"//g'`
+
+sed -i "s|##deploy_status##|$j_deploy_status|g" RICE_ID_SUMMARY.html
+sed -i "s|##rice_obj_count##|$j_rice_count|g" RICE_ID_SUMMARY.html 
+sed -i "s|##deploy_reason##|$j_deploy_reason|g" RICE_ID_SUMMARY.html 
+sed -i "s|##db_env##|$j_db_env|g" RICE_ID_SUMMARY.html 
+sed -i "s|##oic_env##|$j_oic_env|g" RICE_ID_SUMMARY.html
+sed -i "s|##rpt_env##|$j_rpt_env|g" RICE_ID_SUMMARY.html 
+sed -i "s|##add_info##|$j_add_info|g" RICE_ID_SUMMARY.html 
+
+for (( i=0; i<$j_rice_count; i++ ))
+do
+  card_details=`echo $j_rice_obj | jq ".[$i]" | sed 's/\"//g'`
+  rice_obj_name=`echo $card_details | cut -d '#' -f1`
+  rice_obj_status=`echo $card_details | cut -d '#' -f2`
+  log_file=`echo $card_details | cut -d '#' -f3`
+  
+  db_status=$(echo $rice_obj_status | cut -d ':' -f1)
+  oic_status=$(echo $rice_obj_status | cut -d ':' -f3)
+  rpt_status=$(echo $rice_obj_status | cut -d ':' -f2)
+  
+  cards=$cards$card_template
+  cards=$(echo $cards | sed "s|##rice_obj_name##|$rice_obj_name|g")
+  cards=$(echo $cards | sed "s|##db_status##|$db_status|g")
+  cards=$(echo $cards | sed "s|##oic_status##|$oic_status|g")
+  cards=$(echo $cards | sed "s|##rpt_status##|$rpt_status|g")
+  cards=$(echo $cards | sed "s|##rice_obj_file##|$log_file|g")
+done
+
+sed -i "s|##rice_id_obj_cards##|$cards|g" RICE_ID_SUMMARY.html
+#################################### SUMMARY HTML CODE #######################################
+
+#################################### INDIVIDUAL HTML CODE #######################################
+
+temp_section=`cat github/Miscellaneous/ArtifactDesigner_Components/Html/artifact_individual/artifact_individual_section_card.txt`
+temp_section_detail=`cat github/Miscellaneous/ArtifactDesigner_Components/Html/artifact_individual/artifact_individual_section_details_comp.txt`
+
+##listing all file for loop.
+for indi in *_indi_html_data.json
+do
+  echo 'xxxxxxxPAYLOADxxxxxxxxx'
+  cat $indi
+  echo 'xxxxxxxPAYLOADxxxxxxxxx'
+  indi_name=`echo $indi | cut -d '_' -f1`
+  cp github/Miscellaneous/ArtifactDesigner_Components/Html/artifact_individual/artifact_individual.txt RICE_ID_$indi_name.html
+  j_artifact_name=`jq '.artifact_name' $indi`
+  j_sections=`jq '.section' $indi`
+  j_sections_data=`jq '.section_data' $indi`
+  j_sections_len=`echo $j_sections | jq '. | length'`
+
+  d_arti_individual_data=''
+
+  for (( i=0; i<$j_sections_len; i++ ))
+  do
+    j_section_name=`echo $j_sections | jq ".[$i]" | sed 's/\"//g'`
+    j_section_name_data=`echo $j_sections_data | jq ".$j_section_name"`
+    j_section_name_data_len=`echo $j_section_name_data | jq '. | length'`
+
+    d_section=$temp_section
+    d_section_data=''
+    for (( j=0; j<$j_section_name_data_len; j++ ))
+    do
+    section_data_obj=$temp_section_detail
+    j_name=`echo $j_section_name_data | jq ".[$j].name" | sed 's/\"//g'`
+    j_contains_error=`echo $j_section_name_data | jq ".[$j].contains_error" | sed 's/\"//g'`
+    j_payload=`echo $j_section_name_data | jq ".[$j].payload" | sed 's/\"//g'`
+
+    section_data_obj=$(echo $section_data_obj | sed "s|##name##|$j_name|g" )
+    section_data_obj=$(echo $section_data_obj | sed "s|##artifact_id##|$j_section_name$j|g" )
+    if [[ "$j_contains_error" == "no" ]]; then
+      section_data_obj=$(echo $section_data_obj | sed 's|##status_color##|green|g' )
+    else
+      section_data_obj=$(echo $section_data_obj | sed 's|##status_color##|red|g' )
+    fi
+    section_data_obj=$(echo $section_data_obj | sed "s|##payload##|`echo -e $j_payload`|g" )
+    d_section_data=$d_section_data$section_data_obj
+    done
+    d_section=$(echo $d_section | sed "s|##section_name##|$j_section_name|g" )
+    d_section=$(echo $d_section | sed "s|##section_data##|$d_section_data|g" )
+
+    d_arti_individual_data=$d_arti_individual_data$d_section
+  done
+
+  sed -i "s|##artifact_name##|$j_artifact_name|g" RICE_ID_$indi_name.html
+  sed -i "s|##artifact_individual_data##|$d_arti_individual_data|g" RICE_ID_$indi_name.html
+done
+
+#################################### INDIVIDUAL HTML CODE #######################################

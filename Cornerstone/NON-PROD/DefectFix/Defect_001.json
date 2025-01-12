@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INT002",
+	"OIC": [ "NON-PROD/1A/ERP/RTR/AHCS/Interface/INT002/OIC/Integration/WES_WSC_GBL_AHC_INT_EBS_AP_SCH_01.00.0000.iar"],
+	"DB": [],
+	"Report": [],
+	"TARGET_DB": "DEV_DB",
+	"TARGET_OIC": "DEV_OIC",
+	"TARGET_RPT": "DEV_RPT"
+}

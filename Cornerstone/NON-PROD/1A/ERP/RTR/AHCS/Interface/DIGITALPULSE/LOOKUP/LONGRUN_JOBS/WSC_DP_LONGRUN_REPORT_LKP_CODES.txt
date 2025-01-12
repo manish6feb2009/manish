@@ -1,0 +1,27 @@
+LookupType|LookupCode|DisplaySequence|EnabledFlag|StartDateActive|EndDateActive|Meaning|Description|Tag|CONTEXT_ATTRIBUTE|module|track
+WSC_DP_LONG_RUN_JOB_LKP|10|10|Y|||Cost Center Extract|AXE_HR_ALI_COST_CENTER_EXTRACT|10|WSC_DP_LONG_RUN_JOB_LKP|HCM|HCM
+WSC_DP_LONG_RUN_JOB_LKP|20|20|Y|||Division Extract|AXE_HR_ALI_DIVISION_EXTRACT|10|WSC_DP_LONG_RUN_JOB_LKP|HCM|HCM
+WSC_DP_LONG_RUN_JOB_LKP|30|30|Y|||Grade Extract|AXE_HR_ALI_GRADE_EXTRACT|10|WSC_DP_LONG_RUN_JOB_LKP|HCM|HCM
+WSC_DP_LONG_RUN_JOB_LKP|40|40|Y|||Create Accounting|JobDefinition://oracle/apps/ess/financials/subledgerAccounting/shared/XLAFSNAPRPT|5|WSC_DP_LONG_RUN_JOB_LKP|AHCS|RTR
+WSC_DP_LONG_RUN_JOB_LKP|50|50|Y|||Import Accounting Transaction|JobDefinition://oracle/apps/ess/financials/subledgerAccounting/shared/XLATXNIMPORT|5|WSC_DP_LONG_RUN_JOB_LKP|AHCS|RTR
+WSC_DP_LONG_RUN_JOB_LKP|60|60|Y|||GL Data to TeraData for Reporting - GL Balances|/Custom/WESCO Custom/GL/Interfaces/Wesco_GBL_GL_INT010_GL_Balances_To_Teradata_Outbound_Interface_Report.xdo|30|WSC_DP_LONG_RUN_JOB_LKP|GL|RTR
+WSC_DP_LONG_RUN_JOB_LKP|70|70|Y|||GL to Central Outbound Balances|/Custom/Wesco Custom/GL/Interfaces/Wesco_WSC_GBL_GL_INT040_Central_Outbound_Interface_Report.xdo|30|WSC_DP_LONG_RUN_JOB_LKP|GL|RTR
+WSC_DP_LONG_RUN_JOB_LKP|80|80|Y|||AXE HR DWH  ASSIGNMENT REPORT|/Custom/Anixter Custom/HCM/Human Resources/Integration/I038_DataWarehouse/Assignment_Extract/AXE_HR_DWH_ASSIGNMENT_REPORT.xdo|10|WSC_DP_LONG_RUN_JOB_LKP|HCM|HCM
+WSC_DP_LONG_RUN_JOB_LKP|90|90|Y|||AXE HR XACTLY EMP EXTRACT|AXE_HR_XACTLY_EMP_EXTRACT|10|WSC_DP_LONG_RUN_JOB_LKP|HCM|HCM
+WSC_DP_LONG_RUN_JOB_LKP|100|100|Y|||Update Subledger Accounting Balances|JobDefinition://oracle/apps/ess/financials/subledgerAccounting/shared/XLABABUP|5|WSC_DP_LONG_RUN_JOB_LKP|AHCS|RTR
+WSC_DP_LONG_RUN_JOB_LKP|110|110|Y|||Transfer Intercompany Transactions to Payables|JobDefinition://oracle/apps/ess/financials/commonModules/intercompanyTransactions/TransferToPayables|3|WSC_DP_LONG_RUN_JOB_LKP|IC|RTR
+WSC_DP_LONG_RUN_JOB_LKP|120|120|Y|||Transfer Intercompany Transactions to Receivables|JobDefinition://oracle/apps/ess/financials/commonModules/intercompanyTransactions/TransferToReceivables|3|WSC_DP_LONG_RUN_JOB_LKP|IC|RTR
+WSC_DP_LONG_RUN_JOB_LKP|130|130|Y|||Process Receipts through LockBox|JobDefinition://oracle/apps/ess/financials/receivables/receipts/lockboxes/LockboxImportEss|3|WSC_DP_LONG_RUN_JOB_LKP|AR|RTR
+WSC_DP_LONG_RUN_JOB_LKP|140|140|Y|||Validate Payables Invoices|JobDefinition://oracle/apps/ess/financials/payables/invoices/transactions/APXAPRVL|3|WSC_DP_LONG_RUN_JOB_LKP|AP|RTR
+WSC_DP_LONG_RUN_JOB_LKP|150|150|Y|||Wesco_AXE_GBL_AP_INT185_INT186_IC_AP_Invoices_Feed_To_IAP_Teradata_Report|/Custom/WESCO Custom/AP/Interfaces/Wesco_AXE_GBL_AP_INT185_INT186_IC_AP_Invoices_Feed_To_IAP_Teradata_Report.xdo|3|WSC_DP_LONG_RUN_JOB_LKP|IC|RTR
+WSC_DP_LONG_RUN_JOB_LKP|160|160|Y|||Wesco_AXE_GBL_AR_INT234_INT235_AR_Invoice_Balances_to_IAP_Teradata_Report|/Custom/WESCO Custom/AR/Interfaces/Wesco_AXE_GBL_AR_INT234_INT235_AR_Invoice_Balances_to_IAP_Teradata_Report.xdo|3|WSC_DP_LONG_RUN_JOB_LKP|IC|RTR
+WSC_DP_LONG_RUN_JOB_LKP|170|170|Y|||Wesco_AXE_GBL_AR_INT191_INT192_IC_AR_Receipts_to_IAP_Teradata_Report|/Custom/WESCO Custom/AR/Interfaces/Wesco_AXE_GBL_AR_INT191_INT192_IC_AR_Receipts_to_IAP_Teradata_Report.xdo|3|WSC_DP_LONG_RUN_JOB_LKP|IC|RTR
+WSC_DP_LONG_RUN_JOB_LKP|180|180|Y|||Wesco_AXE_GBL_AR_INT189_INT190_IC_AR_Invoice_to_IAP_Teradata_Report|/Custom/WESCO Custom/AR/Interfaces/Wesco_AXE_GBL_AR_INT189_INT190_IC_AR_Invoice_to_IAP_Teradata_Report.xdo|3|WSC_DP_LONG_RUN_JOB_LKP|IC|RTR
+WSC_DP_LONG_RUN_JOB_LKP|190|190|Y|||Wesco_AXE_GBL_AP_INT232_INT233_Open_AP_Invoice_Balances_to_IAP_Teradata_Report|/Custom/WESCO Custom/AP/Interfaces/Wesco_AXE_GBL_AP_INT232_INT233_Open_AP_Invoice_Balances_to_IAP_Teradata_Report.xdo|3|WSC_DP_LONG_RUN_JOB_LKP|IC|RTR
+WSC_DP_LONG_RUN_JOB_LKP|200|200|Y|||Wesco_AXE_GBL_AP_INT187_INT188_IC_AP_Payments_to_IAP_Teradata_Report|/Custom/WESCO Custom/AP/Interfaces/Wesco_AXE_GBL_AP_INT187_INT188_IC_AP_Payments_to_IAP_Teradata_Report.xdo|3|WSC_DP_LONG_RUN_JOB_LKP|IC|RTR
+WSC_DP_LONG_RUN_JOB_LKP|210|210|Y|||Wesco_GBL_GL_INT010_GL_Balances_To_Teradata_Outbound_Interface_Report|/Custom/WESCO Custom/GL/Interfaces/Wesco_GBL_GL_INT010_GL_Balances_To_Teradata_Outbound_Interface_Report.xdo|3|WSC_DP_LONG_RUN_JOB_LKP|GL|RTR
+WSC_DP_LONG_RUN_JOB_LKP|220|220|Y|||Wesco_GBL_GL_INT011_GL_Journals_To_Teradata_Outbound_Interface_Report|/Custom/WESCO Custom/GL/Interfaces/Wesco_GBL_GL_INT011_GL_Journals_To_Teradata_Outbound_Interface_Report.xdo|3|WSC_DP_LONG_RUN_JOB_LKP|GL|RTR
+WSC_DP_LONG_RUN_JOB_LKP|230|230|Y|||Wesco_GBL_GL_RPT051_Exchange_Rate_Report|/Custom/WESCO Custom/GL/Reports/Wesco_GBL_GL_RPT051_Exchange_Rate_Report.xdo|3|WSC_DP_LONG_RUN_JOB_LKP|GL|RTR
+WSC_DP_LONG_RUN_JOB_LKP|240|240|Y|||Wesco_AXE_GBL_AHCS_INT043_AHCS_Details_To_IAP_Outbound_Interface_Report|/Custom/WESCO Custom/AHCS/Interfaces/Wesco_AXE_GBL_AHCS_INT043_AHCS_Details_To_IAP_Outbound_Interface_Report.xdo|1|WSC_DP_LONG_RUN_JOB_LKP|AHCS|RTR
+WSC_DP_LONG_RUN_JOB_LKP|250|250|Y|||Wesco_AXE_GBL_AHCS_INT044_AHCS_Data_to_IAP_AHCS_Balances_Report|/Custom/WESCO Custom/AHCS/Interfaces/Wesco_AXE_GBL_AHCS_INT044_AHCS_Data_to_IAP_AHCS_Balances_Report.xdo|150|WSC_DP_LONG_RUN_JOB_LKP|AHCS|RTR
+WSC_DP_LONG_RUN_JOB_LKP|260|260|Y|||Wesco_GBL_AHCS_RPT006_Error_Report|/Custom/WESCO Custom/AHCS/Reports/Wesco_GBL_AHCS_RPT006_Error_Report.xdo|1|WSC_DP_LONG_RUN_JOB_LKP|AHCS|RTR

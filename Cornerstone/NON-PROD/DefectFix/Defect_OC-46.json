@@ -1,0 +1,11 @@
+{
+	"Rice_id" : "RPT010",
+	"OIC": [],
+	"DB": [],
+    "Report":["NON-PROD/1A/ERP/RTR/GL/Reports/RPT010/Report/DataModels/Wesco_GBL_GL_RPT010_Journal_Approval_Bypass_Details_DM.xdm.catalog","NON-PROD/1A/ERP/RTR/GL/Reports/RPT010/Report/Layouts/Wesco_GBL_GL_RPT010_Journal_Approval_Bypass_Details_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "DEV_RPT"
+}
+
+

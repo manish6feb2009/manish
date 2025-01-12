@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "EXT011",
+	"OIC": ["NON-PROD/1A/ERP/RTR/AHCS/Extension/EXT014/OIC/Integration/WES_WSC_GBL_GL_COA_MAP_TO_BI_01.00.0000.iar"],
+	"DB": [],
+	"Report": [],
+	"TARGET_DB": "",
+	"TARGET_OIC": "UAT_OIC",
+	"TARGET_RPT": ""
+}

@@ -1,0 +1,9 @@
+{
+	"Rice_id":"OC-230",
+	"OIC": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/INT_PURGE_002/OIC/WESCO_DGTL_PLS_PURGING_INTERFACE_01.00.0000.iar"],
+	"DB": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/INT_PURGE_002/DB/00_WSC_COMMON_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "UAT2_DB",
+	"TARGET_OIC": "UAT2_OIC",
+	"TARGET_RPT": ""
+}

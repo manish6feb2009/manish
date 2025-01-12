@@ -1,0 +1,2 @@
+ALTER TABLE wsc_ahcs_psfa_txn_LINE_t ADD "LEG_AFFILIATE" VARCHAR2(5 BYTE);
+commit;

@@ -1,0 +1,6 @@
+﻿DVM,WSC_COMMON_DP_REPROTS_DETAILS_LKP,Common Digital Pulse Report Details,dp report details
+ReportName,ReportPath
+CriticalJobs,/Custom/WESCO Custom/AHCS/Interfaces/Common/Wesco_WSC_GBL_DP_ScheduledJobDetails_Report.xdo
+LongRunningJobs,/Custom/WESCO Custom/AHCS/Interfaces/Common/Wesco_WSC_GBL_DP_LongRunningJobDetails_Report.xdo
+OutboundJobs,/Custom/WESCO Custom/AHCS/Interfaces/Common/Wesco_WSC_GBL_DP_OutboundReportDetails_Report.xdo
+UserAuthentication,/Custom/WESCO Custom/AHCS/Interfaces/Common/Wesco_WSC_GBL_DP_UserRoleDetails_Report.xdo

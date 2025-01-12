@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "OC-233",
+	"OIC": [],
+	
+	"Report": ["PROD/Cornerstone/ERP/RTR/AP/Interface/INT187_INT188/OC-233/DataModels/Wesco_AXE_GBL_AP_INT187_INT188_IC_AP_Payments_to_IAP_Teradata_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "PRD_RPT"
+}

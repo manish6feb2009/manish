@@ -1,0 +1,10 @@
+{
+    "Rice_id" : "OC-147",
+    "OIC": [],
+    "DB": [],
+    "Report": ["PROD/Cornerstone/ERP/RTR/AHCS/Reports/RPT220/Report/DataModels/Wesco_GBL_AHCS_RPT220_XLA_Lines_to_XLA_Balances_Reconcilation_DM.xdm.catalog", 
+               "PROD/Cornerstone/ERP/RTR/AHCS/Reports/RPT220/Report/Layouts/Wesco_GBL_AHCS_RPT220_XLA_Lines_to_XLA_Balances_Reconcilation_Report.xdo.catalog"],
+    "TARGET_DB": "",
+    "TARGET_OIC": "",
+    "TARGET_RPT": "PRD_RPT"
+}

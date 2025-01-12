@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "CTPFS-29442",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/GL/Reports/RPT047/Report/DataModels/Wesco_GBL_GL_RPT047_Trial_Balance_by_Entered_and_Accounted_Amounts_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/GL/Reports/RPT047/Report/Layouts/Wesco_GBL_GL_RPT047_Trial_Balance_By_Entered_and_Accounted_Amount_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

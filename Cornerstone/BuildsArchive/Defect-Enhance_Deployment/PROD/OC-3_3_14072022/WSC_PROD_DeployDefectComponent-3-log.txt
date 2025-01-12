@@ -1,0 +1,519 @@
+[2022-07-14 15:49:14] Build scheduled. Build started by user depandya@deloitte.com
+[2022-07-14 15:49:14] Build task id: 83c0787b-083a-4602-a660-e40340984fe5
+[2022-07-14 15:49:14] Waiting to obtain  executor [Anixter - VM Deploy Template] to start the execution of the build
+[2022-07-14 15:49:35] Executor obtained. Type: VM Template: Anixter - VM Deploy Template Executor VM ID: 32467
+[2022-07-14 15:49:36] Build execution started.
+[2022-07-14 15:49:36] 
+[2022-07-14 15:49:36] 
+[2022-07-14 15:49:36] Parameters in this job: 
+[2022-07-14 15:49:36] ------------------------------------------------------------------
+[2022-07-14 15:49:36] defect_id = OC-3
+[2022-07-14 15:49:36] connectiondetails_password = ********
+[2022-07-14 15:49:36] EXECUTOR_TYPE = VM
+[2022-07-14 15:49:36] TASKID = 83c0787b-083a-4602-a660-e40340984fe5
+[2022-07-14 15:49:36] ------------------------------------------------------------------
+[2022-07-14 15:49:36] Git: Checkout directory is github relative to the workspace root.
+[2022-07-14 15:49:36] Git: git version 2.2.2
+[2022-07-14 15:49:36] Git: Fetching from remote repository https://mkg-sandbox-anixterpaas.developer.ocp.oraclecloud.com/mkg-sandbox-anixterpaas/s/mkg-sandbox-anixterpaas_cornerstone_39047/scm/Cornerstone.git
+[2022-07-14 15:49:36] /bin/git fetch --tags https://mkg-sandbox-anixterpaas.developer.ocp.oraclecloud.com/mkg-sandbox-anixterpaas/s/mkg-sandbox-anixterpaas_cornerstone_39047/scm/Cornerstone.git +refs/heads/*:refs/remotes/origin/* 
+[2022-07-14 15:49:43] Git: Checking out branch main
+[2022-07-14 15:49:44] Git: Done
+[2022-07-14 15:49:44] BEGIN shell script execution with /bin/sh -ex
+[2022-07-14 15:49:44] + l_file_prefix=DEFECT_ID_
+[2022-07-14 15:49:44] + l_summary_file=DEFECT_ID_OC-3_SUMMARY.txt
+[2022-07-14 15:49:44] + l_payload_start_bar='##############PAYLOAD START################'
+[2022-07-14 15:49:44] + l_payload_end_bar='##############PAYLOAD   END################'
+[2022-07-14 15:49:44] ++ cat github/Miscellaneous/ArtifactDesigner_Components/PropertiesFile/artifact_individual/artifact_indv_sec.json
+[2022-07-14 15:49:44] + indi_sec_tpl8='"#section_name#":[
+[2022-07-14 15:49:44] 		#section_data#
+[2022-07-14 15:49:44] ]'
+[2022-07-14 15:49:44] ++ cat github/Miscellaneous/ArtifactDesigner_Components/PropertiesFile/artifact_individual/artifact_indv_sec_data.json
+[2022-07-14 15:49:44] + indi_sec_data_tpl8='{
+[2022-07-14 15:49:44] 	"name":"#name#",
+[2022-07-14 15:49:44] 	"contains_error":"#contains_error#",
+[2022-07-14 15:49:44] 	"payload":"#payload#"
+[2022-07-14 15:49:44] }'
+[2022-07-14 15:49:44] + indi_sec_name=
+[2022-07-14 15:49:44] + section_list_data=
+[2022-07-14 15:49:44] + cp github/Miscellaneous/ArtifactDesigner_Components/PropertiesFile/artifact_individual/artifact_individual.json OC-3_indi_html_data.json
+[2022-07-14 15:49:44] + echo -----------------------------------------------------------------------
+[2022-07-14 15:49:44] -----------------------------------------------------------------------
+[2022-07-14 15:49:44] ++ gpg -d --batch --passphrase ******** github/PROD/connection_details.gpg
+[2022-07-14 15:49:44] + v_con_details='{
+[2022-07-14 15:49:44] 	"PASSWORDS" : {
+[2022-07-14 15:49:44] 		"DEV_DB":"Winter2021",
+[2022-07-14 15:49:44] 		"DEV_OIC":"WescoAnixter@12345678901234567890",
+[2022-07-14 15:49:44] 		"DEV_RPT":"j89uu(L0?",
+[2022-07-14 15:49:44] 		"DEV_DGTP":"DigitalPulse",
+[2022-07-14 15:49:44] 		"SIT_DGTP":"DigitalPulse",
+[2022-07-14 15:49:44] 		"UAT_DB":"WinTer##2022",
+[2022-07-14 15:49:44] 		"UAT_OIC":"WescoAnixter@12345678901234567890",
+[2022-07-14 15:49:44] 		"UAT_RPT":"Fbhsil&4(67g",
+[2022-07-14 15:49:44] 		"SIT2_RPT":"Welcome@123",
+[2022-07-14 15:49:44] 		"PRD_DGTP":"DigitalPulse##22",
+[2022-07-14 15:49:44] 		"PRD_RPT":"e+u8KbxR$(2r4/Xz$M_s^",
+[2022-07-14 15:49:44] 		"PRD_OIC":"WescoAnixterProd@12345678901234567890",
+[2022-07-14 15:49:44] 		"PRD_DB":"WinTer##2022",
+[2022-07-14 15:49:44] 		"PSA_DB":"Winter2021",
+[2022-07-14 15:49:44] 		"PSA_OIC":"WescoAnixter@12345678901234567890",
+[2022-07-14 15:49:44] 		"PSA_RPT":"e+u8KbxR$(2r4/Xz$M_s^"
+[2022-07-14 15:49:44] 	},
+[2022-07-14 15:49:44] 	"URL" :{
+[2022-07-14 15:49:44] 		"DEV_DB":"txndev.subashpcidtrnli.vcnaxepcidev.oraclevcn.com",
+[2022-07-14 15:49:44] 		"DEV_OIC":"https://aicdev-anixterpaas.integration.ocp.oraclecloud.com",
+[2022-07-14 15:49:44] 		"DEV_RPT":"https://eklm-dev20.fa.us2.oraclecloud.com",
+[2022-07-14 15:49:44] 		"DEV_DGTP":"txndev.subashpcidtrnli.vcnaxepcidev.oraclevcn.com",
+[2022-07-14 15:49:44] 		"SIT_DGTP":"ptxntra.subashtrapcidtr.vcnaxepcidev.oraclevcn.com",
+[2022-07-14 15:49:44] 		"UAT_DB":"ptxntr.subashtrapcidtr.vcnaxepcidev.oraclevcn.com",
+[2022-07-14 15:49:44] 		"UAT_OIC":"https://aictr-anixterpaas.integration.ocp.oraclecloud.com",
+[2022-07-14 15:49:44] 		"UAT_RPT":"https://eklm-dev21.fa.us2.oraclecloud.com",
+[2022-07-14 15:49:44] 		"SIT2_RPT":"https://eklm-dev22.fa.us2.oraclecloud.com",
+[2022-07-14 15:49:44] 		"PRD_DGTP":"PTXNPRD.anixter.com",
+[2022-07-14 15:49:44] 		"PRD_RPT":"https://eklm.fa.us2.oraclecloud.com",
+[2022-07-14 15:49:44] 		"PRD_OIC":"https://aicprod-anixterpaas.integration.ocp.oraclecloud.com",
+[2022-07-14 15:49:44] 		"PRD_DB":"PTXNPRD.anixter.com",
+[2022-07-14 15:49:44] 		"PSA_DB":"ptxnstg.subashtrapcidtr.vcnaxepcidev.oraclevcn.com",
+[2022-07-14 15:49:44] 		"PSA_OIC":"https://aicstage-anixterpaas.integration.ocp.oraclecloud.com",
+[2022-07-14 15:49:44] 		"PSA_RPT":"https://eklm-test.fa.us2.oraclecloud.com"
+[2022-07-14 15:49:44] 		
+[2022-07-14 15:49:44] 	}
+[2022-07-14 15:49:44] }'
+[2022-07-14 15:49:44] ++ pwd
+[2022-07-14 15:49:44] + v_home=/data/cibuild/83c0787b-083a-4602-a660-e40340984fe5/workspace
+[2022-07-14 15:49:44] + t_report=
+[2022-07-14 15:49:44] + v_check_oic=FALSE
+[2022-07-14 15:49:44] + v_check_db=FALSE
+[2022-07-14 15:49:44] + v_check_report=FALSE
+[2022-07-14 15:49:44] + v_oic_arti=
+[2022-07-14 15:49:44] + v_report_arti=
+[2022-07-14 15:49:44] + v_db_arti=
+[2022-07-14 15:49:44] + v_defectfix_file_path=github/PROD/DefectFix/Defect_OC-3.json
+[2022-07-14 15:49:44] + set +x
+[2022-07-14 15:49:44] ✓ Defect Fix file is present
+[2022-07-14 15:49:44] ✓ Defect Fix File syntax is correct
+[2022-07-14 15:49:44] + echo 'Parsing file for the components to be deployed as fix...'
+[2022-07-14 15:49:44] Parsing file for the components to be deployed as fix...
+[2022-07-14 15:49:44] ++ jq .OIC github/PROD/DefectFix/Defect_OC-3.json
+[2022-07-14 15:49:44] + j_oic_arti='[]'
+[2022-07-14 15:49:44] ++ jq .Report github/PROD/DefectFix/Defect_OC-3.json
+[2022-07-14 15:49:44] + j_report_arti='[]'
+[2022-07-14 15:49:44] ++ jq .DB github/PROD/DefectFix/Defect_OC-3.json
+[2022-07-14 15:49:44] + j_db_arti='[
+[2022-07-14 15:49:44]   "PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/DB/DefectFix/OC-3/WSC_CENTRAL_033_038_OC3_MASTER.sql"
+[2022-07-14 15:49:44] ]'
+[2022-07-14 15:49:44] ++ echo '[]'
+[2022-07-14 15:49:44] ++ jq '. | length'
+[2022-07-14 15:49:44] + j_oic_arti_len=0
+[2022-07-14 15:49:44] ++ echo '[]'
+[2022-07-14 15:49:44] ++ jq '. | length'
+[2022-07-14 15:49:44] + j_report_arti_len=0
+[2022-07-14 15:49:44] ++ jq '. | length'
+[2022-07-14 15:49:44] ++ echo '[' '"PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/DB/DefectFix/OC-3/WSC_CENTRAL_033_038_OC3_MASTER.sql"' ']'
+[2022-07-14 15:49:44] + j_db_arti_len=1
+[2022-07-14 15:49:44] + [[ 0 != 0 ]]
+[2022-07-14 15:49:44] + echo '✖ OIC Artifacts'
+[2022-07-14 15:49:44] ✖ OIC Artifacts
+[2022-07-14 15:49:44] + [[ 0 != 0 ]]
+[2022-07-14 15:49:44] + echo '✖ Report Artifacts'
+[2022-07-14 15:49:44] ✖ Report Artifacts
+[2022-07-14 15:49:44] + [[ 1 != 0 ]]
+[2022-07-14 15:49:44] + (( i=0 ))
+[2022-07-14 15:49:44] + (( i < 1 ))
+[2022-07-14 15:49:44] + echo '✓ DB Artifacts'
+[2022-07-14 15:49:44] ✓ DB Artifacts
+[2022-07-14 15:49:44] + v_check_db=TRUE
+[2022-07-14 15:49:44] ++ jq '.[0]'
+[2022-07-14 15:49:44] ++ sed 's|"||g'
+[2022-07-14 15:49:44] ++ echo '[' '"PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/DB/DefectFix/OC-3/WSC_CENTRAL_033_038_OC3_MASTER.sql"' ']'
+[2022-07-14 15:49:44] + v_db_arti=PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/DB/DefectFix/OC-3/WSC_CENTRAL_033_038_OC3_MASTER.sql
+[2022-07-14 15:49:44] ++ jq '.[0]'
+[2022-07-14 15:49:44] ++ sed 's|"||g'
+[2022-07-14 15:49:44] ++ echo '[' '"PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/DB/DefectFix/OC-3/WSC_CENTRAL_033_038_OC3_MASTER.sql"' ']'
+[2022-07-14 15:49:44] + echo -e '\t•\tPROD/1A/ERP/RTR/AHCS/Interface/INT033_38/DB/DefectFix/OC-3/WSC_CENTRAL_033_038_OC3_MASTER.sql'
+[2022-07-14 15:49:44] 	•	PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/DB/DefectFix/OC-3/WSC_CENTRAL_033_038_OC3_MASTER.sql
+[2022-07-14 15:49:44] + (( i++  ))
+[2022-07-14 15:49:44] + (( i < 1 ))
+[2022-07-14 15:49:44] + [[ TRUE == \T\R\U\E ]]
+[2022-07-14 15:49:44] + indi_sec_name=',"DATABASE"'
+[2022-07-14 15:49:44] + indi_sec_db='"#section_name#":[
+[2022-07-14 15:49:44] 		#section_data#
+[2022-07-14 15:49:44] ]'
+[2022-07-14 15:49:44] + indi_sec_data_db='{
+[2022-07-14 15:49:44] 	"name":"#name#",
+[2022-07-14 15:49:44] 	"contains_error":"#contains_error#",
+[2022-07-14 15:49:44] 	"payload":"#payload#"
+[2022-07-14 15:49:44] }'
+[2022-07-14 15:49:44] + db_payload=
+[2022-07-14 15:49:44] + echo '---------DATABASE DEPLOYMENT----------'
+[2022-07-14 15:49:44] ---------DATABASE DEPLOYMENT----------
+[2022-07-14 15:49:44] ++ echo PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/DB/DefectFix/OC-3/WSC_CENTRAL_033_038_OC3_MASTER.sql
+[2022-07-14 15:49:44] ++ cut -d/ -f1
+[2022-07-14 15:49:44] ++ rev
+[2022-07-14 15:49:44] ++ rev
+[2022-07-14 15:49:44] + v_master_file=WSC_CENTRAL_033_038_OC3_MASTER.sql
+[2022-07-14 15:49:44] ++ echo '{' '"name":"#name#",' '"contains_error":"#contains_error#",' '"payload":"#payload#"' '}'
+[2022-07-14 15:49:44] ++ sed 's|#name#|WSC_CENTRAL_033_038_OC3_MASTER.sql|g'
+[2022-07-14 15:49:44] + indi_sec_data_db='{ "name":"WSC_CENTRAL_033_038_OC3_MASTER.sql", "contains_error":"#contains_error#", "payload":"#payload#" }'
+[2022-07-14 15:49:44] ++ echo PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/DB/DefectFix/OC-3/WSC_CENTRAL_033_038_OC3_MASTER.sql
+[2022-07-14 15:49:44] ++ cut -d/ -f2-
+[2022-07-14 15:49:44] ++ rev
+[2022-07-14 15:49:44] ++ rev
+[2022-07-14 15:49:44] + cd github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/DB/DefectFix/OC-3
+[2022-07-14 15:49:44] + pwd
+[2022-07-14 15:49:44] /data/cibuild/83c0787b-083a-4602-a660-e40340984fe5/workspace/github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/DB/DefectFix/OC-3
+[2022-07-14 15:49:44] + ls -l
+[2022-07-14 15:49:44] total 136
+[2022-07-14 15:49:44] -rw-r-----. 1 builder builder   297 Jul 14 15:49 Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql
+[2022-07-14 15:49:44] -rw-r-----. 1 builder builder  1014 Jul 14 15:49 Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql
+[2022-07-14 15:49:44] -rw-r-----. 1 builder builder 28694 Jul 14 15:49 WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql
+[2022-07-14 15:49:44] -rw-r-----. 1 builder builder  4313 Jul 14 15:49 WSC_CENTRAL_033_038_OC3_CENT_PKG.sql
+[2022-07-14 15:49:44] -rw-r-----. 1 builder builder   637 Jul 14 15:49 WSC_CENTRAL_033_038_OC3_INDEX.sql
+[2022-07-14 15:49:44] -rw-r-----. 1 builder builder   848 Jul 14 15:49 WSC_CENTRAL_033_038_OC3_MASTER.sql
+[2022-07-14 15:49:44] -rw-r-----. 1 builder builder   718 Jul 14 15:49 WSC_CENTRAL_033_038_OC3_TABLE.sql
+[2022-07-14 15:49:44] -rw-r-----. 1 builder builder 71471 Jul 14 15:49 WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql
+[2022-07-14 15:49:44] -rw-r-----. 1 builder builder  2673 Jul 14 15:49 WSC_CENTRAL_033_038_OC3_VandT_PKG.sql
+[2022-07-14 15:49:44] + echo -e '\tⓘ\tExecuting Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql'
+[2022-07-14 15:49:44] 	ⓘ	Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql
+[2022-07-14 15:49:44] + db_payload='<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql'
+[2022-07-14 15:49:44] + sql -S finint/WinTer##2022@150.136.203.0:1521/PTXNPRD.anixter.com
+[2022-07-14 15:49:47] EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql
+[2022-07-14 15:49:47] CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T
+[2022-07-14 15:49:48] Table "FININT"."WSC_AHCS_CENTRAL_REV_ACC_MAP_T" created.
+[2022-07-14 15:49:48] CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T
+[2022-07-14 15:49:48] Table "FININT"."WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T" created.
+[2022-07-14 15:49:48] EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql
+[2022-07-14 15:49:48] INDEX "FININT"."WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK" created.
+[2022-07-14 15:49:48] INDEX "FININT"."WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK" created.
+[2022-07-14 15:49:48] EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] Commit complete.
+[2022-07-14 15:49:48] EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] 1 row inserted.
+[2022-07-14 15:49:48] Commit complete.
+[2022-07-14 15:49:48] EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql
+[2022-07-14 15:49:48] Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled
+[2022-07-14 15:49:48] EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql
+[2022-07-14 15:49:49] Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql
+[2022-07-14 15:49:49] CREATE/UPDATE PACKAGE wsc_central_pkg
+[2022-07-14 15:49:49] Package WSC_CENTRAL_PKG compiled
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql
+[2022-07-14 15:49:49] Package Body WSC_CENTRAL_PKG compiled
+[2022-07-14 15:49:49] Commit complete.
+[2022-07-14 15:49:49] ++ cat /data/cibuild/83c0787b-083a-4602-a660-e40340984fe5/workspace/spool.txt
+[2022-07-14 15:49:49] + db_payload='<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql
+[2022-07-14 15:49:49] CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T
+[2022-07-14 15:49:49] Table "FININT"."WSC_AHCS_CENTRAL_REV_ACC_MAP_T" created.
+[2022-07-14 15:49:49] CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T
+[2022-07-14 15:49:49] Table "FININT"."WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T" created.
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql
+[2022-07-14 15:49:49] INDEX "FININT"."WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK" created.
+[2022-07-14 15:49:49] INDEX "FININT"."WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK" created.
+[2022-07-14 15:49:49] EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] Commit complete.
+[2022-07-14 15:49:49] EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] Commit complete.
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql
+[2022-07-14 15:49:49] Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql
+[2022-07-14 15:49:49] Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql
+[2022-07-14 15:49:49] CREATE/UPDATE PACKAGE wsc_central_pkg
+[2022-07-14 15:49:49] Package WSC_CENTRAL_PKG compiled
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql
+[2022-07-14 15:49:49] Package Body WSC_CENTRAL_PKG compiled
+[2022-07-14 15:49:49] Commit complete.'
+[2022-07-14 15:49:49] ++ sed 's|"||g'
+[2022-07-14 15:49:49] ++ echo '<br>Executing' Master Script: 'WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING' WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table '"FININT"."WSC_AHCS_CENTRAL_REV_ACC_MAP_T"' created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table '"FININT"."WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T"' created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX '"FININT"."WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK"' created. INDEX '"FININT"."WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK"' created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete.
+[2022-07-14 15:49:49] + db_payload='<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete.'
+[2022-07-14 15:49:49] ++ sed 's|\n|<br>|g'
+[2022-07-14 15:49:49] ++ echo '<br>Executing' Master Script: 'WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING' WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete.
+[2022-07-14 15:49:49] + db_payload='<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete.'
+[2022-07-14 15:49:49] ++ sed 's|#payload#|<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete.|g'
+[2022-07-14 15:49:49] ++ echo '{' '"name":"WSC_CENTRAL_033_038_OC3_MASTER.sql",' '"contains_error":"#contains_error#",' '"payload":"#payload#"' '}'
+[2022-07-14 15:49:49] + indi_sec_data_db='{ "name":"WSC_CENTRAL_033_038_OC3_MASTER.sql", "contains_error":"#contains_error#", "payload":"<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete." }'
+[2022-07-14 15:49:49] ++ cat /data/cibuild/83c0787b-083a-4602-a660-e40340984fe5/workspace/spool.txt
+[2022-07-14 15:49:49] + [[ EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql
+[2022-07-14 15:49:49] CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T
+[2022-07-14 15:49:49] Table "FININT"."WSC_AHCS_CENTRAL_REV_ACC_MAP_T" created.
+[2022-07-14 15:49:49] CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T
+[2022-07-14 15:49:49] Table "FININT"."WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T" created.
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql
+[2022-07-14 15:49:49] INDEX "FININT"."WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK" created.
+[2022-07-14 15:49:49] INDEX "FININT"."WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK" created.
+[2022-07-14 15:49:49] EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] Commit complete.
+[2022-07-14 15:49:49] EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] Commit complete.
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql
+[2022-07-14 15:49:49] Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql
+[2022-07-14 15:49:49] Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql
+[2022-07-14 15:49:49] CREATE/UPDATE PACKAGE wsc_central_pkg
+[2022-07-14 15:49:49] Package WSC_CENTRAL_PKG compiled
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql
+[2022-07-14 15:49:49] Package Body WSC_CENTRAL_PKG compiled
+[2022-07-14 15:49:49] Commit complete. == *\E\r\r\o\r\ \r\e\p\o\r\t\ \-* ]]
+[2022-07-14 15:49:49] ++ cat /data/cibuild/83c0787b-083a-4602-a660-e40340984fe5/workspace/spool.txt
+[2022-07-14 15:49:49] + [[ EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql
+[2022-07-14 15:49:49] CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T
+[2022-07-14 15:49:49] Table "FININT"."WSC_AHCS_CENTRAL_REV_ACC_MAP_T" created.
+[2022-07-14 15:49:49] CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T
+[2022-07-14 15:49:49] Table "FININT"."WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T" created.
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql
+[2022-07-14 15:49:49] INDEX "FININT"."WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK" created.
+[2022-07-14 15:49:49] INDEX "FININT"."WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK" created.
+[2022-07-14 15:49:49] EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] Commit complete.
+[2022-07-14 15:49:49] EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] 1 row inserted.
+[2022-07-14 15:49:49] Commit complete.
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql
+[2022-07-14 15:49:49] Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql
+[2022-07-14 15:49:49] Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql
+[2022-07-14 15:49:49] CREATE/UPDATE PACKAGE wsc_central_pkg
+[2022-07-14 15:49:49] Package WSC_CENTRAL_PKG compiled
+[2022-07-14 15:49:49] EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql
+[2022-07-14 15:49:49] Package Body WSC_CENTRAL_PKG compiled
+[2022-07-14 15:49:49] Commit complete. == *\E\r\r\o\r\s\:\ \c\h\e\c\k\ \c\o\m\p\i\l\e\r\ \l\o\g* ]]
+[2022-07-14 15:49:49] ++ echo '{' '"name":"WSC_CENTRAL_033_038_OC3_MASTER.sql",' '"contains_error":"#contains_error#",' '"payload":"<br>Executing' Master Script: 'WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING' WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit 'complete."' '}'
+[2022-07-14 15:49:49] ++ sed 's|#contains_error#|no|g'
+[2022-07-14 15:49:49] + indi_sec_data_db='{ "name":"WSC_CENTRAL_033_038_OC3_MASTER.sql", "contains_error":"no", "payload":"<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete." }'
+[2022-07-14 15:49:49] ++ echo '"#section_name#":[' '#section_data#' ']'
+[2022-07-14 15:49:49] ++ sed 's|#section_name#|DATABASE|g'
+[2022-07-14 15:49:49] + indi_sec_db='"DATABASE":[ #section_data# ]'
+[2022-07-14 15:49:49] ++ echo '"DATABASE":[' '#section_data#' ']'
+[2022-07-14 15:49:49] ++ sed 's|#section_data#|{ "name":"WSC_CENTRAL_033_038_OC3_MASTER.sql", "contains_error":"no", "payload":"<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete." }|g'
+[2022-07-14 15:49:49] + indi_sec_db='"DATABASE":[ { "name":"WSC_CENTRAL_033_038_OC3_MASTER.sql", "contains_error":"no", "payload":"<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete." } ]'
+[2022-07-14 15:49:49] + section_list_data=',"DATABASE":[ { "name":"WSC_CENTRAL_033_038_OC3_MASTER.sql", "contains_error":"no", "payload":"<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete." } ]'
+[2022-07-14 15:49:49] + echo --------------------------------------
+[2022-07-14 15:49:49] --------------------------------------
+[2022-07-14 15:49:49] + cd /data/cibuild/83c0787b-083a-4602-a660-e40340984fe5/workspace
+[2022-07-14 15:49:49] + [[ FALSE == \T\R\U\E ]]
+[2022-07-14 15:49:49] + [[ FALSE == \T\R\U\E ]]
+[2022-07-14 15:49:49] ++ echo ',"DATABASE"'
+[2022-07-14 15:49:49] ++ cut -d , -f2-
+[2022-07-14 15:49:49] + indi_sec_name='"DATABASE"'
+[2022-07-14 15:49:49] ++ cut -d , -f2-
+[2022-07-14 15:49:49] ++ echo ',"DATABASE":[' '{' '"name":"WSC_CENTRAL_033_038_OC3_MASTER.sql",' '"contains_error":"no",' '"payload":"<br>Executing' Master Script: 'WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING' WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit 'complete."' '}' ']'
+[2022-07-14 15:49:49] + section_list_data='"DATABASE":[ { "name":"WSC_CENTRAL_033_038_OC3_MASTER.sql", "contains_error":"no", "payload":"<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete." } ]'
+[2022-07-14 15:49:49] + sed -i 's|#artifact_name#||g' OC-3_indi_html_data.json
+[2022-07-14 15:49:49] + sed -i 's|#section#|"DATABASE"|g' OC-3_indi_html_data.json
+[2022-07-14 15:49:49] + sed -i 's|#section_list_data#|"DATABASE":[ { "name":"WSC_CENTRAL_033_038_OC3_MASTER.sql", "contains_error":"no", "payload":"<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete." } ]|g' OC-3_indi_html_data.json
+[2022-07-14 15:49:49] + echo -----------------------------------------------------------------------
+[2022-07-14 15:49:49] -----------------------------------------------------------------------
+[2022-07-14 15:49:49] END shell script execution
+[2022-07-14 15:49:49] BEGIN shell script execution with /bin/sh -ex
+[2022-07-14 15:49:49] ++ cat github/Miscellaneous/ArtifactDesigner_Components/Html/artifact_individual/artifact_individual_section_card.txt
+[2022-07-14 15:49:49] + temp_section='<div class="card text-white bg-secondary my-5 py-4 text-center">
+[2022-07-14 15:49:49]     <div class="card-body"><p class="text-white m-0">##section_name##</p></div>
+[2022-07-14 15:49:49] </div>
+[2022-07-14 15:49:49] <div class="row gx-4 gx-lg-5">
+[2022-07-14 15:49:49] 	<div class="col-lg-12" style="margin-bottom:20px">
+[2022-07-14 15:49:49] 		<div id="accordion">
+[2022-07-14 15:49:49] 		##section_data##
+[2022-07-14 15:49:49] 		</div>
+[2022-07-14 15:49:49] 	</div>
+[2022-07-14 15:49:49] </div>'
+[2022-07-14 15:49:49] ++ cat github/Miscellaneous/ArtifactDesigner_Components/Html/artifact_individual/artifact_individual_section_details_comp.txt
+[2022-07-14 15:49:49] + temp_section_detail='<div class="card">
+[2022-07-14 15:49:49] <div class="card-header" id="heading##artifact_id##">
+[2022-07-14 15:49:49]   <h5 class="mb-0">
+[2022-07-14 15:49:49] 	<button class="btn btn-link" data-toggle="collapse" data-target="###artifact_id##" aria-expanded="false" aria-controls="##artifact_id##">
+[2022-07-14 15:49:49] 	  ##name##
+[2022-07-14 15:49:49] 	</button>
+[2022-07-14 15:49:49] 	<button class="btn disabled" style="background-color:##status_color##;"></button>
+[2022-07-14 15:49:49]   </h5>
+[2022-07-14 15:49:49] </div>
+[2022-07-14 15:49:49] <div id="##artifact_id##" class="collapse" aria-labelledby="heading##artifact_id##" data-parent="#accordion">
+[2022-07-14 15:49:49]   <div class="card-body">
+[2022-07-14 15:49:49] 	##payload##
+[2022-07-14 15:49:49]   </div>
+[2022-07-14 15:49:49] </div>
+[2022-07-14 15:49:49] </div>'
+[2022-07-14 15:49:49] + for indi in '*_indi_html_data.json'
+[2022-07-14 15:49:49] + echo xxxxxxxPAYLOADxxxxxxxxx
+[2022-07-14 15:49:49] xxxxxxxPAYLOADxxxxxxxxx
+[2022-07-14 15:49:49] + cat OC-3_indi_html_data.json
+[2022-07-14 15:49:49] {
+[2022-07-14 15:49:49] 	"artifact_name":"",
+[2022-07-14 15:49:49] 	"section":["DATABASE"],
+[2022-07-14 15:49:49] 	"section_data":{
+[2022-07-14 15:49:49] 		"DATABASE":[ { "name":"WSC_CENTRAL_033_038_OC3_MASTER.sql", "contains_error":"no", "payload":"<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete." } ]
+[2022-07-14 15:49:49] 	}
+[2022-07-14 15:49:49] }+ echo xxxxxxxPAYLOADxxxxxxxxx
+[2022-07-14 15:49:49] xxxxxxxPAYLOADxxxxxxxxx
+[2022-07-14 15:49:49] ++ cut -d _ -f1
+[2022-07-14 15:49:49] ++ echo OC-3_indi_html_data.json
+[2022-07-14 15:49:49] + indi_name=OC-3
+[2022-07-14 15:49:49] + cp github/Miscellaneous/ArtifactDesigner_Components/Html/artifact_individual/artifact_individual.txt DEFECT_ID_OC-3.html
+[2022-07-14 15:49:49] ++ jq .artifact_name OC-3_indi_html_data.json
+[2022-07-14 15:49:49] + j_artifact_name='""'
+[2022-07-14 15:49:49] ++ jq .section OC-3_indi_html_data.json
+[2022-07-14 15:49:49] + j_sections='[
+[2022-07-14 15:49:49]   "DATABASE"
+[2022-07-14 15:49:49] ]'
+[2022-07-14 15:49:49] ++ jq .section_data OC-3_indi_html_data.json
+[2022-07-14 15:49:49] + j_sections_data='{
+[2022-07-14 15:49:49]   "DATABASE": [
+[2022-07-14 15:49:49]     {
+[2022-07-14 15:49:49]       "name": "WSC_CENTRAL_033_038_OC3_MASTER.sql",
+[2022-07-14 15:49:49]       "contains_error": "no",
+[2022-07-14 15:49:49]       "payload": "<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete."
+[2022-07-14 15:49:49]     }
+[2022-07-14 15:49:49]   ]
+[2022-07-14 15:49:49] }'
+[2022-07-14 15:49:49] ++ echo '[' '"DATABASE"' ']'
+[2022-07-14 15:49:49] ++ jq '. | length'
+[2022-07-14 15:49:49] + j_sections_len=1
+[2022-07-14 15:49:49] + d_arti_individual_data=
+[2022-07-14 15:49:49] + (( i=0 ))
+[2022-07-14 15:49:49] + (( i<1 ))
+[2022-07-14 15:49:49] ++ echo '[' '"DATABASE"' ']'
+[2022-07-14 15:49:49] ++ jq '.[0]'
+[2022-07-14 15:49:49] ++ sed 's/\"//g'
+[2022-07-14 15:49:49] + j_section_name=DATABASE
+[2022-07-14 15:49:49] ++ jq .DATABASE
+[2022-07-14 15:49:49] ++ echo '{' '"DATABASE":' '[' '{' '"name":' '"WSC_CENTRAL_033_038_OC3_MASTER.sql",' '"contains_error":' '"no",' '"payload":' '"<br>Executing' Master Script: 'WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING' WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit 'complete."' '}' ']' '}'
+[2022-07-14 15:49:49] + j_section_name_data='[
+[2022-07-14 15:49:49]   {
+[2022-07-14 15:49:49]     "name": "WSC_CENTRAL_033_038_OC3_MASTER.sql",
+[2022-07-14 15:49:49]     "contains_error": "no",
+[2022-07-14 15:49:49]     "payload": "<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete."
+[2022-07-14 15:49:49]   }
+[2022-07-14 15:49:49] ]'
+[2022-07-14 15:49:49] ++ jq '. | length'
+[2022-07-14 15:49:49] ++ echo '[' '{' '"name":' '"WSC_CENTRAL_033_038_OC3_MASTER.sql",' '"contains_error":' '"no",' '"payload":' '"<br>Executing' Master Script: 'WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING' WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit 'complete."' '}' ']'
+[2022-07-14 15:49:49] + j_section_name_data_len=1
+[2022-07-14 15:49:49] + d_section='<div class="card text-white bg-secondary my-5 py-4 text-center">
+[2022-07-14 15:49:49]     <div class="card-body"><p class="text-white m-0">##section_name##</p></div>
+[2022-07-14 15:49:49] </div>
+[2022-07-14 15:49:49] <div class="row gx-4 gx-lg-5">
+[2022-07-14 15:49:49] 	<div class="col-lg-12" style="margin-bottom:20px">
+[2022-07-14 15:49:49] 		<div id="accordion">
+[2022-07-14 15:49:49] 		##section_data##
+[2022-07-14 15:49:49] 		</div>
+[2022-07-14 15:49:49] 	</div>
+[2022-07-14 15:49:49] </div>'
+[2022-07-14 15:49:49] + d_section_data=
+[2022-07-14 15:49:49] + (( j=0 ))
+[2022-07-14 15:49:49] + (( j<1 ))
+[2022-07-14 15:49:49] + section_data_obj='<div class="card">
+[2022-07-14 15:49:49] <div class="card-header" id="heading##artifact_id##">
+[2022-07-14 15:49:49]   <h5 class="mb-0">
+[2022-07-14 15:49:49] 	<button class="btn btn-link" data-toggle="collapse" data-target="###artifact_id##" aria-expanded="false" aria-controls="##artifact_id##">
+[2022-07-14 15:49:49] 	  ##name##
+[2022-07-14 15:49:49] 	</button>
+[2022-07-14 15:49:49] 	<button class="btn disabled" style="background-color:##status_color##;"></button>
+[2022-07-14 15:49:49]   </h5>
+[2022-07-14 15:49:49] </div>
+[2022-07-14 15:49:49] <div id="##artifact_id##" class="collapse" aria-labelledby="heading##artifact_id##" data-parent="#accordion">
+[2022-07-14 15:49:49]   <div class="card-body">
+[2022-07-14 15:49:49] 	##payload##
+[2022-07-14 15:49:49]   </div>
+[2022-07-14 15:49:49] </div>
+[2022-07-14 15:49:49] </div>'
+[2022-07-14 15:49:49] ++ jq '.[0].name'
+[2022-07-14 15:49:49] ++ echo '[' '{' '"name":' '"WSC_CENTRAL_033_038_OC3_MASTER.sql",' '"contains_error":' '"no",' '"payload":' '"<br>Executing' Master Script: 'WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING' WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit 'complete."' '}' ']'
+[2022-07-14 15:49:49] ++ sed 's/\"//g'
+[2022-07-14 15:49:49] + j_name=WSC_CENTRAL_033_038_OC3_MASTER.sql
+[2022-07-14 15:49:49] ++ jq '.[0].contains_error'
+[2022-07-14 15:49:49] ++ echo '[' '{' '"name":' '"WSC_CENTRAL_033_038_OC3_MASTER.sql",' '"contains_error":' '"no",' '"payload":' '"<br>Executing' Master Script: 'WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING' WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit 'complete."' '}' ']'
+[2022-07-14 15:49:49] ++ sed 's/\"//g'
+[2022-07-14 15:49:49] + j_contains_error=no
+[2022-07-14 15:49:49] ++ jq '.[0].payload'
+[2022-07-14 15:49:49] ++ sed 's/\"//g'
+[2022-07-14 15:49:49] ++ echo '[' '{' '"name":' '"WSC_CENTRAL_033_038_OC3_MASTER.sql",' '"contains_error":' '"no",' '"payload":' '"<br>Executing' Master Script: 'WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING' WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit 'complete."' '}' ']'
+[2022-07-14 15:49:49] + j_payload='<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete.'
+[2022-07-14 15:49:49] ++ sed 's|##name##|WSC_CENTRAL_033_038_OC3_MASTER.sql|g'
+[2022-07-14 15:49:49] ++ echo '<div' 'class="card">' '<div' 'class="card-header"' 'id="heading##artifact_id##">' '<h5' 'class="mb-0">' '<button' 'class="btn' 'btn-link"' 'data-toggle="collapse"' 'data-target="###artifact_id##"' 'aria-expanded="false"' 'aria-controls="##artifact_id##">' '##name##' '</button>' '<button' 'class="btn' 'disabled"' 'style="background-color:##status_color##;"></button>' '</h5>' '</div>' '<div' 'id="##artifact_id##"' 'class="collapse"' 'aria-labelledby="heading##artifact_id##"' 'data-parent="#accordion">' '<div' 'class="card-body">' '##payload##' '</div>' '</div>' '</div>'
+[2022-07-14 15:49:49] + section_data_obj='<div class="card"> <div class="card-header" id="heading##artifact_id##"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="###artifact_id##" aria-expanded="false" aria-controls="##artifact_id##"> WSC_CENTRAL_033_038_OC3_MASTER.sql </button> <button class="btn disabled" style="background-color:##status_color##;"></button> </h5> </div> <div id="##artifact_id##" class="collapse" aria-labelledby="heading##artifact_id##" data-parent="#accordion"> <div class="card-body"> ##payload## </div> </div> </div>'
+[2022-07-14 15:49:49] ++ echo '<div' 'class="card">' '<div' 'class="card-header"' 'id="heading##artifact_id##">' '<h5' 'class="mb-0">' '<button' 'class="btn' 'btn-link"' 'data-toggle="collapse"' 'data-target="###artifact_id##"' 'aria-expanded="false"' 'aria-controls="##artifact_id##">' WSC_CENTRAL_033_038_OC3_MASTER.sql '</button>' '<button' 'class="btn' 'disabled"' 'style="background-color:##status_color##;"></button>' '</h5>' '</div>' '<div' 'id="##artifact_id##"' 'class="collapse"' 'aria-labelledby="heading##artifact_id##"' 'data-parent="#accordion">' '<div' 'class="card-body">' '##payload##' '</div>' '</div>' '</div>'
+[2022-07-14 15:49:49] ++ sed 's|##artifact_id##|DATABASE0|g'
+[2022-07-14 15:49:49] + section_data_obj='<div class="card"> <div class="card-header" id="headingDATABASE0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#DATABASE0" aria-expanded="false" aria-controls="DATABASE0"> WSC_CENTRAL_033_038_OC3_MASTER.sql </button> <button class="btn disabled" style="background-color:##status_color##;"></button> </h5> </div> <div id="DATABASE0" class="collapse" aria-labelledby="headingDATABASE0" data-parent="#accordion"> <div class="card-body"> ##payload## </div> </div> </div>'
+[2022-07-14 15:49:49] + [[ no == \n\o ]]
+[2022-07-14 15:49:49] ++ echo '<div' 'class="card">' '<div' 'class="card-header"' 'id="headingDATABASE0">' '<h5' 'class="mb-0">' '<button' 'class="btn' 'btn-link"' 'data-toggle="collapse"' 'data-target="#DATABASE0"' 'aria-expanded="false"' 'aria-controls="DATABASE0">' WSC_CENTRAL_033_038_OC3_MASTER.sql '</button>' '<button' 'class="btn' 'disabled"' 'style="background-color:##status_color##;"></button>' '</h5>' '</div>' '<div' 'id="DATABASE0"' 'class="collapse"' 'aria-labelledby="headingDATABASE0"' 'data-parent="#accordion">' '<div' 'class="card-body">' '##payload##' '</div>' '</div>' '</div>'
+[2022-07-14 15:49:49] ++ sed 's|##status_color##|green|g'
+[2022-07-14 15:49:49] + section_data_obj='<div class="card"> <div class="card-header" id="headingDATABASE0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#DATABASE0" aria-expanded="false" aria-controls="DATABASE0"> WSC_CENTRAL_033_038_OC3_MASTER.sql </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="DATABASE0" class="collapse" aria-labelledby="headingDATABASE0" data-parent="#accordion"> <div class="card-body"> ##payload## </div> </div> </div>'
+[2022-07-14 15:49:49] ++ echo '<div' 'class="card">' '<div' 'class="card-header"' 'id="headingDATABASE0">' '<h5' 'class="mb-0">' '<button' 'class="btn' 'btn-link"' 'data-toggle="collapse"' 'data-target="#DATABASE0"' 'aria-expanded="false"' 'aria-controls="DATABASE0">' WSC_CENTRAL_033_038_OC3_MASTER.sql '</button>' '<button' 'class="btn' 'disabled"' 'style="background-color:green;"></button>' '</h5>' '</div>' '<div' 'id="DATABASE0"' 'class="collapse"' 'aria-labelledby="headingDATABASE0"' 'data-parent="#accordion">' '<div' 'class="card-body">' '##payload##' '</div>' '</div>' '</div>'
+[2022-07-14 15:49:49] +++ echo -e '<br>Executing' Master Script: 'WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING' WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete.
+[2022-07-14 15:49:49] ++ sed 's|##payload##|<br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete.|g'
+[2022-07-14 15:49:49] + section_data_obj='<div class="card"> <div class="card-header" id="headingDATABASE0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#DATABASE0" aria-expanded="false" aria-controls="DATABASE0"> WSC_CENTRAL_033_038_OC3_MASTER.sql </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="DATABASE0" class="collapse" aria-labelledby="headingDATABASE0" data-parent="#accordion"> <div class="card-body"> <br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete. </div> </div> </div>'
+[2022-07-14 15:49:49] + d_section_data='<div class="card"> <div class="card-header" id="headingDATABASE0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#DATABASE0" aria-expanded="false" aria-controls="DATABASE0"> WSC_CENTRAL_033_038_OC3_MASTER.sql </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="DATABASE0" class="collapse" aria-labelledby="headingDATABASE0" data-parent="#accordion"> <div class="card-body"> <br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete. </div> </div> </div>'
+[2022-07-14 15:49:49] + (( j++  ))
+[2022-07-14 15:49:49] + (( j<1 ))
+[2022-07-14 15:49:49] ++ echo '<div' 'class="card' text-white bg-secondary my-5 py-4 'text-center">' '<div' 'class="card-body"><p' 'class="text-white' 'm-0">##section_name##</p></div>' '</div>' '<div' 'class="row' gx-4 'gx-lg-5">' '<div' 'class="col-lg-12"' 'style="margin-bottom:20px">' '<div' 'id="accordion">' '##section_data##' '</div>' '</div>' '</div>'
+[2022-07-14 15:49:49] ++ sed 's|##section_name##|DATABASE|g'
+[2022-07-14 15:49:49] + d_section='<div class="card text-white bg-secondary my-5 py-4 text-center"> <div class="card-body"><p class="text-white m-0">DATABASE</p></div> </div> <div class="row gx-4 gx-lg-5"> <div class="col-lg-12" style="margin-bottom:20px"> <div id="accordion"> ##section_data## </div> </div> </div>'
+[2022-07-14 15:49:49] ++ echo '<div' 'class="card' text-white bg-secondary my-5 py-4 'text-center">' '<div' 'class="card-body"><p' 'class="text-white' 'm-0">DATABASE</p></div>' '</div>' '<div' 'class="row' gx-4 'gx-lg-5">' '<div' 'class="col-lg-12"' 'style="margin-bottom:20px">' '<div' 'id="accordion">' '##section_data##' '</div>' '</div>' '</div>'
+[2022-07-14 15:49:49] ++ sed 's|##section_data##|<div class="card"> <div class="card-header" id="headingDATABASE0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#DATABASE0" aria-expanded="false" aria-controls="DATABASE0"> WSC_CENTRAL_033_038_OC3_MASTER.sql </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="DATABASE0" class="collapse" aria-labelledby="headingDATABASE0" data-parent="#accordion"> <div class="card-body"> <br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete. </div> </div> </div>|g'
+[2022-07-14 15:49:49] + d_section='<div class="card text-white bg-secondary my-5 py-4 text-center"> <div class="card-body"><p class="text-white m-0">DATABASE</p></div> </div> <div class="row gx-4 gx-lg-5"> <div class="col-lg-12" style="margin-bottom:20px"> <div id="accordion"> <div class="card"> <div class="card-header" id="headingDATABASE0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#DATABASE0" aria-expanded="false" aria-controls="DATABASE0"> WSC_CENTRAL_033_038_OC3_MASTER.sql </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="DATABASE0" class="collapse" aria-labelledby="headingDATABASE0" data-parent="#accordion"> <div class="card-body"> <br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete. </div> </div> </div> </div> </div> </div>'
+[2022-07-14 15:49:49] + d_arti_individual_data='<div class="card text-white bg-secondary my-5 py-4 text-center"> <div class="card-body"><p class="text-white m-0">DATABASE</p></div> </div> <div class="row gx-4 gx-lg-5"> <div class="col-lg-12" style="margin-bottom:20px"> <div id="accordion"> <div class="card"> <div class="card-header" id="headingDATABASE0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#DATABASE0" aria-expanded="false" aria-controls="DATABASE0"> WSC_CENTRAL_033_038_OC3_MASTER.sql </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="DATABASE0" class="collapse" aria-labelledby="headingDATABASE0" data-parent="#accordion"> <div class="card-body"> <br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete. </div> </div> </div> </div> </div> </div>'
+[2022-07-14 15:49:49] + (( i++  ))
+[2022-07-14 15:49:49] + (( i<1 ))
+[2022-07-14 15:49:49] + sed -i 's|##artifact_name##|""|g' DEFECT_ID_OC-3.html
+[2022-07-14 15:49:49] + sed -i 's|##artifact_individual_data##|<div class="card text-white bg-secondary my-5 py-4 text-center"> <div class="card-body"><p class="text-white m-0">DATABASE</p></div> </div> <div class="row gx-4 gx-lg-5"> <div class="col-lg-12" style="margin-bottom:20px"> <div id="accordion"> <div class="card"> <div class="card-header" id="headingDATABASE0"> <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#DATABASE0" aria-expanded="false" aria-controls="DATABASE0"> WSC_CENTRAL_033_038_OC3_MASTER.sql </button> <button class="btn disabled" style="background-color:green;"></button> </h5> </div> <div id="DATABASE0" class="collapse" aria-labelledby="headingDATABASE0" data-parent="#accordion"> <div class="card-body"> <br>Executing Master Script: WSC_CENTRAL_033_038_OC3_MASTER.sql<br>EXECUTING WSC_CENTRAL_033_038_OC3_TABLE.sql CREATING TABLE WSC_AHCS_CENTRAL_REV_ACC_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T created. CREATING TABLE WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T Table FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T created. EXECUTING WSC_CENTRAL_033_038_OC3_INDEX.sql INDEX FININT.WSC_AHCS_CENTRAL_REV_ACC_MAP_T_PK created. INDEX FININT.WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T_PK created. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_ACC_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING Insert_WSC_AHCS_CENTRAL_REV_BRANCH_MAP_T.sql 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. 1 row inserted. Commit complete. EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG.sql Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_VandT_PKG_BODY.sql Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG.sql CREATE/UPDATE PACKAGE wsc_central_pkg Package WSC_CENTRAL_PKG compiled EXECUTING WSC_CENTRAL_033_038_OC3_CENT_PKG_BODY.sql Package Body WSC_CENTRAL_PKG compiled Commit complete. </div> </div> </div> </div> </div> </div>|g' DEFECT_ID_OC-3.html
+[2022-07-14 15:49:49] END shell script execution
+[2022-07-14 15:49:50] Following artifacts are archived:
+[2022-07-14 15:49:50]   -->  DEFECT_ID_OC-3_SUMMARY.txt
+[2022-07-14 15:49:50]   -->  DEFECT_ID_OC-3.html
+Executor log size 80 KB (79,952)
+[2022-07-14 15:49:51] 
+[2022-07-14 15:49:51] Build completed.
+[2022-07-14 15:49:51] Status: DONE Result: SUCCESSFUL Duration: 16 sec

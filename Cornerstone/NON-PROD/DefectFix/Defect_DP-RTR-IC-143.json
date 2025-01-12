@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "DP-RTR-IC-143",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/GL/Reports/RPT190/Report/DataModels/Wesco_GBL_GL_RPT190_AP_AR_SLA_to_GL_Reconciliation_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/GL/Reports/RPT190/Report/Layouts/Wesco_GBL_GL_RPT190_AP_AR_SLA_to_GL_Reconciliation_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

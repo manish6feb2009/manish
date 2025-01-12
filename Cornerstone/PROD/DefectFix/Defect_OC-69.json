@@ -1,0 +1,9 @@
+{
+    "Rice_id" : "INT245",
+    "OIC": [],
+    "DB": [],
+    "Report":["PROD/1B/ERP/RTR/GL/Interface/INT245/Report/DataModels/Wesco_WSC_GBL_GL_INT245_Expense_Exceptions_To_Teradata_DM.xdm.catalog", "PROD/1B/ERP/RTR/GL/Interface/INT245/Report/Layouts/Wesco_WSC_GBL_GL_INT245_Expense_Exceptions_To_Teradata_Interface.xdo.catalog"],
+    "TARGET_OIC": "",
+    "TARGET_DB": "",
+    "TARGET_RPT": "PRD_RPT"
+}

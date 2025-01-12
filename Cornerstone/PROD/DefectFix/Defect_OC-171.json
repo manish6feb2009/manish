@@ -1,0 +1,9 @@
+{
+    "Rice_id" : "OC-171",
+    "OIC": [],
+    "DB": [],
+    "Report": ["PROD/Cornerstone/ERP/RTR/AR/Reports/RPT209/Report/DataModels/Wesco_AXE_GBL_AR_RPT209_Non_Material_IC_TB_Invoice_Level_DM.xdm.catalog"],
+    "TARGET_DB": "",
+    "TARGET_OIC": "",
+    "TARGET_RPT": "PRD_RPT"
+}

@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "OC-147",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Reports/RPT220/Report/Support.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

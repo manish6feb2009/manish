@@ -1,0 +1,7 @@
+{
+    "CodePackEnv": "PROD",
+    "RICE_ID": ["PROD/Cornerstone/ERP/RTR/AHCS/Interface/DIGITALPULSE"],
+    "TARGET_DB": "PRD_DGTP",
+    "TARGET_OIC": "",
+    "TARGET_RPT": ""
+}

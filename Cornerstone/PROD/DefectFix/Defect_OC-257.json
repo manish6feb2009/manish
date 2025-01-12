@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "OC-257",
+	"OIC": [],
+	
+	"Report": ["PROD/Cornerstone/ERP/RTR/AHCS/Extension/EXT219/Report/DataModels/Wesco_GBL_EXT219_ESS_Lookup_Query_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "PRD_RPT"
+}

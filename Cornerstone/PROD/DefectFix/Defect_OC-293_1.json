@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "OC-293_1",
+	"OIC": ["PROD/Cornerstone/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WE_AX_GB_CO_AH_IM_AC_ER_RP_BA_IN_01.00.0000.iar"
+	"DB": [],
+	"Report": [],
+	"TARGET_DB": "",
+	"TARGET_OIC": "PRD_OIC",
+	"TARGET_RPT": ""
+}

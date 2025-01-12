@@ -1,0 +1,13 @@
+{
+	"Rice_id" : "OC-91",
+	"OIC": [],
+	"DB": [],
+	"Report": ["PROD/Cornerstone/ERP/RTR/Miscellaneous/Reports/RPT223/Report/DataModels/Wesco_GBL_IC_RPT223_Intercomp_Trx_Batches_DFF_DM.xdm.catalog","PROD/Cornerstone/ERP/RTR/Miscellaneous/Reports/RPT223/Report/Layouts/Wesco_GBL_IC_RPT223_Intercomp_Trx_Batches_DFF_Report.xdo.catalog"
+     ],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "PRD_RPT"
+}
+
+
+

@@ -1,0 +1,13 @@
+{
+	"Rice_id" : "INC2755389",
+	"OIC": [],
+	"DB": [],
+	"Report": ["PROD/Cornerstone/ERP/RTR/AHCS/Reports/RPT100/Report/DataModels/Wesco_GBL_AHCS_RPT100_LSI_Reconciliation_DM.xdm.catalog",
+	"PROD/Cornerstone/ERP/RTR/AHCS/Reports/RPT100/Report/Layouts/Wesco_GBL_AHCS_RPT100_LSI_Reconciliation_Report.xdo.catalog"
+	],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "PRD_RPT"
+}
+
+

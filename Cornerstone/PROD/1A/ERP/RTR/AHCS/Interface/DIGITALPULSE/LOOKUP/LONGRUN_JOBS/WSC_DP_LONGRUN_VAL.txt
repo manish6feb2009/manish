@@ -1,0 +1,9 @@
+LookupType|LookupCode|DisplaySequence|EnabledFlag|StartDateActive|EndDateActive|Meaning|Description|Tag|CONTEXT_ATTRIBUTE|module|track
+WSC_DP_LONG_RUN_JOB_LKP|10|10|Y|||Cost Center Extract|AXE_HR_ALI_COST_CENTER_EXTRACT|10|WSC_DP_LONG_RUN_JOB_LKP|HCM|HCM
+WSC_DP_LONG_RUN_JOB_LKP|20|20|Y|||Division Extract|AXE_HR_ALI_DIVISION_EXTRACT|10|WSC_DP_LONG_RUN_JOB_LKP|HCM|HCM
+WSC_DP_LONG_RUN_JOB_LKP|30|30|Y|||Grade Extract|AXE_HR_ALI_GRADE_EXTRACT|10|WSC_DP_LONG_RUN_JOB_LKP|HCM|HCM
+WSC_DP_LONG_RUN_JOB_LKP|50|50|Y|||Import Accounting Transaction|JobDefinition://oracle/apps/ess/financials/subledgerAccounting/shared/XLATXNIMPORT|5|WSC_DP_LONG_RUN_JOB_LKP|HCM|HCM
+WSC_DP_LONG_RUN_JOB_LKP|60|60|Y|||GL Data to TeraData for Reporting - GL Balances|/Custom/WESCO Custom/GL/Interfaces/Wesco_GBL_GL_INT010_GL_Balances_To_Teradata_Outbound_Interface_Report.xdo|30|WSC_DP_LONG_RUN_JOB_LKP|HCM|HCM
+WSC_DP_LONG_RUN_JOB_LKP|70|70|Y|||GL to Central Outbound Balances|/Custom/Wesco Custom/GL/Interfaces/Wesco_WSC_GBL_GL_INT040_Central_Outbound_Interface_Report.xdo|30|WSC_DP_LONG_RUN_JOB_LKP|HCM|HCM
+WSC_DP_LONG_RUN_JOB_LKP|80|80|Y|||AXE HR DWH  ASSIGNMENT REPORT|/Custom/Anixter Custom/HCM/Human Resources/Integration/I038_DataWarehouse/Assignment_Extract/AXE_HR_DWH_ASSIGNMENT_REPORT.xdo|10|WSC_DP_LONG_RUN_JOB_LKP|HCM|HCM
+WSC_DP_LONG_RUN_JOB_LKP|90|90|Y|||AXE HR XACTLY EMP EXTRACT|AXE_HR_XACTLY_EMP_EXTRACT|10|WSC_DP_LONG_RUN_JOB_LKP|HCM|HCM

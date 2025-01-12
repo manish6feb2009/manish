@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "OC-160",
+	"OIC": [],
+	"DB": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/INT016/DB/DefectFix/OC-160/WSC_CONCUR_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "UAT2_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}

@@ -1,0 +1,9 @@
+Grant select on WSC_GEN_INT_CONTROL_T to FININT_RO;
+Grant select on WSC_GEN_INT_STATUS_T to FININT_RO;
+Grant select on WSC_EBS_FA_ASSET_CREATED_T to FININT_RO;
+Grant select on WSC_EBS_FA_CATEGORIES_T to FININT_RO;
+Grant select on WSC_EBS_FA_LOCATIONS_T to FININT_RO;
+Grant select on WSC_EBS_FA_CATEGORIES_TEMP_T to FININT_RO;
+Grant select on WSC_EBS_FA_LOCATIONS_TEMP_T to FININT_RO;
+Grant select on WSC_EBS_FA_TXN_T to FININT_RO;
+Grant select on WSC_GL_COA_FY25_MAPPING_RULES_T to FININT_RO;

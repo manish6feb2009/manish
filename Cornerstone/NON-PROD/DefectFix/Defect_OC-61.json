@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "RPT007",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1A/ERP/RTR/AHCS/Reports/RPT007/Report/DataModels/Wesco_GBL_AHCS_RPT007_AHCS_to_GL_Reconciliation_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "SIT2_RPT"
+}

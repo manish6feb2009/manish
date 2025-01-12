@@ -1,0 +1,17 @@
+{
+	"INTEGRATIONS": ["WES_GBL_AHC_INT_EBS_FA_TO_DB_01.00.0000",
+                          "WESC_WSC_GBL_INT2_EBSA_VAL_ERRO_01.00.0000",
+                          "WESCO_WSC_GBL_DPJOB_REPOR_INTER_01.00.0000",
+                          "WESC_WSC_GBL_AHCS_DGTL_PULS_INTE_01.00.0000",
+                          "WESCO_WSC_GBL_DP_USER_AUTHE_01.00.0000",
+                          "WESC_WSC_GBL_DP_JOB_REPO_INTER_01.00.0000",
+                          "WESCO_CUSTOM_ESS_JOBS_HOLD_INT_01.00.0000",
+                          "WESCO_CUSTO_ESS_JOBS_RELEA_INT_01.00.0000",
+                          "WE_AX_GB_CO_AH_IM_AC_ER_RP_BA_IN_01.00.0000",
+                           "WESCO_WSC_GBL_COMMO_EMAIL_INTER_01.00.0000",
+						   "WES_AXE_GBL_COM_AHC_VAL_ERR_BAD__01.00.0000",
+						   "WESC_WSC_GBL_COMM_AHCS_VALI_ERR_01.00.0000",
+						   "WES_AXE_GBL_COM_AHC_IMP_ACC_ERR_01.00.0000",
+						   "WESCO_WSC_GBL_COMMO_ERROR_INTER_01.00.0000"],
+		"TARGET_OIC": "UAT2_OIC"
+}

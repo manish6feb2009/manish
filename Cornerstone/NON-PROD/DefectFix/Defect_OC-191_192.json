@@ -1,0 +1,12 @@
+{
+	"Rice_id" : "OC-191_192",
+	"OIC": [],
+	
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/AR/Reports/RPT102_103/Report/DataModels/TransactionsPrintDm.xdm.catalog",
+	           "NON-PROD/Cornerstone/ERP/RTR/AR/Reports/RPT102_103/Report/Layouts/DefaultCreditmemo.xdo.catalog",
+			   "NON-PROD/Cornerstone/ERP/RTR/AR/Reports/RPT102_103/Report/Layouts/DefaultInvoice.xdo.catalog"
+              ],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

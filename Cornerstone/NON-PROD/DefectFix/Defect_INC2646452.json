@@ -1,0 +1,11 @@
+{
+	"Rice_id" : "INC2646452",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/AP/Reports/RPT028/Report/DataModels/Wesco_AXE_GBL_AP_RPT028_Non_material_IC_AP_Report_DM.xdm.catalog", 
+			   "NON-PROD/Cornerstone/ERP/RTR/AP/Reports/RPT030/Report/DataModels/Wesco_AXE_GBL_AP_RPT030_Non_Material_IC_AP_Payments_DM.xdm.catalog", 
+			   "NON-PROD/Cornerstone/ERP/RTR/AR/Reports/RPT029/Report/DataModels/Wesco_AXE_GBL_AR_RPT029_Non_Material_IC_AR_Receipts_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

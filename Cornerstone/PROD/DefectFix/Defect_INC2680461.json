@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INC2680461",
+	"OIC": [],
+	"DB": [],
+	"Report": ["PROD/1A/ERP/RTR/GL/Interface/INT040/Report/DataModels/Wesco_WSC_GBL_GL_INT040_Central_Outbound_Interface_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "PRD_RPT"
+}

@@ -1,0 +1,9 @@
+{
+    "Rice_id" : "Defect_OC-109",
+    "OIC": [],
+    "DB": [],
+    "Report": ["PROD/Cornerstone/ERP/RTR/AHCS/Reports/RPT008/Report/DataModels/Wesco_GBL_AHCS_RPT008_Subledger_Period_Close_Exception_by_Ledger_Set_DM.xdm.catalog"],
+    "TARGET_DB": "",
+    "TARGET_OIC": "",
+    "TARGET_RPT": "PRD_RPT"
+}

@@ -1,0 +1,131 @@
+-----------------------------------------------------------------------
+
+BaseDeployment File data recieved as
+##############PAYLOAD START################
+{
+	"CodePackEnv": "PROD",
+	"RICE_ID": ["PROD/1A/ERP/RTR/GL/Reports/CNV001",
+	"PROD/1A/ERP/RTR/GL/Reports/RPT001",
+	"PROD/1A/ERP/RTR/GL/Reports/RPT003",
+	"PROD/1A/ERP/RTR/GL/Reports/RPT005",
+	"PROD/1A/ERP/RTR/GL/Reports/RPT002",
+	"PROD/1A/ERP/RTR/GL/Reports/RPT004",
+	"PROD/1A/ERP/RTR/GL/Reports/RPT041",
+	"PROD/1A/ERP/RTR/GL/Reports/RPT042",
+	"PROD/1A/ERP/RTR/GL/Reports/RPT043",
+	"PROD/1A/ERP/RTR/GL/Reports/RPT045",
+	"PROD/1A/ERP/RTR/GL/Reports/RPT046",
+	"PROD/1A/ERP/RTR/GL/Reports/RPT047",
+	"PROD/1A/ERP/RTR/GL/Reports/RPT051",
+	"PROD/1A/ERP/RTR/GL/Reports/RPT101",
+	"PROD/1A/ERP/RTR/AHCS/Reports/RPT006",
+	"PROD/1A/ERP/RTR/AHCS/Reports/RPT007",
+	"PROD/1A/ERP/RTR/AHCS/Reports/RPT008",
+	"PROD/1A/ERP/RTR/AHCS/Reports/RPT009",
+	"PROD/1A/ERP/RTR/AHCS/Interface/INT012",
+	"PROD/1A/ERP/RTR/AHCS/Interface/INT041",
+	"PROD/1A/ERP/RTR/GL/Interface/INT010",
+	"PROD/1A/ERP/RTR/GL/Interface/INT011",
+	"PROD/1A/ERP/RTR/GL/Interface/INT040",
+	"PROD/1A/ERP/RTR/AHCS/Interface/COMMON",
+	"PROD/1A/ERP/RTR/GL/Extension/EXT001_002_014",
+	"PROD/1A/ERP/RTR/GL/Extension/EXT007_008_009",
+	"PROD/1A/ERP/RTR/GL/Extension/EXT013",
+	"PROD/1A/ERP/RTR/AHCS/Extension/EXT010",
+	"PROD/1A/ERP/RTR/AHCS/Extension/EXT011",
+	"PROD/1A/ERP/RTR/AHCS/Extension/EXT014",
+	"PROD/1A/ERP/RTR/AHCS/Interface/INT002",
+	"PROD/1A/ERP/RTR/AHCS/Interface/INT005",
+	"PROD/1A/ERP/RTR/AHCS/Interface/INT033_38",
+	"PROD/1A/ERP/RTR/AHCS/Interface/INT122",
+	"PROD/1A/ERP/RTR/AHCS/Interface/INT004",
+	"PROD/1A/ERP/RTR/AHCS/Interface/COMMON_POST_EXT_INT"],
+	"TARGET_DB": "PRD_DB",
+	"TARGET_OIC": "PRD_OIC",
+	"TARGET_RPT": "PRD_RPT"
+}
+##############PAYLOAD   END################
+
+✓ BaseDeployment File syntax is correct
+github/PROD/1A/ERP/RTR/GL/Reports/CNV001
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Reports/RPT001
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Reports/RPT003
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Reports/RPT005
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Reports/RPT002
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Reports/RPT004
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Reports/RPT041
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Reports/RPT042
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Reports/RPT043
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Reports/RPT045
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Reports/RPT046
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Reports/RPT047
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Reports/RPT051
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Reports/RPT101
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Reports/RPT006
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Reports/RPT007
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Reports/RPT008
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Reports/RPT009
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Interface/INT012
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Interface/INT041
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Interface/INT010
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Interface/INT011
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Interface/INT040
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON
+	·DB Status : ✓ Success.
+	·OIC Status : ✓ Success.
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Extension/EXT001_002_014
+	·DB Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Extension/EXT007_008_009
+	·DB Status : ✓ Success.
+github/PROD/1A/ERP/RTR/GL/Extension/EXT013
+	·DB Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Extension/EXT010
+	·DB Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Extension/EXT011
+	·DB Status : ✓ Success.
+	·OIC Status : ✓ Success.
+	·RPT Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Extension/EXT014
+	·OIC Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Interface/INT002
+	·DB Status : ✓ Success.
+	·OIC Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Interface/INT005
+	·DB Status : ✓ Success.
+	·OIC Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38
+	·DB Status : ✓ Success.
+	·OIC Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Interface/INT122
+	·DB Status : ✓ Success.
+	·OIC Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Interface/INT004
+	·DB Status : ✓ Success.
+	·OIC Status : ✓ Success.
+github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON_POST_EXT_INT
+	·DB Status : ✓ Success.
+-----------------------------------------------------------------------

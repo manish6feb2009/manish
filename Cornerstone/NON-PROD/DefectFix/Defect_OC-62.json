@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "RPT046",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1A/ERP/RTR/GL/Reports/RPT046/Report/DataModels/Wesco_GBL_GL_RPT046_Journal_Line_Detail_DM.xdm.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "SIT2_RPT"
+}

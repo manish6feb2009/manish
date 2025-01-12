@@ -1,0 +1,48 @@
+✓ Interface directory exists for rice-id: RPT043 
+Fetching the components...
+✖ OIC Artifacts
+✓ Report-Data Model Artifacts
+	•	github/PROD/1A/ERP/RTR/GL/Reports/RPT043/Report/DataModels/Wesco_GBL_GL_RPT043_Journals_Missed_Reversing_DM.xdm.catalog
+✓ Report-Layout Artifacts
+	•	github/PROD/1A/ERP/RTR/GL/Reports/RPT043/Report/Layouts/Wesco_GBL_GL_RPT043_Journals_Missed_Reversing_Report.xdo.catalog
+✖ DB Artifacts
+-----------REPORT DEPLOYMENT----------
+Recieved Filepath: github/PROD/1A/ERP/RTR/GL/Reports/RPT043/Report/DataModels/Wesco_GBL_GL_RPT043_Journals_Missed_Reversing_DM.xdm.catalog
+github/PROD/1A/ERP/RTR/GL/Reports/RPT043/Report/Layouts/Wesco_GBL_GL_RPT043_Journals_Missed_Reversing_Report.xdo.catalog
+
+	Processing file: github/PROD/1A/ERP/RTR/GL/Reports/RPT043/Report/DataModels/Wesco_GBL_GL_RPT043_Journals_Missed_Reversing_DM.xdm.catalog
+	ⓘ	Fetching property file  & exporting it: github/PROD/1A/ERP/RTR/GL/Reports/RPT043/Report/DataModels/Wesco_GBL_GL_RPT043_Journals_Missed_Reversing_DM.xdm.prop 
+	ⓘ	Creating Folder Structure if doesn't exists. Location: /shared/Custom/WESCO Custom/GL/Reports/Data Models
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:createFolderResult></sawsoap:createFolderResult></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	ⓘ	Importing report to location: /shared/Custom/WESCO Custom/GL/Reports/Data Models
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:pasteItem2Result></sawsoap:pasteItem2Result></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	✓	Report Imported: github/PROD/1A/ERP/RTR/GL/Reports/RPT043/Report/DataModels/Wesco_GBL_GL_RPT043_Journals_Missed_Reversing_DM.xdm.catalog
+
+	Processing file: github/PROD/1A/ERP/RTR/GL/Reports/RPT043/Report/Layouts/Wesco_GBL_GL_RPT043_Journals_Missed_Reversing_Report.xdo.catalog
+	ⓘ	Fetching property file  & exporting it: github/PROD/1A/ERP/RTR/GL/Reports/RPT043/Report/Layouts/Wesco_GBL_GL_RPT043_Journals_Missed_Reversing_Report.xdo.prop 
+	ⓘ	Creating Folder Structure if doesn't exists. Location: /shared/Custom/WESCO Custom/GL/Reports
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:createFolderResult></sawsoap:createFolderResult></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	ⓘ	Importing report to location: /shared/Custom/WESCO Custom/GL/Reports
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:pasteItem2Result></sawsoap:pasteItem2Result></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	✓	Report Imported: github/PROD/1A/ERP/RTR/GL/Reports/RPT043/Report/Layouts/Wesco_GBL_GL_RPT043_Journals_Missed_Reversing_Report.xdo.catalog
+--------------------------------------

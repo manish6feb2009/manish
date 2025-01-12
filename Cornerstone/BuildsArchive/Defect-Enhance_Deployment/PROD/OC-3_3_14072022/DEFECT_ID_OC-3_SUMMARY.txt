@@ -1,0 +1,2 @@
+✓ Defect Fix file is present
+✓ Defect Fix File syntax is correct

@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "CHG0091672",
+	"OIC": [],
+	"DB": [],
+	"Report": ["PROD/1B/ERP/RTR/AR/Reports/RPT102_103/Report/DataModels/TransactionsPrintDm.xdm.catalog","PROD/1B/ERP/RTR/AR/Reports/RPT102_103/Report/Layouts/DefaultCreditmemo.xdo.catalog","PROD/1B/ERP/RTR/AR/Reports/RPT102_103/Report/Layouts/DefaultDebitmemo.xdo.catalog","PROD/1B/ERP/RTR/AR/Reports/RPT102_103/Report/Layouts/DefaultInvoice.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "PRD_RPT"
+}

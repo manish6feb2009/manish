@@ -1,0 +1,160 @@
+✓ Interface directory exists for rice-id: INT005 
+Fetching the components...
+✓ OIC Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/INT005/OIC/Integration/WES_WSC_GBL_AHC_INT_EBS_AR_TO_DB_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/INT005/OIC/Integration/WE_WS_GB_AH_IN_EB_AR_DB_TO_UC_IN_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/INT005/OIC/Integration/WSC_GBL_AHC_INT_EBS_AR_2_DB_SCH_01.00.0000.iar
+✖ Report-Data Model Artifacts
+✖ Report-Layout Artifacts
+✓ DB Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/INT005/DB/Master/WSC_INT005_MASTER.sql
+---------DATABASE DEPLOYMENT----------
+
+Table "FININT"."WSC_AHCS_AR_TXN_HEADER_T" created.
+
+
+Table "FININT"."WSC_AHCS_AR_TXN_LINE_T" created.
+
+
+Commit complete.
+
+
+Index "FININT"."WSC_AHCS_AR_TXN_HEADER_BATCH_ID_I" created.
+
+
+Index "FININT"."WSC_AHCS_AR_TXN_HEADER_LEG_AE_HEADER_ID_I" created.
+
+
+Index WSC_AHCS_AR_TXN_HEADER_BATCH_ID_I altered.
+
+
+Index WSC_AHCS_AR_TXN_HEADER_LEG_AE_HEADER_ID_I altered.
+
+
+Index "FININT"."WSC_AHCS_AR_TXN_LINE_BATCH_ID_I" created.
+
+
+Index "FININT"."WSC_AHCS_AR_TXN_LINE_HEADER_ID_I" created.
+
+
+Index "FININT"."WSC_AHCS_AR_TXN_LINE_LEG_COA_I" created.
+
+
+Index "FININT"."WSC_AHCS_AR_TXN_LINE_LEG_AE_HEADER_ID_I" created.
+
+
+Index WSC_AHCS_AR_TXN_LINE_BATCH_ID_I altered.
+
+
+Index WSC_AHCS_AR_TXN_LINE_HEADER_ID_I altered.
+
+
+Index WSC_AHCS_AR_TXN_LINE_LEG_AE_HEADER_ID_I altered.
+
+
+Index WSC_AHCS_AR_TXN_LINE_LEG_COA_I altered.
+
+
+Commit complete.
+
+
+Sequence "FININT"."WSC_AR_HEADER_S1" created.
+
+
+Sequence "FININT"."WSC_AR_LINE_S1" created.
+
+
+Commit complete.
+
+
+Type WSC_AR_HEADER_T_TYPE compiled
+
+
+Type WSC_AR_HEADER_T_TYPE_TABLE compiled
+
+
+Type WSC_AR_LINE_T_TYPE compiled
+
+
+Type WSC_AR_LINE_T_TYPE_TABLE compiled
+
+
+Package WSC_AR_PKG compiled
+
+
+Package Body WSC_AR_PKG compiled
+
+
+Package WSC_AHCS_AR_VALIDATION_TRANSFORMATION_PKG compiled
+
+
+Package Body WSC_AHCS_AR_VALIDATION_TRANSFORMATION_PKG compiled
+
+
+Commit complete.
+
+--------------------------------------
+--------INTEGRATION DEPLOYMENT--------
+Recieved Filepath: github/PROD/1A/ERP/RTR/AHCS/Interface/INT005/OIC/Integration/WES_WSC_GBL_AHC_INT_EBS_AR_TO_DB_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/INT005/OIC/Integration/WE_WS_GB_AH_IN_EB_AR_DB_TO_UC_IN_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/INT005/OIC/Integration/WSC_GBL_AHC_INT_EBS_AR_2_DB_SCH_01.00.0000.iar,
+Iterating over filepaths and processing for deployment....
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/INT005/OIC/Integration/WES_WSC_GBL_AHC_INT_EBS_AR_TO_DB_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WES_WSC_GBL_AHC_INT_EBS_AR_TO_DB%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WES_WSC_GBL_AHC_INT_EBS_AR_TO_DB | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/INT005/OIC/Integration/WES_WSC_GBL_AHC_INT_EBS_AR_TO_DB_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/INT005/OIC/Integration/WE_WS_GB_AH_IN_EB_AR_DB_TO_UC_IN_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WE_WS_GB_AH_IN_EB_AR_DB_TO_UC_IN%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WE_WS_GB_AH_IN_EB_AR_DB_TO_UC_IN | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/INT005/OIC/Integration/WE_WS_GB_AH_IN_EB_AR_DB_TO_UC_IN_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/INT005/OIC/Integration/WSC_GBL_AHC_INT_EBS_AR_2_DB_SCH_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WSC_GBL_AHC_INT_EBS_AR_2_DB_SCH%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WSC_GBL_AHC_INT_EBS_AR_2_DB_SCH | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/INT005/OIC/Integration/WSC_GBL_AHC_INT_EBS_AR_2_DB_SCH_01.00.0000.iar: DEPLOYED
+
+
+
+--------------------------------------

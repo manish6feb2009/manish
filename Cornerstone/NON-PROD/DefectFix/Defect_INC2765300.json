@@ -1,0 +1,10 @@
+{
+	"Rice_id" : "INC2765300",
+	"OIC": [],
+	"DB": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Interface/INT218/DB/DefectFix/INC2765300/WSC_218_MASTER.sql"],
+	"Report": [],
+	"TARGET_DB": "UAT_DB",
+	"TARGET_OIC": "",
+	"TARGET_RPT": ""
+}
+

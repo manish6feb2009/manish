@@ -1,0 +1,1 @@
+INSERT INTO XX_IMD_DETAILS (USER_NAME,PASSWORD,URL) VALUES ('FIN_INT','WescoAnixter@12345678901234567890','https://aicdev-anixterpaas.integration.ocp.oraclecloud.com');

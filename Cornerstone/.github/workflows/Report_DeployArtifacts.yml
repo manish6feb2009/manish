@@ -1,0 +1,123 @@
+name: Report_DeployArtifacts
+on:
+  workflow_dispatch:
+    branches: [ main ]
+    inputs:
+      reportpath:
+        description: 'REPORT PATH seprated by , for multiple'
+        required: true
+        type: string
+        default: 'PUT'
+        
+  workflow_call:
+    inputs:
+      reportpath:
+        description: 'REPORT PATH seprated by , for multiple'
+        required: true
+        type: string
+        default: 'NON'
+
+jobs:
+  Process_and_Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - if: ${{ github.event.workflow == '.github/workflows/Report_DeployArtifacts.yml'}}
+        uses: actions/checkout@v2
+      
+      # Runs a set of commands for deploying OIC Integration
+      #tr -s ' ' $deployFileList | cut -d ' ' -f2
+      - name: Deploy Reports Files
+        run: |
+          echo '----------------'
+          #✓✖
+          #Intialize global variable and files
+            Instance='https://eklm-dev20.fa.us2.oraclecloud.com'
+            Username='FIN_INT'
+            Password='Fbhsil&4(67g'
+            GITLocation=${{ github.event.inputs.reportpath }}
+            FilePath=''
+            
+            echo "Recieved Filepath: $GITLocation"
+            echo -e "\tⓘ\tGenerating Session Token...."
+            echo -n "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:v6=\"urn://oracle.bi.webservices/v6\">
+               <soapenv:Header/>
+               <soapenv:Body>
+                  <v6:logon>
+                     <v6:name>"$Username"</v6:name>
+                     <v6:password><![CDATA["$Password"]]></v6:password>
+                  </v6:logon>
+               </soapenv:Body>
+            </soapenv:Envelope>">>tokenRequest.xml
+            {
+                curl -s --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:urn:logon" --data @tokenRequest.xml $Instance/analytics-ws/saw.dll?SoapImpl=nQSessionService>>tokenResponse.xml
+            }||{
+                echo -e "\t✖\tSome Error Occured while generating session using CURL. Error Code: $?"
+                exit $?
+            }
+            token=`cat tokenResponse.xml | sed 's/<\/\?[^>]\+>//g'`
+            echo -e "\t✓\tGenerated Session Token : $token"
+            
+            for filepath in ${GITLocation//,/ }
+            do
+                echo -e "\n\tProcessing file: $filepath"
+                propertyFile=`echo $filepath | sed -e 's/'.catalog'/'.prop'/g'`
+                echo -e "\tⓘ\tFetching property file  & exporting it: $propertyFile "
+                {
+                    chmod +777 $propertyFile
+                    . $propertyFile
+                }||{
+                    echo -e "\t✖\tSome Error Occured while reading and exporting property file. Error Code: $?"
+                    exit $?
+                }
+                echo -e "\tⓘ\tCreating Folder Structure if doesn't exists. Location: $BI_FOLDER_LOCATION"
+                echo -n "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:v6=\"urn://oracle.bi.webservices/v6\">
+                   <soapenv:Header/>
+                   <soapenv:Body>
+                      <v6:createFolder>
+                         <v6:path>"$BI_FOLDER_LOCATION"</v6:path>
+                         <v6:createIfNotExists>true</v6:createIfNotExists>
+                         <v6:createIntermediateDirs>true</v6:createIntermediateDirs>
+                         <v6:sessionID>">>dir.xml                     
+                echo -n	$token>>dir.xml
+                echo "</v6:sessionID>
+                      </v6:createFolder>
+                    </soapenv:Body>
+                </soapenv:Envelope>">>dir.xml
+                {
+                    o_create_loc=`curl -s --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:urn:createFolder" --data @dir.xml $Instance/analytics-ws/saw.dll?SoapImpl=webCatalogService`
+                }||{
+                    echo -e "\t✖\tSome Error Occured while creating folder structure. Error Code: $?"
+                    exit $?
+                }
+                echo -e "\t✓\tConverting Report Content to BASE64 encoding"
+                echo -n "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:v6=\"urn://oracle.bi.webservices/v6\">
+                   <soapenv:Header/>
+                   <soapenv:Body>
+                      <v6:pasteItem2>
+                         <v6:archive>">>updateRequest.xml
+                #added base64 data
+                cat $filepath | base64 >>updateRequest.xml
+                echo -n "</v6:archive>
+                         <v6:replacePath>"$BI_FOLDER_LOCATION"</v6:replacePath>
+                         <v6:flagACL>0</v6:flagACL>
+                         <v6:flagOverwrite>0</v6:flagOverwrite>
+                         <v6:sessionID>">>updateRequest.xml
+                #added session token
+                echo -n $token>>updateRequest.xml
+                echo "</v6:sessionID>
+                      </v6:pasteItem2>
+                   </soapenv:Body>
+                </soapenv:Envelope>">>updateRequest.xml
+                echo -e "\tⓘ\tImporting report to location: $BI_FOLDER_LOCATION"
+                {
+                    o_imp_rep=`curl -s --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:urn:pasteItem2" --data @updateRequest.xml $Instance/analytics-ws/saw.dll?SoapImpl=webCatalogService`
+                }||{
+                    echo -e "\t✖\tSome Error Occured while importing report using CURL. Error Code: $?"
+                    exit $?
+                }
+                echo -e "\t✓\tReport Imported: $filepath"
+                truncate -s 0 updateRequest.xml
+                truncate -s 0 dir.xml
+            done
+          echo '----------------'

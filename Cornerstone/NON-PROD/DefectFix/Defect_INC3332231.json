@@ -1,0 +1,10 @@
+{
+    "Rice_id" : "Defect_INC3332231",
+    "OIC": [],
+    "DB": [],
+    "Report": ["NON-PROD/Cornerstone/ERP/RTR/AHCS/Reports/RPT006/Report/DataModels/Wesco_GBL_AHCS_RPT006_Error_DM.xdm.catalog", 
+               "NON-PROD/Cornerstone/ERP/RTR/AHCS/Reports/RPT006/Report/Layouts/Wesco_GBL_AHCS_RPT006_Error_Report.xdo.catalog"],
+    "TARGET_DB": "",
+    "TARGET_OIC": "",
+    "TARGET_RPT": "UAT2_RPT"
+}

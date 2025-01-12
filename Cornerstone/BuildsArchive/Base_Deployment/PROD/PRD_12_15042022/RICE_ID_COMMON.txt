@@ -1,0 +1,462 @@
+✓ Interface directory exists for rice-id: COMMON 
+Fetching the components...
+✓ OIC Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_AHCS_COMMO_ACCOU_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_AHCS_REPRO_INTER_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_COMMO_EMAIL_INTER_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_COMMO_ERROR_INTER_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_AHCS_COMM_IMPA_CREA_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_AHCS_COMM_MAST_SCH_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_AHCS_PURG_INTE_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_AHCS_VALI_ERR_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_AHCS_VALI_ERRO_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_GL_LEGA_ENTI_I_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WSC_AHCS_ERROR_NOTIFY_01.00.0000.iar
+✓ Report-Data Model Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_AHCS_Common_Create_Accounting_Status_DM.xdm.catalog
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_AHCS_Common_ImpAcc_Count_DM.xdm.catalog
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_GL_COMMON_LEGAL_ENTITIES_EXTRACTION_DM.xdm.catalog
+✓ Report-Layout Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_AHCS_Common_Create_Accounting_Status_Report.xdo.catalog
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_AHCS_Common_ImpAcc_Count_Report.xdo.catalog
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_GL_COMMON_LEGAL_ENTITIES_EXTRACTION_REPORT.xdo.catalog
+✓ DB Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/DB/Master/WSC_COMMON_MASTER.sql
+---------DATABASE DEPLOYMENT----------
+
+Table "FININT"."WSC_GL_LEGAL_ENTITIES_T" created.
+
+
+Table "FININT"."WSC_AHCS_INT_CONTROL_T" created.
+
+
+Table "FININT"."WSC_AHCS_INT_STATUS_T" created.
+
+
+Table "FININT"."WSC_AHCS_INT_LOGGING_T" created.
+
+
+Table "FININT"."WSC_AHCS_REFRESH_T" created.
+
+
+Table "FININT"."XX_IMD_DETAILS" created.
+
+
+1 row inserted.
+
+
+Table "FININT"."XX_IMD_USER_ROLE_DETAILS_T" created.
+
+
+Table "FININT"."WSC_AHCS_DASHBOARD1_AUDIT_T" created.
+
+
+Index "FININT"."WSC_AHCS_FLEX_SEGMENT_VALUE" created.
+
+
+INDEX "FININT"."WSC_AHCS_INT_CONTROL_T_PK" created.
+
+
+Index "FININT"."WSC_AHCS_INT_STATUS_ACC_STS_I" created.
+
+
+Index "FININT"."WSC_AHCS_INT_STATUS_ATT2_STTS_I" created.
+
+
+Index "FININT"."WSC_AHCS_INT_STATUS_ATTRIBUTE3_T" created.
+
+
+Index "FININT"."WSC_AHCS_INT_STATUS_BATCH_ID_I" created.
+
+
+Index "FININT"."WSC_AHCS_INT_STATUS_FILENAME_I" created.
+
+
+Index "FININT"."WSC_AHCS_INT_STATUS_HEADER_ID_I" created.
+
+
+Index "FININT"."WSC_AHCS_INT_STATUS_LEG_HDR_ID_I" created.
+
+
+Index "FININT"."WSC_AHCS_INT_STATUS_LEG_LINE_I" created.
+
+
+Index "FININT"."WSC_AHCS_INT_STATUS_LINE_ID_I" created.
+
+
+Index "FININT"."WSC_AHCS_INT_STATUS_STATUS_I" created.
+
+
+Sequence "FININT"."WSC_AHCS_BATCH_SEQ" created.
+
+
+Type WSC_GL_LEGAL_ENTITIES_VALUE_T_TYPE compiled
+
+
+Type WSC_GL_LEGAL_ENTITIES_VALUE_T_TYPE_TABLE compiled
+
+
+Procedure LOGGING_INSERT compiled
+
+
+Package WSC_AHCS_REPROCESSING_PKG compiled
+
+
+Package Body WSC_AHCS_REPROCESSING_PKG compiled
+
+
+Package WSC_AHCS_INT_ERROR_LOGGING compiled
+
+
+Package Body WSC_AHCS_INT_ERROR_LOGGING compiled
+
+
+Procedure WSC_GL_LEGAL_ENTITIES_P compiled
+
+
+Procedure WSC_AHCS_BATCH_P compiled
+
+
+Commit complete.
+
+--------------------------------------
+--------INTEGRATION DEPLOYMENT--------
+Recieved Filepath: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_AHCS_COMMO_ACCOU_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_AHCS_REPRO_INTER_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_COMMO_EMAIL_INTER_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_COMMO_ERROR_INTER_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_AHCS_COMM_IMPA_CREA_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_AHCS_COMM_MAST_SCH_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_AHCS_PURG_INTE_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_AHCS_VALI_ERR_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_AHCS_VALI_ERRO_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_GL_LEGA_ENTI_I_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WSC_AHCS_ERROR_NOTIFY_01.00.0000.iar,
+Iterating over filepaths and processing for deployment....
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_AHCS_COMMO_ACCOU_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WESCO_WSC_GBL_AHCS_COMMO_ACCOU%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WESCO_WSC_GBL_AHCS_COMMO_ACCOU | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_AHCS_COMMO_ACCOU_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_AHCS_REPRO_INTER_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WESCO_WSC_GBL_AHCS_REPRO_INTER%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WESCO_WSC_GBL_AHCS_REPRO_INTER | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_AHCS_REPRO_INTER_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_COMMO_EMAIL_INTER_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WESCO_WSC_GBL_COMMO_EMAIL_INTER%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WESCO_WSC_GBL_COMMO_EMAIL_INTER | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_COMMO_EMAIL_INTER_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_COMMO_ERROR_INTER_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WESCO_WSC_GBL_COMMO_ERROR_INTER%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WESCO_WSC_GBL_COMMO_ERROR_INTER | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESCO_WSC_GBL_COMMO_ERROR_INTER_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_AHCS_COMM_IMPA_CREA_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WESC_WSC_GBL_AHCS_COMM_IMPA_CREA%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WESC_WSC_GBL_AHCS_COMM_IMPA_CREA | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_AHCS_COMM_IMPA_CREA_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_AHCS_COMM_MAST_SCH_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WESC_WSC_GBL_AHCS_COMM_MAST_SCH%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WESC_WSC_GBL_AHCS_COMM_MAST_SCH | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_AHCS_COMM_MAST_SCH_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_AHCS_PURG_INTE_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WESC_WSC_GBL_COMM_AHCS_PURG_INTE%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WESC_WSC_GBL_COMM_AHCS_PURG_INTE | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_AHCS_PURG_INTE_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_AHCS_VALI_ERR_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WESC_WSC_GBL_COMM_AHCS_VALI_ERR%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WESC_WSC_GBL_COMM_AHCS_VALI_ERR | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_AHCS_VALI_ERR_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_AHCS_VALI_ERRO_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WESC_WSC_GBL_COMM_AHCS_VALI_ERRO%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WESC_WSC_GBL_COMM_AHCS_VALI_ERRO | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_AHCS_VALI_ERRO_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_GL_LEGA_ENTI_I_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WESC_WSC_GBL_COMM_GL_LEGA_ENTI_I%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WESC_WSC_GBL_COMM_GL_LEGA_ENTI_I | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WESC_WSC_GBL_COMM_GL_LEGA_ENTI_I_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WSC_AHCS_ERROR_NOTIFY_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WSC_AHCS_ERROR_NOTIFY%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WSC_AHCS_ERROR_NOTIFY | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/OIC/Integration/WSC_AHCS_ERROR_NOTIFY_01.00.0000.iar: DEPLOYED
+
+
+
+--------------------------------------
+-----------REPORT DEPLOYMENT----------
+Recieved Filepath: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_AHCS_Common_Create_Accounting_Status_DM.xdm.catalog
+github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_AHCS_Common_ImpAcc_Count_DM.xdm.catalog
+github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_GL_COMMON_LEGAL_ENTITIES_EXTRACTION_DM.xdm.catalog
+github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_AHCS_Common_Create_Accounting_Status_Report.xdo.catalog
+github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_AHCS_Common_ImpAcc_Count_Report.xdo.catalog
+github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_GL_COMMON_LEGAL_ENTITIES_EXTRACTION_REPORT.xdo.catalog
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_AHCS_Common_Create_Accounting_Status_DM.xdm.catalog
+	ⓘ	Fetching property file  & exporting it: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_AHCS_Common_Create_Accounting_Status_DM.xdm.prop 
+	ⓘ	Creating Folder Structure if doesn't exists. Location: /shared/Custom/WESCO Custom/AHCS/Interfaces/Common/Data Models
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:createFolderResult></sawsoap:createFolderResult></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	ⓘ	Importing report to location: /shared/Custom/WESCO Custom/AHCS/Interfaces/Common/Data Models
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:pasteItem2Result></sawsoap:pasteItem2Result></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	✓	Report Imported: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_AHCS_Common_Create_Accounting_Status_DM.xdm.catalog
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_AHCS_Common_ImpAcc_Count_DM.xdm.catalog
+	ⓘ	Fetching property file  & exporting it: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_AHCS_Common_ImpAcc_Count_DM.xdm.prop 
+	ⓘ	Creating Folder Structure if doesn't exists. Location: /shared/Custom/WESCO Custom/AHCS/Interfaces/Common/Data Models
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:createFolderResult></sawsoap:createFolderResult></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	ⓘ	Importing report to location: /shared/Custom/WESCO Custom/AHCS/Interfaces/Common/Data Models
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:pasteItem2Result></sawsoap:pasteItem2Result></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	✓	Report Imported: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_AHCS_Common_ImpAcc_Count_DM.xdm.catalog
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_GL_COMMON_LEGAL_ENTITIES_EXTRACTION_DM.xdm.catalog
+	ⓘ	Fetching property file  & exporting it: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_GL_COMMON_LEGAL_ENTITIES_EXTRACTION_DM.xdm.prop 
+	ⓘ	Creating Folder Structure if doesn't exists. Location: /shared/Custom/WESCO Custom/GL/Interfaces/Data Models
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:createFolderResult></sawsoap:createFolderResult></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	ⓘ	Importing report to location: /shared/Custom/WESCO Custom/GL/Interfaces/Data Models
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:pasteItem2Result></sawsoap:pasteItem2Result></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	✓	Report Imported: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/DataModels/Wesco_WSC_GBL_GL_COMMON_LEGAL_ENTITIES_EXTRACTION_DM.xdm.catalog
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_AHCS_Common_Create_Accounting_Status_Report.xdo.catalog
+	ⓘ	Fetching property file  & exporting it: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_AHCS_Common_Create_Accounting_Status_Report.xdo.prop 
+	ⓘ	Creating Folder Structure if doesn't exists. Location: /shared/Custom/WESCO Custom/AHCS/Interfaces/Common
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:createFolderResult></sawsoap:createFolderResult></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	ⓘ	Importing report to location: /shared/Custom/WESCO Custom/AHCS/Interfaces/Common
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:pasteItem2Result></sawsoap:pasteItem2Result></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	✓	Report Imported: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_AHCS_Common_Create_Accounting_Status_Report.xdo.catalog
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_AHCS_Common_ImpAcc_Count_Report.xdo.catalog
+	ⓘ	Fetching property file  & exporting it: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_AHCS_Common_ImpAcc_Count_Report.xdo.prop 
+	ⓘ	Creating Folder Structure if doesn't exists. Location: /shared/Custom/WESCO Custom/AHCS/Interfaces/Common
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:createFolderResult></sawsoap:createFolderResult></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	ⓘ	Importing report to location: /shared/Custom/WESCO Custom/AHCS/Interfaces/Common
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:pasteItem2Result></sawsoap:pasteItem2Result></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	✓	Report Imported: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_AHCS_Common_ImpAcc_Count_Report.xdo.catalog
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_GL_COMMON_LEGAL_ENTITIES_EXTRACTION_REPORT.xdo.catalog
+	ⓘ	Fetching property file  & exporting it: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_GL_COMMON_LEGAL_ENTITIES_EXTRACTION_REPORT.xdo.prop 
+	ⓘ	Creating Folder Structure if doesn't exists. Location: /shared/Custom/WESCO Custom/GL/Interfaces
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:createFolderResult></sawsoap:createFolderResult></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	ⓘ	Importing report to location: /shared/Custom/WESCO Custom/GL/Interfaces
+Response Recieved:
+##############PAYLOAD START################
+<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sawsoap="urn://oracle.bi.webservices/v6"> <soap:Body> <sawsoap:pasteItem2Result></sawsoap:pasteItem2Result></soap:Body> </soap:Envelope> 
+##############PAYLOAD   END################
+
+	✓	Report Imported: github/PROD/1A/ERP/RTR/AHCS/Interface/COMMON/Report/Layouts/Wesco_WSC_GBL_GL_COMMON_LEGAL_ENTITIES_EXTRACTION_REPORT.xdo.catalog
+--------------------------------------

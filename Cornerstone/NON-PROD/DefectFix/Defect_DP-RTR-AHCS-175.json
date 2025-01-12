@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "RPT208",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/AHCS/Reports/RPT208/Report/DataModels/Wesco_GBL_AHCS_RPT208_AHCS_To_GL_Bal_MF_Recon_DM.xdm.catalog","NON-PROD/1B/ERP/RTR/AHCS/Reports/RPT208/Report/Layouts/Wesco_GBL_AHCS_RPT208_AHCS_To_GL_Bal_MF_Recon_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT_RPT"
+}

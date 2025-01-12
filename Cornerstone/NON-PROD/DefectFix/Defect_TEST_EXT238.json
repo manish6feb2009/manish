@@ -1,0 +1,14 @@
+{
+	"Rice_id" : "TEST_EXT238",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/Report/DataModels/WSC_AXE_GBL_EXT238_GL_UserAccess_Data_DM.xdm.catalog",
+	           "NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/Report/DataModels/WSC_AXE_GBL_EXT238_IC_GroupID_DM.xdm.catalog",
+			   "NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/Report/DataModels/WSC_AXE_GBL_EXT238_IC_PROGRAM_STATUS_DM.xdm.catalog",
+	        "NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/Report/Layouts/WSC_AXE_GBL_EXT238_GL_UserAccess_Data_Report.xdo.catalog",
+			"NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/Report/Layouts/WSC_AXE_GBL_EXT238_IC_GroupID_Report.xdo.catalog",
+			"NON-PROD/1B/ERP/RTR/GL/Extension/EXT238/Report/Layouts/WSC_AXE_GBL_EXT238_IC_PROGRAM_STATUS_Report.xdo.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "SOAK_RPT"
+}

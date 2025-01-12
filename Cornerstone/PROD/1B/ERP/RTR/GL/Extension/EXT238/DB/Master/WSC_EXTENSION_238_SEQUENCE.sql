@@ -1,0 +1,48 @@
+--------------------------------------------------
+--WSC_INTER_INTRA_COMPANY_HDR_IC_SEQ_S1
+--------------------------------------------------
+
+CREATE SEQUENCE  "FININT"."WSC_INTER_INTRA_COMPANY_HDR_IC_SEQ_S1"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 
+INCREMENT BY 1 START WITH 1;
+
+--------------------------------------------------
+--WSC_INTER_INTRA_COMPANY_HDR_SEQ_S1
+--------------------------------------------------
+
+CREATE SEQUENCE  "FININT"."WSC_INTER_INTRA_COMPANY_HDR_SEQ_S1"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 
+INCREMENT BY 1 START WITH 1;
+
+--------------------------------------------------
+--WSC_INTER_INTRA_COMPANY_LINE_IC_SEQ_S1
+--------------------------------------------------
+
+CREATE SEQUENCE  "FININT"."WSC_INTER_INTRA_COMPANY_LINE_IC_SEQ_S1"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 
+INCREMENT BY 1 START WITH 1;
+
+--------------------------------------------------
+--WSC_INTER_INTRA_COMPANY_LINE_SEQ_S1
+--------------------------------------------------
+
+CREATE SEQUENCE  "FININT"."WSC_INTER_INTRA_COMPANY_LINE_SEQ_S1"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 
+INCREMENT BY 1 START WITH 1;
+
+--------------------------------------------------
+--WSC_INTER_INTRA_COMPANY_SEQ_H
+--------------------------------------------------
+
+CREATE SEQUENCE  "FININT"."WSC_INTER_INTRA_COMPANY_SEQ_H"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 
+INCREMENT BY 1 START WITH 1;
+
+--------------------------------------------------
+--WSC_INTER_INTRA_COMPANY_SEQ_T
+--------------------------------------------------
+
+CREATE SEQUENCE  "FININT"."WSC_INTER_INTRA_COMPANY_SEQ_T"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 
+INCREMENT BY 1 START WITH 1;
+
+--------------------------------------------------
+--WSC_FILE_LINE_TYPE_CODE_SEQ_S1
+--------------------------------------------------
+
+CREATE SEQUENCE  "FININT"."WSC_FILE_LINE_TYPE_CODE_SEQ_S1"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 
+INCREMENT BY 1 START WITH 1;

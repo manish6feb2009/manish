@@ -1,0 +1,7 @@
+SET ECHO ON;
+SET DEFINE OFF;
+
+PROMPT "EXECUTING GL_Data_Fix.sql";
+@GL_Data_Fix.sql
+
+COMMIT;

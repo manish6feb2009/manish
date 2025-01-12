@@ -1,0 +1,3 @@
+SET DEFINE OFF;
+@WSC_AHCS_DASHBOARD2_V.sql
+commit;

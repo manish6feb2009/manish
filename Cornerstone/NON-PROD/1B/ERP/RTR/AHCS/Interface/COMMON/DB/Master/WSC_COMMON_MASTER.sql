@@ -1,0 +1,22 @@
+SET DEFINE OFF;
+@WSC_COMMON_TABLE.sql
+---@WSC_COMMON_GL_INDEX.sql
+@WSC_COMMON_SEQUENCE.sql
+---@WSC_COMMON_GL_TABLE_TYPE.sql
+@WSC_COMMON_PROCEDURE.sql
+---@wsc_ahcs_mfstatus_tbl_update.sql
+---@WSC_AHCS_MFSTATUS_TBL_UPDATE_body.sql
+---@WSC_AHCS_INT_ERROR_LOGGING.sql
+---@WSC_AHCS_INT_ERROR_LOGGING_body.sql
+@WSC_INT240_TXN_TMP_T.sql
+---@WSC_AHCS_REPROCESSING_PKG.sql
+---@wsc_ahcs_reprocessing_pkg_body.sql
+---@WSC_COMMON_insert.sql
+---@WSC_COMMON_GRANT_JOB_SCHEDULER.sql
+---need to uncomment 17,18,19,21
+--@WSC_AHCS_DASHBOARD2_T.sql
+--@WSC_AHCS_DASHBOARD_MV.sql
+--@WSC_AHCS_DASHBOARD2_V.sql
+@WSC_AHCS_RECON_RECORDS_PKG.sql
+--@WSC_AHCS_RECON_RECORDS_PKG_body.sql
+commit;

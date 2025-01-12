@@ -1,0 +1,171 @@
+✓ Interface directory exists for rice-id: INT122 
+Fetching the components...
+✓ OIC Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/INT122/OIC/Integration/WES_WSC_GBL_AHC_INT_ORA_POC_DB_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/INT122/OIC/Integration/WES_WSC_GBL_AHC_INT_ORA_POC_DB_T_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/INT122/OIC/Integration/WES_WSC_GBL_AHC_INT_ORA_POC_SCH_01.00.0000.iar
+✖ Report-Data Model Artifacts
+✖ Report-Layout Artifacts
+✓ DB Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/INT122/DB/Master/WSC_INT122_MASTER.sql
+---------DATABASE DEPLOYMENT----------
+EXECUTING WSC_INT122_TABLE.sql
+
+Table "FININT"."WSC_AHCS_POC_TXN_HEADER_T" created.
+
+
+Table "FININT"."WSC_AHCS_POC_TXN_LINE_T" created.
+
+EXECUTING WSC_INT122_INDEXES.sql
+
+Index "FININT"."WSC_AHCS_POC_TXN_HEADER_BATCH_ID_I" created.
+
+
+Index "FININT"."WSC_AHCS_POC_TXN_HEADER_JE_HEADER_ID_I" created.
+
+
+Index "FININT"."WSC_AHCS_POC_TXN_LINE_BATCH_ID_I" created.
+
+
+Index "FININT"."WSC_AHCS_POC_TXN_LINE_HEADER_ID_I" created.
+
+
+Index "FININT"."WSC_AHCS_POC_TXN_LINE_JE_HEADER_ID_I" created.
+
+
+Index "FININT"."WSC_AHCS_POC_TXN_LINE_LEG_COA_I" created.
+
+
+Index WSC_AHCS_POC_TXN_HEADER_BATCH_ID_I altered.
+
+
+Index WSC_AHCS_POC_TXN_HEADER_JE_HEADER_ID_I altered.
+
+
+Index WSC_AHCS_POC_TXN_HEADER_T_PK altered.
+
+
+Index WSC_AHCS_POC_TXN_LINE_BATCH_ID_I altered.
+
+
+Index WSC_AHCS_POC_TXN_LINE_HEADER_ID_I altered.
+
+
+Index WSC_AHCS_POC_TXN_LINE_JE_HEADER_ID_I altered.
+
+
+Index WSC_AHCS_POC_TXN_LINE_LEG_COA_I altered.
+
+
+Index WSC_AHCS_POC_TXN_LINE_T_PK altered.
+
+EXECUTING WSC_INT122_SEQUENCE.sql
+
+Sequence "FININT"."WSC_POC_HEADER_S1" created.
+
+
+Sequence "FININT"."WSC_POC_LINE_S1" created.
+
+EXECUTING WSC_INT122_TABLE_TYPES.sql
+
+Type WSC_POC_HEADER_RT compiled
+
+
+Type Body WSC_POC_HEADER_RT compiled
+
+
+Type WSC_POC_LINE_RT compiled
+
+
+Type Body WSC_POC_LINE_RT compiled
+
+
+Type WSC_POC_HEADER_TT compiled
+
+
+Type WSC_POC_LINE_TT compiled
+
+EXECUTING WSC_INT122_PKG.sql
+
+Package WSC_POC_PKG compiled
+
+EXECUTING WSC_INT122_PKG_BODY.sql
+
+Package Body WSC_POC_PKG compiled
+
+EXECUTING WSC_AHCS_INT122_VALIDATION_TRANSFORMATION_PKG.sql
+
+Package WSC_AHCS_POC_VALIDATION_TRANSFORMATION_PKG compiled
+
+EXECUTING WSC_AHCS_INT122_VALIDATION_TRANSFORMATION_PKG_BODY.sql
+
+Package Body WSC_AHCS_POC_VALIDATION_TRANSFORMATION_PKG compiled
+
+
+Commit complete.
+
+--------------------------------------
+--------INTEGRATION DEPLOYMENT--------
+Recieved Filepath: github/PROD/1A/ERP/RTR/AHCS/Interface/INT122/OIC/Integration/WES_WSC_GBL_AHC_INT_ORA_POC_DB_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/INT122/OIC/Integration/WES_WSC_GBL_AHC_INT_ORA_POC_DB_T_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/INT122/OIC/Integration/WES_WSC_GBL_AHC_INT_ORA_POC_SCH_01.00.0000.iar,
+Iterating over filepaths and processing for deployment....
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/INT122/OIC/Integration/WES_WSC_GBL_AHC_INT_ORA_POC_DB_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WES_WSC_GBL_AHC_INT_ORA_POC_DB%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WES_WSC_GBL_AHC_INT_ORA_POC_DB | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/INT122/OIC/Integration/WES_WSC_GBL_AHC_INT_ORA_POC_DB_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/INT122/OIC/Integration/WES_WSC_GBL_AHC_INT_ORA_POC_DB_T_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WES_WSC_GBL_AHC_INT_ORA_POC_DB_T%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WES_WSC_GBL_AHC_INT_ORA_POC_DB_T | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/INT122/OIC/Integration/WES_WSC_GBL_AHC_INT_ORA_POC_DB_T_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/INT122/OIC/Integration/WES_WSC_GBL_AHC_INT_ORA_POC_SCH_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WES_WSC_GBL_AHC_INT_ORA_POC_SCH%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WES_WSC_GBL_AHC_INT_ORA_POC_SCH | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/INT122/OIC/Integration/WES_WSC_GBL_AHC_INT_ORA_POC_SCH_01.00.0000.iar: DEPLOYED
+
+
+
+--------------------------------------

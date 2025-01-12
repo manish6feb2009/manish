@@ -1,0 +1,9 @@
+{
+	"Rice_id" : "INC2656866",
+	"OIC": [],
+	"DB": [],
+	"Report": ["NON-PROD/Cornerstone/ERP/RTR/AP/Reports/RPT031/Report/DataModels/Wesco_AXE_GBL_AP_RPT031_Non-Material_IC_AP_Invoices_Selected_For_Payment_Report_with_associated_AR_Invoice_D.catalog"],
+	"TARGET_DB": "",
+	"TARGET_OIC": "",
+	"TARGET_RPT": "UAT2_RPT"
+}

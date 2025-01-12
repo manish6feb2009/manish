@@ -1,0 +1,319 @@
+✓ Interface directory exists for rice-id: INT033_38 
+Fetching the components...
+✓ OIC Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WESC_WSC_GBL_AHCS_CTRL_TO_DB_IN_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WES_GBL_AHC_INT_CEN_SAL_2_DB_SCH_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WES_WSC_GBL_AHC_CEN_DB_TO_UCM_IN_01.00.0000.iar
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WES_WSC_GBL_AHC_INT_CEN_TO_DB_SC_01.00.0000.iar
+✖ Report-Data Model Artifacts
+✖ Report-Layout Artifacts
+✓ DB Artifacts
+	•	github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/DB/Master/WSC_CENTRAL_033_038_MASTER.sql
+---------DATABASE DEPLOYMENT----------
+EXECUTING WSC_CENTRAL_033_038_TABLE.sql
+CREATING TABLE WSC_AHCS_CENTRAL_TXN_STG_T
+
+Table "FININT"."WSC_AHCS_CENTRAL_TXN_STG_T" created.
+
+CREATING TABLE WSC_AHCS_CENTRAL_TXN_HEADER_T
+
+Table "FININT"."WSC_AHCS_CENTRAL_TXN_HEADER_T" created.
+
+CREATING TABLE WSC_AHCS_CENTRAL_TXN_LINE_T
+
+Table "FININT"."WSC_AHCS_CENTRAL_TXN_LINE_T" created.
+
+CREATING TABLE WSC_AHCS_CENTRAL_JE_CTG_MAP_T
+
+Table "FININT"."WSC_AHCS_CENTRAL_JE_CTG_MAP_T" created.
+
+
+Commit complete.
+
+EXECUTING WSC_CENTRAL_033_038_INDEX.sql
+CREATING INDEX WSC_AHCS_CENTRAL_TXN_LINE_T_I
+
+Index "FININT"."WSC_AHCS_CENTRAL_TXN_LINE_T_I" created.
+
+CREATING INDEX WSC_AHCS_CENTRAL_TXN_LINE_LEG_COA_I
+
+Index "FININT"."WSC_AHCS_CENTRAL_TXN_LINE_LEG_COA_I" created.
+
+CREATING INDEX WSC_AHCS_CENTRAL_TXN_LINE_BATCH_ID_I
+
+Index "FININT"."WSC_AHCS_CENTRAL_TXN_LINE_BATCH_ID_I" created.
+
+CREATING INDEX WSC_AHCS_CENTRAL_TXN_HEADER_T_I
+
+Index "FININT"."WSC_AHCS_CENTRAL_TXN_HEADER_T_I" created.
+
+
+Commit complete.
+
+EXECUTING WSC_CENTRAL_033_038_SEQUENCE.sql
+CREATING SEQUENCE WSC_CTRL_HEADER_T_S1
+
+Sequence "FININT"."WSC_CTRL_HEADER_T_S1" created.
+
+CREATING SEQUENCE WSC_CTRL_HEADER_T_S2
+
+Sequence "FININT"."WSC_CTRL_HEADER_T_S2" created.
+
+CREATING SEQUENCE WSC_CTRL_LINE_T_S1
+
+Sequence "FININT"."WSC_CTRL_LINE_T_S1" created.
+
+
+Commit complete.
+
+EXECUTING WSC_CENTRAL_033_038_TYPE.sql
+CREATING TYPE WSC_CENTRAL_S_TYPE
+
+Type WSC_CENTRAL_S_TYPE compiled
+
+CREATING TYPE WSC_CENTRAL_S_TYPE_TABLE
+
+Type WSC_CENTRAL_S_TYPE_TABLE compiled
+
+CREATING TYPE WSC_CTRL_TXN_ID_S_TYPE
+
+Type WSC_CTRL_TXN_ID_S_TYPE compiled
+
+
+Type WSC_CTRL_TXN_ID_S_TYPE_TABLE compiled
+
+EXECUTING WSC_CENTRAL_033_038_JE_CTG_MAP_T_DATA.sql
+
+Table "FININT"."WSC_AHCS_CENTRAL_JE_CTG_MAP_T" truncated.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Commit complete.
+
+EXECUTING WSC_CENTRAL_033_038_CENT_PKG.sql
+CREATE/UPDATE PACKAGE wsc_central_pkg
+
+Package WSC_CENTRAL_PKG compiled
+
+EXECUTING WSC_CENTRAL_033_038_CENT_PKG_BODY.sql
+
+Package Body WSC_CENTRAL_PKG compiled
+
+EXECUTING WSC_CENTRAL_033_038_VandT_PKG.sql
+
+Package WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled
+
+EXECUTING WSC_CENTRAL_033_038_VandT_PKG_BODY.sql
+
+Package Body WSC_AHCS_CENTRAL_VALIDATION_TRANSFORMATION_PKG compiled
+
+
+Commit complete.
+
+--------------------------------------
+--------INTEGRATION DEPLOYMENT--------
+Recieved Filepath: github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WESC_WSC_GBL_AHCS_CTRL_TO_DB_IN_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WES_GBL_AHC_INT_CEN_SAL_2_DB_SCH_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WES_WSC_GBL_AHC_CEN_DB_TO_UCM_IN_01.00.0000.iar,github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WES_WSC_GBL_AHC_INT_CEN_TO_DB_SC_01.00.0000.iar,
+Iterating over filepaths and processing for deployment....
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WESC_WSC_GBL_AHCS_CTRL_TO_DB_IN_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WESC_WSC_GBL_AHCS_CTRL_TO_DB_IN%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WESC_WSC_GBL_AHCS_CTRL_TO_DB_IN | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WESC_WSC_GBL_AHCS_CTRL_TO_DB_IN_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WES_GBL_AHC_INT_CEN_SAL_2_DB_SCH_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WES_GBL_AHC_INT_CEN_SAL_2_DB_SCH%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WES_GBL_AHC_INT_CEN_SAL_2_DB_SCH | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WES_GBL_AHC_INT_CEN_SAL_2_DB_SCH_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WES_WSC_GBL_AHC_CEN_DB_TO_UCM_IN_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WES_WSC_GBL_AHC_CEN_DB_TO_UCM_IN%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WES_WSC_GBL_AHC_CEN_DB_TO_UCM_IN | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WES_WSC_GBL_AHC_CEN_DB_TO_UCM_IN_01.00.0000.iar: DEPLOYED
+
+
+
+	Processing file: github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WES_WSC_GBL_AHC_INT_CEN_TO_DB_SC_01.00.0000.iar
+
+	ⓘ	FileType: INTERGARTION ARCHIVE
+Checking the status of the integration by integration ID : WES_WSC_GBL_AHC_INT_CEN_TO_DB_SC%7C01.00.0000
+
+##############PAYLOAD START################
+{"status":"HTTP 404 Not Found","title":"Integration 'WES_WSC_GBL_AHC_INT_CEN_TO_DB_SC | 01.00.0000' not found.","type":"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"}
+##############PAYLOAD   END################
+
+	ⓘ	Integration Not found. Deploying.....
+	ⓘ	Deploying Integration.....
+
+##############PAYLOAD START################
+204
+##############PAYLOAD   END################
+
+	✓	github/PROD/1A/ERP/RTR/AHCS/Interface/INT033_38/OIC/Integration/WES_WSC_GBL_AHC_INT_CEN_TO_DB_SC_01.00.0000.iar: DEPLOYED
+
+
+
+--------------------------------------
